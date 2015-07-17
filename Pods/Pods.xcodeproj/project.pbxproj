@@ -1,0 +1,515 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		05ED177A831E73FD62D8EDEB /* SimpleAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 88E621381642D773F69A4EB4 /* SimpleAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		117451F53FB2476438DDC7AD /* Pods-ChipManager-SimpleAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA28F84781F1D0B5ADB16AA /* Pods-ChipManager-SimpleAlert-dummy.m */; };
+		1C16E3C2B416880C7E481D3D /* Pods-ChipManager-SimpleAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2C5D839D300470F5EE14AED /* Pods-ChipManager-SimpleAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1FC267E955B0EDC22DAC0550 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC18B05E206BAB621D76224 /* UIKit.framework */; };
+		4F524C385EFB0E254C7A43E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3589E0C1E69CFC7AC083F0 /* Foundation.framework */; };
+		5309D305171C0EE74EC93860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3589E0C1E69CFC7AC083F0 /* Foundation.framework */; };
+		76FCBA0FD9BE9934DB5CEF07 /* Pods-ChipManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BAED58D77CF8D4A99D45F46 /* Pods-ChipManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE98688659001281041051DA /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6C192BC4E478A76A220A2 /* SimpleAlert.swift */; };
+		D0D5AC7455E27D411CB46D1C /* SimpleAlert.xib in Sources */ = {isa = PBXBuildFile; fileRef = E33CE57FDB9FBFC3D76E99A2 /* SimpleAlert.xib */; };
+		F77BBF1F68D0B6EE03CDA094 /* Pods-ChipManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B451BF5E8035BCBB3E9B5CB4 /* Pods-ChipManager-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7137DFA3CFFFD6CBA69609EF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 819DA7DC4FDB19856A02F120 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B3C7091A9DAEF2AABC288538;
+			remoteInfo = "Pods-ChipManager-SimpleAlert";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BAED58D77CF8D4A99D45F46 /* Pods-ChipManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-umbrella.h"; sourceTree = "<group>"; };
+		1CD5585E42EA04F6D8D4D415 /* Pods-ChipManager-SimpleAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager-SimpleAlert.xcconfig"; sourceTree = "<group>"; };
+		2C4F58FBE1AFCA12670F9F84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		34C9B2D4539AF152FD319AAE /* Pods_ChipManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChipManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DDEB9596710D5E34D814B5A /* Pods-ChipManager-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChipManager-frameworks.sh"; sourceTree = "<group>"; };
+		40AA5EFD27AD3E321B2ECFC3 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager-SimpleAlert-Private.xcconfig"; sourceTree = "<group>"; };
+		5BC6C192BC4E478A76A220A2 /* SimpleAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleAlert.swift; path = SimpleAlert/SimpleAlert.swift; sourceTree = "<group>"; };
+		69625487A52350869FDB2704 /* Pods-ChipManager-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChipManager-acknowledgements.markdown"; sourceTree = "<group>"; };
+		6AA28F84781F1D0B5ADB16AA /* Pods-ChipManager-SimpleAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChipManager-SimpleAlert-dummy.m"; sourceTree = "<group>"; };
+		6CC18B05E206BAB621D76224 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		77BB6B9D43415472D06D18F2 /* Pods-ChipManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChipManager.modulemap"; sourceTree = "<group>"; };
+		88E621381642D773F69A4EB4 /* SimpleAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimpleAlert.h; path = SimpleAlert/SimpleAlert.h; sourceTree = "<group>"; };
+		8D6D92C20850EAFF63893A0C /* Pods-ChipManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager.debug.xcconfig"; sourceTree = "<group>"; };
+		96F3573C85F44D466E38B138 /* Pods-ChipManager-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-environment.h"; sourceTree = "<group>"; };
+		9C60E61A86E546647CFFCF8B /* Pods-ChipManager-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChipManager-acknowledgements.plist"; sourceTree = "<group>"; };
+		9EB31AF076152680D9D71869 /* Pods-ChipManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager.release.xcconfig"; sourceTree = "<group>"; };
+		A1209FCF7B232A9AB9405AE3 /* Pods-ChipManager-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChipManager-resources.sh"; sourceTree = "<group>"; };
+		B451BF5E8035BCBB3E9B5CB4 /* Pods-ChipManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChipManager-dummy.m"; sourceTree = "<group>"; };
+		BA3589E0C1E69CFC7AC083F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		BE2083858A2901FB8E2BD284 /* SimpleAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C626FC88D2B500566BE8DC4D /* Pods-ChipManager-SimpleAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChipManager-SimpleAlert.modulemap"; sourceTree = "<group>"; };
+		E33CE57FDB9FBFC3D76E99A2 /* SimpleAlert.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SimpleAlert.xib; path = SimpleAlert/SimpleAlert.xib; sourceTree = "<group>"; };
+		E69651FE3F2598B882DDDC70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F020A2081D6B1F5EA4D610FD /* Pods-ChipManager-SimpleAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-SimpleAlert-prefix.pch"; sourceTree = "<group>"; };
+		F2C5D839D300470F5EE14AED /* Pods-ChipManager-SimpleAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-SimpleAlert-umbrella.h"; sourceTree = "<group>"; };
+		FA4A00E1CCF13DA281F27AE9 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5A18866FF41A688B91627B13 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5309D305171C0EE74EC93860 /* Foundation.framework in Frameworks */,
+				1FC267E955B0EDC22DAC0550 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BBA5BB26E9F759BE5855FF18 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F524C385EFB0E254C7A43E0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		220D133D1E0F588C6544876C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				7C3B903C727E0A7A6A55D9E7 /* Pods-ChipManager */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		3026A7D39D7A24D4856A3C12 /* SimpleAlert */ = {
+			isa = PBXGroup;
+			children = (
+				88E621381642D773F69A4EB4 /* SimpleAlert.h */,
+				5BC6C192BC4E478A76A220A2 /* SimpleAlert.swift */,
+				E33CE57FDB9FBFC3D76E99A2 /* SimpleAlert.xib */,
+				44FE573576D436EABF7C82FD /* Support Files */,
+			);
+			path = SimpleAlert;
+			sourceTree = "<group>";
+		};
+		31FCAC98B7D9E5A9E58CEDD9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4C92710E930865404C3F8449 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		44FE573576D436EABF7C82FD /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E69651FE3F2598B882DDDC70 /* Info.plist */,
+				C626FC88D2B500566BE8DC4D /* Pods-ChipManager-SimpleAlert.modulemap */,
+				1CD5585E42EA04F6D8D4D415 /* Pods-ChipManager-SimpleAlert.xcconfig */,
+				40AA5EFD27AD3E321B2ECFC3 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */,
+				6AA28F84781F1D0B5ADB16AA /* Pods-ChipManager-SimpleAlert-dummy.m */,
+				F020A2081D6B1F5EA4D610FD /* Pods-ChipManager-SimpleAlert-prefix.pch */,
+				F2C5D839D300470F5EE14AED /* Pods-ChipManager-SimpleAlert-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-ChipManager-SimpleAlert";
+			sourceTree = "<group>";
+		};
+		4C92710E930865404C3F8449 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				BA3589E0C1E69CFC7AC083F0 /* Foundation.framework */,
+				6CC18B05E206BAB621D76224 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		7C3B903C727E0A7A6A55D9E7 /* Pods-ChipManager */ = {
+			isa = PBXGroup;
+			children = (
+				2C4F58FBE1AFCA12670F9F84 /* Info.plist */,
+				77BB6B9D43415472D06D18F2 /* Pods-ChipManager.modulemap */,
+				69625487A52350869FDB2704 /* Pods-ChipManager-acknowledgements.markdown */,
+				9C60E61A86E546647CFFCF8B /* Pods-ChipManager-acknowledgements.plist */,
+				B451BF5E8035BCBB3E9B5CB4 /* Pods-ChipManager-dummy.m */,
+				96F3573C85F44D466E38B138 /* Pods-ChipManager-environment.h */,
+				3DDEB9596710D5E34D814B5A /* Pods-ChipManager-frameworks.sh */,
+				A1209FCF7B232A9AB9405AE3 /* Pods-ChipManager-resources.sh */,
+				1BAED58D77CF8D4A99D45F46 /* Pods-ChipManager-umbrella.h */,
+				8D6D92C20850EAFF63893A0C /* Pods-ChipManager.debug.xcconfig */,
+				9EB31AF076152680D9D71869 /* Pods-ChipManager.release.xcconfig */,
+			);
+			name = "Pods-ChipManager";
+			path = "Target Support Files/Pods-ChipManager";
+			sourceTree = "<group>";
+		};
+		89C0047E47645F1CFED73F9C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				34C9B2D4539AF152FD319AAE /* Pods_ChipManager.framework */,
+				BE2083858A2901FB8E2BD284 /* SimpleAlert.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A0A6A22AB2576189C262C706 = {
+			isa = PBXGroup;
+			children = (
+				FA4A00E1CCF13DA281F27AE9 /* Podfile */,
+				31FCAC98B7D9E5A9E58CEDD9 /* Frameworks */,
+				C5CF9354DCAF45CF2712BA88 /* Pods */,
+				89C0047E47645F1CFED73F9C /* Products */,
+				220D133D1E0F588C6544876C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		C5CF9354DCAF45CF2712BA88 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3026A7D39D7A24D4856A3C12 /* SimpleAlert */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		6C2BE4F7F9D49AE91E6AF19D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1C16E3C2B416880C7E481D3D /* Pods-ChipManager-SimpleAlert-umbrella.h in Headers */,
+				05ED177A831E73FD62D8EDEB /* SimpleAlert.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2FED953F6CED1A44B8E2B04 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76FCBA0FD9BE9934DB5CEF07 /* Pods-ChipManager-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		09579E3EC53EB5A340BC7D9A /* Pods-ChipManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3330A99ACE9B2D69834BAD97 /* Build configuration list for PBXNativeTarget "Pods-ChipManager" */;
+			buildPhases = (
+				E54645A83FA934E8172BBD3A /* Sources */,
+				BBA5BB26E9F759BE5855FF18 /* Frameworks */,
+				C2FED953F6CED1A44B8E2B04 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5567D22DDF7D2938F3EBBD9 /* PBXTargetDependency */,
+			);
+			name = "Pods-ChipManager";
+			productName = "Pods-ChipManager";
+			productReference = 34C9B2D4539AF152FD319AAE /* Pods_ChipManager.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B3C7091A9DAEF2AABC288538 /* Pods-ChipManager-SimpleAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7080EF343A0B7974485CFF0 /* Build configuration list for PBXNativeTarget "Pods-ChipManager-SimpleAlert" */;
+			buildPhases = (
+				752731D6A0ACE587DA308D90 /* Sources */,
+				5A18866FF41A688B91627B13 /* Frameworks */,
+				6C2BE4F7F9D49AE91E6AF19D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ChipManager-SimpleAlert";
+			productName = "Pods-ChipManager-SimpleAlert";
+			productReference = BE2083858A2901FB8E2BD284 /* SimpleAlert.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		819DA7DC4FDB19856A02F120 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = E2C039E25A86E338361EEB0A /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = A0A6A22AB2576189C262C706;
+			productRefGroup = 89C0047E47645F1CFED73F9C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				09579E3EC53EB5A340BC7D9A /* Pods-ChipManager */,
+				B3C7091A9DAEF2AABC288538 /* Pods-ChipManager-SimpleAlert */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		752731D6A0ACE587DA308D90 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				117451F53FB2476438DDC7AD /* Pods-ChipManager-SimpleAlert-dummy.m in Sources */,
+				BE98688659001281041051DA /* SimpleAlert.swift in Sources */,
+				D0D5AC7455E27D411CB46D1C /* SimpleAlert.xib in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E54645A83FA934E8172BBD3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F77BBF1F68D0B6EE03CDA094 /* Pods-ChipManager-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5567D22DDF7D2938F3EBBD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ChipManager-SimpleAlert";
+			target = B3C7091A9DAEF2AABC288538 /* Pods-ChipManager-SimpleAlert */;
+			targetProxy = 7137DFA3CFFFD6CBA69609EF /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1538E2E1EBA2A7D4D6A3AA1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40AA5EFD27AD3E321B2ECFC3 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ChipManager-SimpleAlert/Pods-ChipManager-SimpleAlert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager-SimpleAlert/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager-SimpleAlert/Pods-ChipManager-SimpleAlert.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = SimpleAlert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1E98BCB8D3A2119B754F96B7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 40AA5EFD27AD3E321B2ECFC3 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ChipManager-SimpleAlert/Pods-ChipManager-SimpleAlert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager-SimpleAlert/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager-SimpleAlert/Pods-ChipManager-SimpleAlert.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SimpleAlert;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		39B9191424BCB369B26D5DCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		70541BD125B01C0DAE576543 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9EB31AF076152680D9D71869 /* Pods-ChipManager.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager/Pods-ChipManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ChipManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		D1E5485F0F097EFA2770945D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3F50276782B29E8040AA584 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D6D92C20850EAFF63893A0C /* Pods-ChipManager.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager/Pods-ChipManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ChipManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3330A99ACE9B2D69834BAD97 /* Build configuration list for PBXNativeTarget "Pods-ChipManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3F50276782B29E8040AA584 /* Debug */,
+				70541BD125B01C0DAE576543 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E2C039E25A86E338361EEB0A /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				39B9191424BCB369B26D5DCD /* Debug */,
+				D1E5485F0F097EFA2770945D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7080EF343A0B7974485CFF0 /* Build configuration list for PBXNativeTarget "Pods-ChipManager-SimpleAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1538E2E1EBA2A7D4D6A3AA1D /* Debug */,
+				1E98BCB8D3A2119B754F96B7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 819DA7DC4FDB19856A02F120 /* Project object */;
+}

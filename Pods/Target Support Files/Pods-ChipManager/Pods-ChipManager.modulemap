@@ -1,0 +1,6 @@
+framework module Pods_ChipManager {
+  umbrella header "Pods-ChipManager-umbrella.h"
+
+  export *
+  module * { export * }
+}

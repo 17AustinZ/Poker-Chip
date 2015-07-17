@@ -1,0 +1,10 @@
+PODS:
+  - SimpleAlert (1.2.1)
+
+DEPENDENCIES:
+  - SimpleAlert
+
+SPEC CHECKSUMS:
+  SimpleAlert: 22d7890f9d253d947a23fd60fcd0213febe6a339
+
+COCOAPODS: 0.37.2
