@@ -51,24 +51,36 @@ class ConfigureViewController: UIViewController{
         
         CBSAlert.addAction(SimpleAlert.Action(title: "No Limit", style: SimpleAlert.Action.Style.Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
             self.betStructure = .NoLimit
+            self.handleLabels()
         }))
         
         CBSAlert.addAction(SimpleAlert.Action(title: "Fixed Limit", style: .Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
             self.betStructure = .FixedLimit
+            self.handleLabels()
         }))
         
         CBSAlert.addAction(SimpleAlert.Action(title: "Pot Limit", style: .Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
             self.betStructure = .PotLimit
+            self.handleLabels()
         }))
         
         CBSAlert.addAction(SimpleAlert.Action(title: "Spread Limit", style: .Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
             self.betStructure = .SpreadLimit
+            self.handleLabels()
         }))
         
+    
+        
+        
+        presentViewController(CBSAlert, animated: true, completion: {})
+        
+        handleLabels()
 
         
         
-        presentViewController(CBSAlert, animated: true, completion: {
+    }
+    
+    func handleLabels(){
         switch self.betStructure{
         case .Default:
             self.bettingStructureDisplay.text = ""
@@ -80,11 +92,7 @@ class ConfigureViewController: UIViewController{
             self.bettingStructureDisplay.text = "Pot Limit"
         case .SpreadLimit:
             self.bettingStructureDisplay.text = "Spread Limit"
-            }})
-        
-
-        
-        
+        }
     }
     
     

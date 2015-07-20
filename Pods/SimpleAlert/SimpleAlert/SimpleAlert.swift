@@ -304,6 +304,10 @@ public class SimpleAlert {
                 configurActionSheetButton(style, forButton: button)
             }
         }
+        
+        @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
+            println("asdf")
+        }
     }
 }
 
@@ -528,6 +532,8 @@ private extension SimpleAlert.Controller {
             
             self.actions.removeAll()
             self.textFields.removeAll()
+            
+            
         }
     }
 }

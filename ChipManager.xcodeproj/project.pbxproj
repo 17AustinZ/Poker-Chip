@@ -16,6 +16,7 @@
 		D9B117E31B59635E003204CC /* BettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117E01B59635E003204CC /* BettingViewController.swift */; };
 		D9B117E41B59635E003204CC /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117E11B59635E003204CC /* ConfigureViewController.swift */; };
 		D9B117EC1B5963B9003204CC /* DYAlertPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B117EB1B5963B9003204CC /* DYAlertPickView.m */; };
+		D9D478B81B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D478B71B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift */; };
 		F65284D83E946E64D44E8520 /* Pods_ChipManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440C609F5F3F7DE89346B446 /* Pods_ChipManager.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
@@ -48,6 +49,7 @@
 		D9B117E61B596367003204CC /* ChipManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChipManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		D9B117EA1B5963B9003204CC /* DYAlertPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYAlertPickView.h; sourceTree = "<group>"; };
 		D9B117EB1B5963B9003204CC /* DYAlertPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYAlertPickView.m; sourceTree = "<group>"; };
+		D9D478B71B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureSimpleAlert.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		D9B117BC1B5962EE003204CC /* ChipManager */ = {
 			isa = PBXGroup;
 			children = (
+				D9D763861B5D8B4C00230075 /* Views */,
 				D9B117E91B5963B9003204CC /* DYAlertPicker */,
 				D9B117DF1B59635E003204CC /* ViewControllers */,
 				D9B117BF1B5962EE003204CC /* AppDelegate.swift */,
@@ -163,6 +166,14 @@
 				D9B117EB1B5963B9003204CC /* DYAlertPickView.m */,
 			);
 			path = DYAlertPicker;
+			sourceTree = SOURCE_ROOT;
+		};
+		D9D763861B5D8B4C00230075 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D9D478B71B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift */,
+			);
+			path = Views;
 			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
@@ -317,6 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D9B117C21B5962EE003204CC /* ViewController.swift in Sources */,
+				D9D478B81B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift in Sources */,
 				D9B117E41B59635E003204CC /* ConfigureViewController.swift in Sources */,
 				D9B117C01B5962EE003204CC /* AppDelegate.swift in Sources */,
 				D9B117E31B59635E003204CC /* BettingViewController.swift in Sources */,
