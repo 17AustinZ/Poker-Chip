@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="iks-9X-sZ0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -47,7 +48,6 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.83467824835526316" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="xig-ql-uOt" secondAttribute="centerY" constant="26" id="X8q-MV-rUo"/>
                             <constraint firstAttribute="centerX" secondItem="xig-ql-uOt" secondAttribute="centerX" constant="7" id="bbc-vt-FWo"/>
@@ -70,7 +70,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bL-Za-5qp">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bL-Za-5qp">
                                 <rect key="frame" x="75" y="100" width="117" height="30"/>
                                 <state key="normal" title="Betting Structure">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -79,15 +79,24 @@
                                     <action selector="changeBettingStructure:" destination="CWz-f1-OR0" eventType="touchUpInside" id="qd4-jb-6VU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reb-Vt-sPj">
-                                <rect key="frame" x="474" y="104" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reb-Vt-sPj">
+                                <rect key="frame" x="475" y="104" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="reb-Vt-sPj" secondAttribute="trailing" constant="67" id="1o3-wn-Uxu"/>
+                            <constraint firstItem="1bL-Za-5qp" firstAttribute="leading" secondItem="rne-Zs-XXZ" secondAttribute="leadingMargin" constant="59" id="4Up-2E-SdX"/>
+                            <constraint firstItem="1bL-Za-5qp" firstAttribute="top" secondItem="oFy-eZ-VMf" secondAttribute="bottom" constant="36" id="H41-9F-mI5"/>
+                            <constraint firstItem="reb-Vt-sPj" firstAttribute="centerY" secondItem="1bL-Za-5qp" secondAttribute="centerY" constant="-0.5" id="TKR-Db-6ka"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bettingStructure" destination="reb-Vt-sPj" id="2s9-gV-g7m"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NY-sv-wHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
