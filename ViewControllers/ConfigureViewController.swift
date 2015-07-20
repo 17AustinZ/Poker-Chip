@@ -33,19 +33,16 @@ class ConfigureViewController: UIViewController{
 
     @IBAction func changeBettingStructure(sender: AnyObject) {
         let CBSAlert = SimpleAlert.Controller(title: "Betting Structure", message: "", style: .Alert)
-        CBSAlert.addAction(SimpleAlert.Action(title: "OK", style: .Default) { action in
-            println("No Limit")
-            })
-        CBSAlert.addAction(SimpleAlert.Action(title: "Set Limit", style: .Default) { action : <#((SimpleAlert.Action!) -> Void)?##(SimpleAlert.Action!) -> Void#>))
+
+        CBSAlert.addAction(SimpleAlert.Action(title: "No Limit", style: .Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
+            println("done")
+            }))
         
-//        
-//        CBSAlert.addAction(SimpleAlert.Controller(title: "No Limit",
-//            style: .Default ,
-//            handler: {(alert: UIAlertAction!) in println("Foo")}))
-//        
-        
-        
-        
+        CBSAlert.addAction(SimpleAlert.Action(title: "Fixed Limit", style: .Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
+            println("done")
+        }))
+
+
         presentViewController(CBSAlert, animated: true, completion: nil)
     }
     
