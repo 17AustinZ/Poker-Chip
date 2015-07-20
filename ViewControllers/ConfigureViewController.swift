@@ -19,8 +19,9 @@ import UIKit
 
 class ConfigureViewController: UIViewController{
     
-    @IBOutlet weak var bettingStructureDisplay: UILabel!
+    @IBOutlet weak var bettingStructureButton: UIButton!
     
+    @IBOutlet weak var bettingStructureDisplay: UILabel! 
     var betStructure : bettingStructure = .Default
     
     enum bettingStructure {
@@ -35,6 +36,7 @@ class ConfigureViewController: UIViewController{
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
         bettingStructureDisplay.text = ""
+        
 
     }
     
@@ -74,24 +76,36 @@ class ConfigureViewController: UIViewController{
         
         presentViewController(CBSAlert, animated: true, completion: {})
         
-        handleLabels()
-
-        
         
     }
     
     func handleLabels(){
         switch self.betStructure{
         case .Default:
-            self.bettingStructureDisplay.text = ""
+            UIView.performWithoutAnimation({
+                self.bettingStructureButton.setTitle("Betting Structure", forState: UIControlState.Normal)
+                self.bettingStructureButton.layoutIfNeeded()
+            })
         case .FixedLimit:
-            self.bettingStructureDisplay.text = "Fixed Limit"
+            UIView.performWithoutAnimation({
+                self.bettingStructureButton.setTitle("Fixed Limit", forState: UIControlState.Normal)
+                self.bettingStructureButton.layoutIfNeeded()
+            })
         case .NoLimit:
-            self.bettingStructureDisplay.text = "No Limit"
+            UIView.performWithoutAnimation({
+                self.bettingStructureButton.setTitle("No Limit", forState: UIControlState.Normal)
+                self.bettingStructureButton.layoutIfNeeded()
+            })
         case .PotLimit:
-            self.bettingStructureDisplay.text = "Pot Limit"
+            UIView.performWithoutAnimation({
+                self.bettingStructureButton.setTitle("Pot Limit", forState: UIControlState.Normal)
+                self.bettingStructureButton.layoutIfNeeded()
+            })
         case .SpreadLimit:
-            self.bettingStructureDisplay.text = "Spread Limit"
+            UIView.performWithoutAnimation({
+                self.bettingStructureButton.setTitle("Spread Limit", forState: UIControlState.Normal)
+                self.bettingStructureButton.layoutIfNeeded()
+            })
         }
     }
     
