@@ -19,9 +19,12 @@ import UIKit
 
 class ConfigureViewController: UIViewController{
     
-    var betStructure = bettingStructure.NoLimit
-
+    @IBOutlet weak var bettingStructureDisplay: UILabel!
+    
+    var betStructure : bettingStructure = .Default
+    
     enum bettingStructure {
+        case Default
         case NoLimit
         case FixedLimit
         case PotLimit
@@ -31,6 +34,8 @@ class ConfigureViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.setNavigationBarHidden(true, animated: true)
+        bettingStructureDisplay.text = ""
+
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -39,7 +44,6 @@ class ConfigureViewController: UIViewController{
         navigationController?.setNavigationBarHidden(false, animated: true)
     }
 
-    @IBOutlet weak var bettingStructureDisplay: UILabel!
 
     @IBAction func changeBettingStructure(sender: AnyObject) {
         let CBSAlert = SimpleAlert.Controller(title: "Betting Structure", message: "", style: .Alert)
@@ -60,7 +64,14 @@ class ConfigureViewController: UIViewController{
         CBSAlert.addAction(SimpleAlert.Action(title: "Spread Limit", style: .Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
             self.betStructure = .SpreadLimit
         }))
-        switch betStructure{
+        
+
+        
+        
+        presentViewController(CBSAlert, animated: true, completion: {
+        switch self.betStructure{
+        case .Default:
+            self.bettingStructureDisplay.text = ""
         case .FixedLimit:
             self.bettingStructureDisplay.text = "Fixed Limit"
         case .NoLimit:
@@ -69,9 +80,11 @@ class ConfigureViewController: UIViewController{
             self.bettingStructureDisplay.text = "Pot Limit"
         case .SpreadLimit:
             self.bettingStructureDisplay.text = "Spread Limit"
-        }
+            }})
         
-        presentViewController(CBSAlert, animated: true, completion: nil)
+
+        
+        
     }
     
     

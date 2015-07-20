@@ -44,7 +44,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="CWz-f1-OR0" kind="show" id="xnp-0Y-yKg"/>
+                                    <segue destination="CWz-f1-OR0" kind="show" id="Nnf-Wz-h09"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,8 +79,8 @@
                                     <action selector="changeBettingStructure:" destination="CWz-f1-OR0" eventType="touchUpInside" id="qd4-jb-6VU"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reb-Vt-sPj">
-                                <rect key="frame" x="475" y="104" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ss" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reb-Vt-sPj">
+                                <rect key="frame" x="505" y="98" width="18" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -88,14 +88,14 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="reb-Vt-sPj" secondAttribute="trailing" constant="67" id="1o3-wn-Uxu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="reb-Vt-sPj" secondAttribute="trailing" constant="61" id="1o3-wn-Uxu"/>
                             <constraint firstItem="1bL-Za-5qp" firstAttribute="leading" secondItem="rne-Zs-XXZ" secondAttribute="leadingMargin" constant="59" id="4Up-2E-SdX"/>
                             <constraint firstItem="1bL-Za-5qp" firstAttribute="top" secondItem="oFy-eZ-VMf" secondAttribute="bottom" constant="36" id="H41-9F-mI5"/>
-                            <constraint firstItem="reb-Vt-sPj" firstAttribute="centerY" secondItem="1bL-Za-5qp" secondAttribute="centerY" constant="-0.5" id="TKR-Db-6ka"/>
+                            <constraint firstItem="reb-Vt-sPj" firstAttribute="centerY" secondItem="1bL-Za-5qp" secondAttribute="centerY" constant="-7" id="TKR-Db-6ka"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="bettingStructure" destination="reb-Vt-sPj" id="2s9-gV-g7m"/>
+                        <outlet property="bettingStructureDisplay" destination="reb-Vt-sPj" id="yKg-4D-0rF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9NY-sv-wHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
