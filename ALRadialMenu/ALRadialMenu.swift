@@ -24,6 +24,7 @@ public class ALRadialMenu: UIButton {
     
     public convenience init() {
         self.init(frame: CGRectZero)
+        overlayView = UIView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2, UIScreen.mainScreen().bounds.height / 2, CGFloat(self.radius * 2), CGFloat(self.radius * 2)))
     }
     
     public override init(frame: CGRect) {
@@ -149,7 +150,6 @@ public class ALRadialMenu: UIButton {
     :param: UIWindow window
     */
     public func presentInWindow(win: UIWindow) -> Self {
-        
         if buttons.count == 0 {
             println("ALRadialMenu has no buttons to present")
             return self
@@ -172,6 +172,28 @@ public class ALRadialMenu: UIButton {
         return self
     }
     
+    public func refreshButtons(view: UIView){
+        var window = view.window
+        
+        if buttons.count == 0 {
+            println("ALRadialMenu has no buttons to present")
+        }
+        
+        if animationOrigin == nil {
+            animationOrigin = center
+        }
+        
+        
+        for i in 0..<buttons.count {
+            
+            dismissWithoutAnimation(buttons[i], index: i)
+            animationOrigin = center
+            view.window!.addSubview(overlayView)
+            view.window!.addSubview(buttons[i])
+            presentWithoutAnimation(buttons[i], index: i)
+        }
+        
+    }
     /**
     Dismiss the buttons with an animation
     */
@@ -204,6 +226,7 @@ public class ALRadialMenu: UIButton {
         }
     }
     
+    
     private var overlayView = UIView(frame: UIScreen.mainScreen().bounds)
     
     private var radius: Double = 100
@@ -214,6 +237,10 @@ public class ALRadialMenu: UIButton {
         }
     }
     
+    
+
+    
+    
     private var spacingDegrees: Angle!
     private var animationOrigin: CGPoint!
     
@@ -222,10 +249,10 @@ public class ALRadialMenu: UIButton {
 
     // MARK: Private API
     private func commonInit() {
-        dismissGesture = UITapGestureRecognizer(target: self, action: "dismiss")
-        dismissGesture.enabled = dismissOnOverlayTap
-        
-        overlayView.addGestureRecognizer(dismissGesture)
+//        dismissGesture = UITapGestureRecognizer(target: self, action: "dismiss")
+//        dismissGesture.enabled = dismissOnOverlayTap
+//        
+//        overlayView.addGestureRecognizer(dismissGesture)
     }
     
     private func dismiss(selectedIndex: Int) {
@@ -242,6 +269,7 @@ public class ALRadialMenu: UIButton {
     }
     
     private func presentAnimation(view: ALRadialMenuButton, index: Int) {
+      
         let degrees = startAngle.degrees + spacingDegrees.degrees * Double(index)
         let newCenter = pointOnCircumference(animationOrigin, radius: radius, angle: Angle(degrees: degrees))
         let _delay = Double(index) * delay
@@ -254,6 +282,16 @@ public class ALRadialMenu: UIButton {
         }, completion: nil)
     }
     
+    private func presentWithoutAnimation(view: ALRadialMenuButton, index: Int) {
+        let degrees = startAngle.degrees + spacingDegrees.degrees * Double(index)
+        let newCenter = pointOnCircumference(CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height / 2), radius: radius, angle: Angle(degrees: degrees))
+        let _delay = Double(index) * delay
+        view.alpha = 1
+        view.center = newCenter
+        
+        
+    }
+    
     private func dismissAnimation(view: ALRadialMenuButton, index: Int) {
         let _delay = Double(index) * delay
         UIView.animateWithDuration(0.5, delay: _delay, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: animationOptions, animations: {
@@ -264,6 +302,10 @@ public class ALRadialMenu: UIButton {
         })
     }
     
+    private func dismissWithoutAnimation(view: ALRadialMenuButton, index: Int) {
+        view.removeFromSuperview()
+        
+    }
     private func selectedAnimation(view: ALRadialMenuButton) {
         UIView.animateWithDuration(0.5, delay: 0, usingSpringWithDamping: 0.7, initialSpringVelocity: 0.7, options: animationOptions, animations: {
             view.alpha = 0

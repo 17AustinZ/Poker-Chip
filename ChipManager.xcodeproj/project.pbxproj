@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D94C050C1B6015A400B323F1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C050B1B6015A400B323F1 /* Player.swift */; };
 		D9B117C01B5962EE003204CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117BF1B5962EE003204CC /* AppDelegate.swift */; };
 		D9B117C21B5962EE003204CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117C11B5962EE003204CC /* ViewController.swift */; };
 		D9B117C51B5962EE003204CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B117C31B5962EE003204CC /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 		1C62A9C68BD99D7D2008FE4B /* Pods-ChipManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChipManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChipManager/Pods-ChipManager.debug.xcconfig"; sourceTree = "<group>"; };
 		440C609F5F3F7DE89346B446 /* Pods_ChipManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChipManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3A56DB1737A8089BDE467D /* Pods-ChipManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChipManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChipManager/Pods-ChipManager.release.xcconfig"; sourceTree = "<group>"; };
+		D94C050B1B6015A400B323F1 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		D9B117BA1B5962EE003204CC /* ChipManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChipManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B117BE1B5962EE003204CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B117BF1B5962EE003204CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -126,6 +128,7 @@
 				D9B117C81B5962EE003204CC /* LaunchScreen.xib */,
 				D9B117BD1B5962EE003204CC /* Supporting Files */,
 				D9B117E61B596367003204CC /* ChipManager-Bridging-Header.h */,
+				D94C050B1B6015A400B323F1 /* Player.swift */,
 			);
 			path = ChipManager;
 			sourceTree = "<group>";
@@ -348,6 +351,7 @@
 				D9B117C01B5962EE003204CC /* AppDelegate.swift in Sources */,
 				D9B117E31B59635E003204CC /* BettingViewController.swift in Sources */,
 				D9D478BD1B5DB10000CAA8C4 /* ALRadialMenuButton.swift in Sources */,
+				D94C050C1B6015A400B323F1 /* Player.swift in Sources */,
 				D9B117EC1B5963B9003204CC /* DYAlertPickView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

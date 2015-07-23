@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-ChipManager-Bohr.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ChipManager-SimpleAlert.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -17,12 +22,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>09579E3EC53EB5A340BC7D9A</key>
+		<key>307027E5E3744CAE3F93EBBF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>B3C7091A9DAEF2AABC288538</key>
+		<key>3F7EDF259CF0DEBFE77CE1C2</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C6EC096F8E830319726F252E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

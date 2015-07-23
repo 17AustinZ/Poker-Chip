@@ -1,0 +1,1 @@
+PODS_CHIPMANAGER_BOHR_OTHER_LDFLAGS = -framework "Foundation" -framework "UIKit"

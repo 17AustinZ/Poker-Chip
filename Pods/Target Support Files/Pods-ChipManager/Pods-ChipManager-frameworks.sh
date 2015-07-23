@@ -48,8 +48,10 @@ code_sign() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Bohr.framework'
   install_framework 'SimpleAlert.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Bohr.framework'
   install_framework 'SimpleAlert.framework'
 fi

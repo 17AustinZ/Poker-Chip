@@ -11,11 +11,14 @@ import UIKit
 public typealias ALRadialMenuButtonAction = () -> Void
 
 public class ALRadialMenuButton: UIButton {
+    var player : Player?
+    
     public var action: ALRadialMenuButtonAction? {
         didSet {
             configureAction()
         }
     }
+
     
     private func configureAction() {
         addTarget(self, action: "performAction", forControlEvents: UIControlEvents.TouchUpInside)

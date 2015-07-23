@@ -44,6 +44,11 @@ class ConfigureViewController: UIViewController{
 
         super.prepareForSegue(segue, sender: sender)
         navigationController?.setNavigationBarHidden(false, animated: true)
+        if segue.identifier == "toGame" {
+            var bettingVC : BettingViewController = segue.destinationViewController as! BettingViewController
+            bettingVC.players = [Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob")]
+        }
+        
     }
 
 
@@ -53,22 +58,22 @@ class ConfigureViewController: UIViewController{
         
         CBSAlert.addAction(SimpleAlert.Action(title: "No Limit", style: SimpleAlert.Action.Style.Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
             self.betStructure = .NoLimit
-            self.handleLabels()
+            self.resolveOption()
         }))
         
         CBSAlert.addAction(SimpleAlert.Action(title: "Fixed Limit", style: .Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
             self.betStructure = .FixedLimit
-            self.handleLabels()
+            self.resolveOption()
         }))
         
         CBSAlert.addAction(SimpleAlert.Action(title: "Pot Limit", style: .Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
             self.betStructure = .PotLimit
-            self.handleLabels()
+            self.resolveOption()
         }))
         
         CBSAlert.addAction(SimpleAlert.Action(title: "Spread Limit", style: .Default , handler: {(alertAction : SimpleAlert.Action!) -> Void in
             self.betStructure = .SpreadLimit
-            self.handleLabels()
+            self.resolveOption()
         }))
         
     
@@ -79,7 +84,7 @@ class ConfigureViewController: UIViewController{
         
     }
     
-    func handleLabels(){
+    func resolveOption(){
         switch self.betStructure{
         case .Default:
             UIView.performWithoutAnimation({
@@ -91,6 +96,7 @@ class ConfigureViewController: UIViewController{
                 self.bettingStructureButton.setTitle("Fixed Limit", forState: UIControlState.Normal)
                 self.bettingStructureButton.layoutIfNeeded()
             })
+            
         case .NoLimit:
             UIView.performWithoutAnimation({
                 self.bettingStructureButton.setTitle("No Limit", forState: UIControlState.Normal)

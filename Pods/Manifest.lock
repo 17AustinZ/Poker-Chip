@@ -1,10 +1,13 @@
 PODS:
+  - Bohr (2.1.0)
   - SimpleAlert (1.2.1)
 
 DEPENDENCIES:
+  - Bohr
   - SimpleAlert
 
 SPEC CHECKSUMS:
+  Bohr: 08c66d64e8f14c2bb759d81074ebea9a3ae0024d
   SimpleAlert: 22d7890f9d253d947a23fd60fcd0213febe6a339
 
 COCOAPODS: 0.37.2

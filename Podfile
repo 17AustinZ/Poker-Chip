@@ -6,6 +6,7 @@ use_frameworks!
 target 'ChipManager' do
 
 pod 'SimpleAlert'
+pod 'Bohr'
 
 end
 

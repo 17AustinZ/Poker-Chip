@@ -11,16 +11,32 @@ import UIKit
 
 class BettingViewController: UIViewController{
     var gameMode = ""
-    var numPlayers : Int? = 8
-    var buttons : [ALRadialMenuButton]?
     
+    @IBOutlet weak var raiseButton: UIButton!
+    @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var foldButton: UIButton!
+    
+    
+    @IBAction func raise(sender: AnyObject) {
+    }
+    @IBAction func call(sender: AnyObject) {
+    }
+    @IBAction func fold(sender: AnyObject) {
+    }
+    var radialMenu : ALRadialMenu = ALRadialMenu()
+    var numPlayers : Int? = 8
+    var buttons : [ALRadialMenuButton] = []
+    var playerNames : [String] = []
+    var players : [Player] = []
+    var currentPlayer : Player?
     func generateButtons() -> [ALRadialMenuButton] {
         
         var buttons = [ALRadialMenuButton]()
-        
-        for i in 0..<numPlayers! {
+        for i in 0..<players.count {
             let button = ALRadialMenuButton(frame: CGRectMake(0, 0, 44, 44))
             button.setImage(UIImage(named: "icon\(i+1)"), forState: UIControlState.Normal)
+            
+            button.player = players[i]
             buttons.append(button)
         }
         
@@ -30,11 +46,30 @@ class BettingViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        currentPlayer = players[0]
+        
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        generateButtons()
         showMenu()
     }
     
+    
     @IBAction func testButton(sender: AnyObject) {
-        showMenu()
+        buttons[2].setImage(UIImage(named: "icon1"), forState: UIControlState.Normal)
+        radialMenu.setButtons(buttons)
+        radialMenu.refreshButtons(view)
+        
+        
+
+        
     }
     
     func showMenu() {
@@ -45,7 +80,11 @@ class BettingViewController: UIViewController{
 //                .setAnimationOrigin(sender.locationInView(view))
 //                .presentInView(view)
         
-        ALRadialMenu().setButtons(generateButtons()).setAnimationOrigin(midScreen).presentInView(view)
+        radialMenu = ALRadialMenu().setButtons(generateButtons()).setAnimationOrigin(midScreen)
+        radialMenu.setRadius(150)
+        radialMenu.setDismissOnOverlayTap(false)
+        radialMenu.presentInView(view)
+
         
     }
 }

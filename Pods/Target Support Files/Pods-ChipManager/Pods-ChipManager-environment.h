@@ -6,6 +6,12 @@
 // project.
 
 
+// Bohr
+#define COCOAPODS_POD_AVAILABLE_Bohr
+#define COCOAPODS_VERSION_MAJOR_Bohr 2
+#define COCOAPODS_VERSION_MINOR_Bohr 1
+#define COCOAPODS_VERSION_PATCH_Bohr 0
+
 // SimpleAlert
 #define COCOAPODS_POD_AVAILABLE_SimpleAlert
 #define COCOAPODS_VERSION_MAJOR_SimpleAlert 1

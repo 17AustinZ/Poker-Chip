@@ -7,172 +7,291 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		05ED177A831E73FD62D8EDEB /* SimpleAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 88E621381642D773F69A4EB4 /* SimpleAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		117451F53FB2476438DDC7AD /* Pods-ChipManager-SimpleAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AA28F84781F1D0B5ADB16AA /* Pods-ChipManager-SimpleAlert-dummy.m */; };
-		1C16E3C2B416880C7E481D3D /* Pods-ChipManager-SimpleAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2C5D839D300470F5EE14AED /* Pods-ChipManager-SimpleAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		1FC267E955B0EDC22DAC0550 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6CC18B05E206BAB621D76224 /* UIKit.framework */; };
-		4F524C385EFB0E254C7A43E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3589E0C1E69CFC7AC083F0 /* Foundation.framework */; };
-		5309D305171C0EE74EC93860 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA3589E0C1E69CFC7AC083F0 /* Foundation.framework */; };
-		76FCBA0FD9BE9934DB5CEF07 /* Pods-ChipManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BAED58D77CF8D4A99D45F46 /* Pods-ChipManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		BE98688659001281041051DA /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BC6C192BC4E478A76A220A2 /* SimpleAlert.swift */; };
-		D0D5AC7455E27D411CB46D1C /* SimpleAlert.xib in Sources */ = {isa = PBXBuildFile; fileRef = E33CE57FDB9FBFC3D76E99A2 /* SimpleAlert.xib */; };
-		F77BBF1F68D0B6EE03CDA094 /* Pods-ChipManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B451BF5E8035BCBB3E9B5CB4 /* Pods-ChipManager-dummy.m */; };
+		058D52222904D40CD860DD4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550CFAC677EAEB77167BBD6E /* Foundation.framework */; };
+		0CE0DB95FD3C3E8CA2E35CF6 /* BOOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D6250A9D8EF8844CB83A3CB8 /* BOOptionTableViewCell.m */; };
+		0D3F60CF8A8C336B569AEB2B /* BOChoiceTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = DD93E34F97521835E18ED38C /* BOChoiceTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		132D69684D9D09531811C22F /* SimpleAlert.xib in Sources */ = {isa = PBXBuildFile; fileRef = 62B3D6D489B5BA95BB33715E /* SimpleAlert.xib */; };
+		1E72756D7C37EDA050623672 /* BOChoiceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 910BF00379CD0A9FED3F9607 /* BOChoiceTableViewCell.m */; };
+		281B6542C2F147F524B88414 /* Bohr.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C7C7789C2A44D2686B97460 /* Bohr.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29128C94E928DA30EBFAC4F2 /* BOTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DCFC8BA85FC69E142F4A7AAF /* BOTableViewCell.m */; };
+		37336D9E11914AC4A02B0C38 /* BOSetting+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BA87D28C9FD913008CA017F /* BOSetting+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		429E55CF6D9511F7EE775284 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E418BAB7763A967F5BB33C16 /* UIKit.framework */; };
+		4D405C890CF9CFD28730D46D /* BOTimeTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FB233A041ED8604487F86E17 /* BOTimeTableViewCell.m */; };
+		5EFB3470D6767FC8C924D867 /* BOSetting.h in Headers */ = {isa = PBXBuildFile; fileRef = 0E11252D3F0F71C384F08750 /* BOSetting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6CBE5F57968C3706376D79D1 /* SimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54CC8CF3E51E70681E30939 /* SimpleAlert.swift */; };
+		755E88AD5A8FFE82E034DA55 /* Pods-ChipManager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 277DEE2F2F5E825D97CABA70 /* Pods-ChipManager-dummy.m */; };
+		79A85BBD7CC40141278767E0 /* Pods-ChipManager-Bohr-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 064BA1BFC3BF32F8C79E819D /* Pods-ChipManager-Bohr-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7E1B6A2FC5855CD5C727B77C /* BOTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3AE68908328ED74926105573 /* BOTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7F798041B38CB9522A1766D9 /* Pods-ChipManager-SimpleAlert-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F7784A1FE4578F6790CC5B6 /* Pods-ChipManager-SimpleAlert-dummy.m */; };
+		843D3247DFC9698BAD68F986 /* BOSwitchTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 43D157752FBFE119C189CAC0 /* BOSwitchTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88707F66911E486AFB3F7355 /* SimpleAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 63DC87C34EAD85C4801CDD60 /* SimpleAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A12E090924D88282DDEFAD18 /* BOButtonTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8DF0C32BF4616061E39F6546 /* BOButtonTableViewCell.m */; };
+		A88D2BDA92EB2EDE338D731C /* BOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 67A10A2B9FE62FBCC27E5B39 /* BOTableViewController.m */; };
+		B4826382F7B1B4CC19AE422F /* BOSetting.m in Sources */ = {isa = PBXBuildFile; fileRef = 3523B32D24E9797ED399C682 /* BOSetting.m */; };
+		C915CED61745D761FEFE4253 /* BOTimeTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 170254D3BFB263568113A2FD /* BOTimeTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D0851D4ED67553C5472E4D6D /* BOOptionTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 3D52350CAB447C7C3950E2B0 /* BOOptionTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D92AABA0D08DD36FB57B6DA9 /* BOTextTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DE1DE162238697296947DBF1 /* BOTextTableViewCell.m */; };
+		DAF93335636487B74B1FE0E3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550CFAC677EAEB77167BBD6E /* Foundation.framework */; };
+		DD0AE19CD646F495B1190762 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E418BAB7763A967F5BB33C16 /* UIKit.framework */; };
+		DD13E989DE151F1828E3D141 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 550CFAC677EAEB77167BBD6E /* Foundation.framework */; };
+		DD174B8B06F81C241AF3DE55 /* BOTableViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = F92D487BD1DC8FC329A29530 /* BOTableViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E44680FEE10AC7B8EF48635B /* Pods-ChipManager-SimpleAlert-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E896408DB76EB8401F99D65B /* Pods-ChipManager-SimpleAlert-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E4A204F3DB5F23FCEB7CC955 /* BOTableViewCell+Subclass.h in Headers */ = {isa = PBXBuildFile; fileRef = D519B0A8C44AACA9D7AAE788 /* BOTableViewCell+Subclass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7D7B48A2A08D5E5A60E6C60 /* Pods-ChipManager-Bohr-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2961432692CBAECF717F6618 /* Pods-ChipManager-Bohr-dummy.m */; };
+		EF7DCBB0977B40F038319562 /* Pods-ChipManager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1AC6AB088579C22C450E6746 /* Pods-ChipManager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F1972AF7B22CE873437D063C /* BOButtonTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 38C75ACEEC2BFC0B278989E4 /* BOButtonTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FB7F6737DBA414FF117922EA /* BOSwitchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EE713BB524C7C6A36BBE0074 /* BOSwitchTableViewCell.m */; };
+		FD993D45089789A4B178D2BE /* BOTableViewController+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 6867DA336321FE162122E68C /* BOTableViewController+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FE41A57276FA9F3BAD5E9824 /* BOTextTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6CE6C7EA0A4D4A9C305B3E /* BOTextTableViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7137DFA3CFFFD6CBA69609EF /* PBXContainerItemProxy */ = {
+		02BB69FF6EFC6990AD2C1EAA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 819DA7DC4FDB19856A02F120 /* Project object */;
+			containerPortal = 33A395077FA4113CAF85EC46 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = B3C7091A9DAEF2AABC288538;
+			remoteGlobalIDString = 3F7EDF259CF0DEBFE77CE1C2;
+			remoteInfo = "Pods-ChipManager-Bohr";
+		};
+		6C211B1FB4F0D04FFCCE0DBC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 33A395077FA4113CAF85EC46 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C6EC096F8E830319726F252E;
 			remoteInfo = "Pods-ChipManager-SimpleAlert";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1BAED58D77CF8D4A99D45F46 /* Pods-ChipManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-umbrella.h"; sourceTree = "<group>"; };
-		1CD5585E42EA04F6D8D4D415 /* Pods-ChipManager-SimpleAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager-SimpleAlert.xcconfig"; sourceTree = "<group>"; };
-		2C4F58FBE1AFCA12670F9F84 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34C9B2D4539AF152FD319AAE /* Pods_ChipManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChipManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DDEB9596710D5E34D814B5A /* Pods-ChipManager-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChipManager-frameworks.sh"; sourceTree = "<group>"; };
-		40AA5EFD27AD3E321B2ECFC3 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager-SimpleAlert-Private.xcconfig"; sourceTree = "<group>"; };
-		5BC6C192BC4E478A76A220A2 /* SimpleAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleAlert.swift; path = SimpleAlert/SimpleAlert.swift; sourceTree = "<group>"; };
-		69625487A52350869FDB2704 /* Pods-ChipManager-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChipManager-acknowledgements.markdown"; sourceTree = "<group>"; };
-		6AA28F84781F1D0B5ADB16AA /* Pods-ChipManager-SimpleAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChipManager-SimpleAlert-dummy.m"; sourceTree = "<group>"; };
-		6CC18B05E206BAB621D76224 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		77BB6B9D43415472D06D18F2 /* Pods-ChipManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChipManager.modulemap"; sourceTree = "<group>"; };
-		88E621381642D773F69A4EB4 /* SimpleAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimpleAlert.h; path = SimpleAlert/SimpleAlert.h; sourceTree = "<group>"; };
-		8D6D92C20850EAFF63893A0C /* Pods-ChipManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager.debug.xcconfig"; sourceTree = "<group>"; };
-		96F3573C85F44D466E38B138 /* Pods-ChipManager-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-environment.h"; sourceTree = "<group>"; };
-		9C60E61A86E546647CFFCF8B /* Pods-ChipManager-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChipManager-acknowledgements.plist"; sourceTree = "<group>"; };
-		9EB31AF076152680D9D71869 /* Pods-ChipManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager.release.xcconfig"; sourceTree = "<group>"; };
-		A1209FCF7B232A9AB9405AE3 /* Pods-ChipManager-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChipManager-resources.sh"; sourceTree = "<group>"; };
-		B451BF5E8035BCBB3E9B5CB4 /* Pods-ChipManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChipManager-dummy.m"; sourceTree = "<group>"; };
-		BA3589E0C1E69CFC7AC083F0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		BE2083858A2901FB8E2BD284 /* SimpleAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C626FC88D2B500566BE8DC4D /* Pods-ChipManager-SimpleAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChipManager-SimpleAlert.modulemap"; sourceTree = "<group>"; };
-		E33CE57FDB9FBFC3D76E99A2 /* SimpleAlert.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SimpleAlert.xib; path = SimpleAlert/SimpleAlert.xib; sourceTree = "<group>"; };
-		E69651FE3F2598B882DDDC70 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F020A2081D6B1F5EA4D610FD /* Pods-ChipManager-SimpleAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-SimpleAlert-prefix.pch"; sourceTree = "<group>"; };
-		F2C5D839D300470F5EE14AED /* Pods-ChipManager-SimpleAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-SimpleAlert-umbrella.h"; sourceTree = "<group>"; };
-		FA4A00E1CCF13DA281F27AE9 /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		064816DC2CAE6C9047643153 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		064BA1BFC3BF32F8C79E819D /* Pods-ChipManager-Bohr-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-Bohr-umbrella.h"; sourceTree = "<group>"; };
+		0A6CE6C7EA0A4D4A9C305B3E /* BOTextTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOTextTableViewCell.h; path = Bohr/BOTextTableViewCell.h; sourceTree = "<group>"; };
+		0E11252D3F0F71C384F08750 /* BOSetting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOSetting.h; path = Bohr/BOSetting.h; sourceTree = "<group>"; };
+		0ECBE046805AF0159A150799 /* Pods-ChipManager-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ChipManager-acknowledgements.markdown"; sourceTree = "<group>"; };
+		1294C699309922A36C63DDCD /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		170254D3BFB263568113A2FD /* BOTimeTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOTimeTableViewCell.h; path = Bohr/BOTimeTableViewCell.h; sourceTree = "<group>"; };
+		1AC6AB088579C22C450E6746 /* Pods-ChipManager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-umbrella.h"; sourceTree = "<group>"; };
+		1C7C7789C2A44D2686B97460 /* Bohr.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Bohr.h; path = Bohr/Bohr.h; sourceTree = "<group>"; };
+		259AC6E4E0E68736B3B6953C /* Pods-ChipManager-Bohr-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-Bohr-prefix.pch"; sourceTree = "<group>"; };
+		277DEE2F2F5E825D97CABA70 /* Pods-ChipManager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChipManager-dummy.m"; sourceTree = "<group>"; };
+		28294553034CB41D6135C022 /* Pods-ChipManager-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChipManager-resources.sh"; sourceTree = "<group>"; };
+		2961432692CBAECF717F6618 /* Pods-ChipManager-Bohr-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChipManager-Bohr-dummy.m"; sourceTree = "<group>"; };
+		325F5AB269E3F87522B6C033 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3523B32D24E9797ED399C682 /* BOSetting.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOSetting.m; path = Bohr/BOSetting.m; sourceTree = "<group>"; };
+		38C75ACEEC2BFC0B278989E4 /* BOButtonTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOButtonTableViewCell.h; path = Bohr/BOButtonTableViewCell.h; sourceTree = "<group>"; };
+		3AE68908328ED74926105573 /* BOTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOTableViewCell.h; path = Bohr/BOTableViewCell.h; sourceTree = "<group>"; };
+		3D52350CAB447C7C3950E2B0 /* BOOptionTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOOptionTableViewCell.h; path = Bohr/BOOptionTableViewCell.h; sourceTree = "<group>"; };
+		4133EA9B5E363A4A8EA2A96E /* Pods-ChipManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager.release.xcconfig"; sourceTree = "<group>"; };
+		4196D9044C60F7E2ABE5D6C5 /* Pods-ChipManager-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ChipManager-acknowledgements.plist"; sourceTree = "<group>"; };
+		43D157752FBFE119C189CAC0 /* BOSwitchTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOSwitchTableViewCell.h; path = Bohr/BOSwitchTableViewCell.h; sourceTree = "<group>"; };
+		550CFAC677EAEB77167BBD6E /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		573C9A416D5B13636ED9F24F /* Bohr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Bohr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		62B3D6D489B5BA95BB33715E /* SimpleAlert.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = SimpleAlert.xib; path = SimpleAlert/SimpleAlert.xib; sourceTree = "<group>"; };
+		63DC87C34EAD85C4801CDD60 /* SimpleAlert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SimpleAlert.h; path = SimpleAlert/SimpleAlert.h; sourceTree = "<group>"; };
+		67A10A2B9FE62FBCC27E5B39 /* BOTableViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOTableViewController.m; path = Bohr/BOTableViewController.m; sourceTree = "<group>"; };
+		685C675463AEEFAE0AE45199 /* Pods-ChipManager-SimpleAlert.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager-SimpleAlert.xcconfig"; sourceTree = "<group>"; };
+		6867DA336321FE162122E68C /* BOTableViewController+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BOTableViewController+Private.h"; path = "Bohr/BOTableViewController+Private.h"; sourceTree = "<group>"; };
+		6B9EC0685815978E72B0C7EB /* SimpleAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F7784A1FE4578F6790CC5B6 /* Pods-ChipManager-SimpleAlert-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ChipManager-SimpleAlert-dummy.m"; sourceTree = "<group>"; };
+		7BA87D28C9FD913008CA017F /* BOSetting+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BOSetting+Private.h"; path = "Bohr/BOSetting+Private.h"; sourceTree = "<group>"; };
+		810A5B54A87F08CBD1286AFF /* Pods-ChipManager-Bohr-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager-Bohr-Private.xcconfig"; sourceTree = "<group>"; };
+		8B532C6B6ABDFA341A9DF70E /* Pods-ChipManager-Bohr.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChipManager-Bohr.modulemap"; sourceTree = "<group>"; };
+		8C900CD8D7990784327B1E96 /* Pods-ChipManager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChipManager.modulemap"; sourceTree = "<group>"; };
+		8DF0C32BF4616061E39F6546 /* BOButtonTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOButtonTableViewCell.m; path = Bohr/BOButtonTableViewCell.m; sourceTree = "<group>"; };
+		90EDB21A135D68EE808E9714 /* Pods-ChipManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager.debug.xcconfig"; sourceTree = "<group>"; };
+		910BF00379CD0A9FED3F9607 /* BOChoiceTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOChoiceTableViewCell.m; path = Bohr/BOChoiceTableViewCell.m; sourceTree = "<group>"; };
+		A23BC264FA4243B39EEE3A41 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager-SimpleAlert-Private.xcconfig"; sourceTree = "<group>"; };
+		A54CC8CF3E51E70681E30939 /* SimpleAlert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SimpleAlert.swift; path = SimpleAlert/SimpleAlert.swift; sourceTree = "<group>"; };
+		A9C03DDF5BFCEF6C8467EA93 /* Pods-ChipManager-SimpleAlert.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-ChipManager-SimpleAlert.modulemap"; sourceTree = "<group>"; };
+		B30E294C776891289BA5F81D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB57251E8922401220C9FDF0 /* Pods-ChipManager-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-environment.h"; sourceTree = "<group>"; };
+		CFB60763AA85062E9B3C2AAC /* Pods_ChipManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChipManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D32DDAE407F0A96036378677 /* Pods-ChipManager-SimpleAlert-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-SimpleAlert-prefix.pch"; sourceTree = "<group>"; };
+		D519B0A8C44AACA9D7AAE788 /* BOTableViewCell+Subclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "BOTableViewCell+Subclass.h"; path = "Bohr/BOTableViewCell+Subclass.h"; sourceTree = "<group>"; };
+		D6250A9D8EF8844CB83A3CB8 /* BOOptionTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOOptionTableViewCell.m; path = Bohr/BOOptionTableViewCell.m; sourceTree = "<group>"; };
+		DCFC8BA85FC69E142F4A7AAF /* BOTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOTableViewCell.m; path = Bohr/BOTableViewCell.m; sourceTree = "<group>"; };
+		DD93E34F97521835E18ED38C /* BOChoiceTableViewCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOChoiceTableViewCell.h; path = Bohr/BOChoiceTableViewCell.h; sourceTree = "<group>"; };
+		DE1DE162238697296947DBF1 /* BOTextTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOTextTableViewCell.m; path = Bohr/BOTextTableViewCell.m; sourceTree = "<group>"; };
+		E1084F30E0277612B483E542 /* Pods-ChipManager-Bohr.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ChipManager-Bohr.xcconfig"; sourceTree = "<group>"; };
+		E144BA935B8AA5B6EE2CBF02 /* Pods-ChipManager-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ChipManager-frameworks.sh"; sourceTree = "<group>"; };
+		E418BAB7763A967F5BB33C16 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E896408DB76EB8401F99D65B /* Pods-ChipManager-SimpleAlert-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ChipManager-SimpleAlert-umbrella.h"; sourceTree = "<group>"; };
+		EE713BB524C7C6A36BBE0074 /* BOSwitchTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOSwitchTableViewCell.m; path = Bohr/BOSwitchTableViewCell.m; sourceTree = "<group>"; };
+		F92D487BD1DC8FC329A29530 /* BOTableViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BOTableViewController.h; path = Bohr/BOTableViewController.h; sourceTree = "<group>"; };
+		FB233A041ED8604487F86E17 /* BOTimeTableViewCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BOTimeTableViewCell.m; path = Bohr/BOTimeTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		5A18866FF41A688B91627B13 /* Frameworks */ = {
+		38FD2FD77C2DBC53E8F86905 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5309D305171C0EE74EC93860 /* Foundation.framework in Frameworks */,
-				1FC267E955B0EDC22DAC0550 /* UIKit.framework in Frameworks */,
+				058D52222904D40CD860DD4E /* Foundation.framework in Frameworks */,
+				DD0AE19CD646F495B1190762 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BBA5BB26E9F759BE5855FF18 /* Frameworks */ = {
+		79449CB082403A8C3FBA13E0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4F524C385EFB0E254C7A43E0 /* Foundation.framework in Frameworks */,
+				DD13E989DE151F1828E3D141 /* Foundation.framework in Frameworks */,
+				429E55CF6D9511F7EE775284 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		803A2C01CE8629B00D862182 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAF93335636487B74B1FE0E3 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		220D133D1E0F588C6544876C /* Targets Support Files */ = {
+		05303CDE9A6A7C4FC1D22F00 = {
 			isa = PBXGroup;
 			children = (
-				7C3B903C727E0A7A6A55D9E7 /* Pods-ChipManager */,
+				1294C699309922A36C63DDCD /* Podfile */,
+				D7F6A851667A5A5D42B8D910 /* Frameworks */,
+				EC488391191A9983CF07B809 /* Pods */,
+				A826AC678F37CE063F03AAAC /* Products */,
+				56BB51CADE55D28BF2E6498D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		16437D9976F279F1D0115F46 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				550CFAC677EAEB77167BBD6E /* Foundation.framework */,
+				E418BAB7763A967F5BB33C16 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		56BB51CADE55D28BF2E6498D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				BFFEC971AACC79D8B93C7FF4 /* Pods-ChipManager */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		3026A7D39D7A24D4856A3C12 /* SimpleAlert */ = {
+		60657C042E46375AC5BC0B11 /* Bohr */ = {
 			isa = PBXGroup;
 			children = (
-				88E621381642D773F69A4EB4 /* SimpleAlert.h */,
-				5BC6C192BC4E478A76A220A2 /* SimpleAlert.swift */,
-				E33CE57FDB9FBFC3D76E99A2 /* SimpleAlert.xib */,
-				44FE573576D436EABF7C82FD /* Support Files */,
+				38C75ACEEC2BFC0B278989E4 /* BOButtonTableViewCell.h */,
+				8DF0C32BF4616061E39F6546 /* BOButtonTableViewCell.m */,
+				DD93E34F97521835E18ED38C /* BOChoiceTableViewCell.h */,
+				910BF00379CD0A9FED3F9607 /* BOChoiceTableViewCell.m */,
+				3D52350CAB447C7C3950E2B0 /* BOOptionTableViewCell.h */,
+				D6250A9D8EF8844CB83A3CB8 /* BOOptionTableViewCell.m */,
+				0E11252D3F0F71C384F08750 /* BOSetting.h */,
+				3523B32D24E9797ED399C682 /* BOSetting.m */,
+				7BA87D28C9FD913008CA017F /* BOSetting+Private.h */,
+				43D157752FBFE119C189CAC0 /* BOSwitchTableViewCell.h */,
+				EE713BB524C7C6A36BBE0074 /* BOSwitchTableViewCell.m */,
+				3AE68908328ED74926105573 /* BOTableViewCell.h */,
+				DCFC8BA85FC69E142F4A7AAF /* BOTableViewCell.m */,
+				D519B0A8C44AACA9D7AAE788 /* BOTableViewCell+Subclass.h */,
+				F92D487BD1DC8FC329A29530 /* BOTableViewController.h */,
+				67A10A2B9FE62FBCC27E5B39 /* BOTableViewController.m */,
+				6867DA336321FE162122E68C /* BOTableViewController+Private.h */,
+				0A6CE6C7EA0A4D4A9C305B3E /* BOTextTableViewCell.h */,
+				DE1DE162238697296947DBF1 /* BOTextTableViewCell.m */,
+				170254D3BFB263568113A2FD /* BOTimeTableViewCell.h */,
+				FB233A041ED8604487F86E17 /* BOTimeTableViewCell.m */,
+				1C7C7789C2A44D2686B97460 /* Bohr.h */,
+				CA6CCA5F3471321917A35969 /* Support Files */,
+			);
+			path = Bohr;
+			sourceTree = "<group>";
+		};
+		6271F2574A7C375FCFE3CAE6 /* SimpleAlert */ = {
+			isa = PBXGroup;
+			children = (
+				63DC87C34EAD85C4801CDD60 /* SimpleAlert.h */,
+				A54CC8CF3E51E70681E30939 /* SimpleAlert.swift */,
+				62B3D6D489B5BA95BB33715E /* SimpleAlert.xib */,
+				A6FA88DC04B62D86461B9073 /* Support Files */,
 			);
 			path = SimpleAlert;
 			sourceTree = "<group>";
 		};
-		31FCAC98B7D9E5A9E58CEDD9 /* Frameworks */ = {
+		A6FA88DC04B62D86461B9073 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				4C92710E930865404C3F8449 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		44FE573576D436EABF7C82FD /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				E69651FE3F2598B882DDDC70 /* Info.plist */,
-				C626FC88D2B500566BE8DC4D /* Pods-ChipManager-SimpleAlert.modulemap */,
-				1CD5585E42EA04F6D8D4D415 /* Pods-ChipManager-SimpleAlert.xcconfig */,
-				40AA5EFD27AD3E321B2ECFC3 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */,
-				6AA28F84781F1D0B5ADB16AA /* Pods-ChipManager-SimpleAlert-dummy.m */,
-				F020A2081D6B1F5EA4D610FD /* Pods-ChipManager-SimpleAlert-prefix.pch */,
-				F2C5D839D300470F5EE14AED /* Pods-ChipManager-SimpleAlert-umbrella.h */,
+				064816DC2CAE6C9047643153 /* Info.plist */,
+				A9C03DDF5BFCEF6C8467EA93 /* Pods-ChipManager-SimpleAlert.modulemap */,
+				685C675463AEEFAE0AE45199 /* Pods-ChipManager-SimpleAlert.xcconfig */,
+				A23BC264FA4243B39EEE3A41 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */,
+				6F7784A1FE4578F6790CC5B6 /* Pods-ChipManager-SimpleAlert-dummy.m */,
+				D32DDAE407F0A96036378677 /* Pods-ChipManager-SimpleAlert-prefix.pch */,
+				E896408DB76EB8401F99D65B /* Pods-ChipManager-SimpleAlert-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/Pods-ChipManager-SimpleAlert";
 			sourceTree = "<group>";
 		};
-		4C92710E930865404C3F8449 /* iOS */ = {
+		A826AC678F37CE063F03AAAC /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BA3589E0C1E69CFC7AC083F0 /* Foundation.framework */,
-				6CC18B05E206BAB621D76224 /* UIKit.framework */,
+				573C9A416D5B13636ED9F24F /* Bohr.framework */,
+				CFB60763AA85062E9B3C2AAC /* Pods_ChipManager.framework */,
+				6B9EC0685815978E72B0C7EB /* SimpleAlert.framework */,
 			);
-			name = iOS;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		7C3B903C727E0A7A6A55D9E7 /* Pods-ChipManager */ = {
+		BFFEC971AACC79D8B93C7FF4 /* Pods-ChipManager */ = {
 			isa = PBXGroup;
 			children = (
-				2C4F58FBE1AFCA12670F9F84 /* Info.plist */,
-				77BB6B9D43415472D06D18F2 /* Pods-ChipManager.modulemap */,
-				69625487A52350869FDB2704 /* Pods-ChipManager-acknowledgements.markdown */,
-				9C60E61A86E546647CFFCF8B /* Pods-ChipManager-acknowledgements.plist */,
-				B451BF5E8035BCBB3E9B5CB4 /* Pods-ChipManager-dummy.m */,
-				96F3573C85F44D466E38B138 /* Pods-ChipManager-environment.h */,
-				3DDEB9596710D5E34D814B5A /* Pods-ChipManager-frameworks.sh */,
-				A1209FCF7B232A9AB9405AE3 /* Pods-ChipManager-resources.sh */,
-				1BAED58D77CF8D4A99D45F46 /* Pods-ChipManager-umbrella.h */,
-				8D6D92C20850EAFF63893A0C /* Pods-ChipManager.debug.xcconfig */,
-				9EB31AF076152680D9D71869 /* Pods-ChipManager.release.xcconfig */,
+				325F5AB269E3F87522B6C033 /* Info.plist */,
+				8C900CD8D7990784327B1E96 /* Pods-ChipManager.modulemap */,
+				0ECBE046805AF0159A150799 /* Pods-ChipManager-acknowledgements.markdown */,
+				4196D9044C60F7E2ABE5D6C5 /* Pods-ChipManager-acknowledgements.plist */,
+				277DEE2F2F5E825D97CABA70 /* Pods-ChipManager-dummy.m */,
+				CB57251E8922401220C9FDF0 /* Pods-ChipManager-environment.h */,
+				E144BA935B8AA5B6EE2CBF02 /* Pods-ChipManager-frameworks.sh */,
+				28294553034CB41D6135C022 /* Pods-ChipManager-resources.sh */,
+				1AC6AB088579C22C450E6746 /* Pods-ChipManager-umbrella.h */,
+				90EDB21A135D68EE808E9714 /* Pods-ChipManager.debug.xcconfig */,
+				4133EA9B5E363A4A8EA2A96E /* Pods-ChipManager.release.xcconfig */,
 			);
 			name = "Pods-ChipManager";
 			path = "Target Support Files/Pods-ChipManager";
 			sourceTree = "<group>";
 		};
-		89C0047E47645F1CFED73F9C /* Products */ = {
+		CA6CCA5F3471321917A35969 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				34C9B2D4539AF152FD319AAE /* Pods_ChipManager.framework */,
-				BE2083858A2901FB8E2BD284 /* SimpleAlert.framework */,
+				B30E294C776891289BA5F81D /* Info.plist */,
+				8B532C6B6ABDFA341A9DF70E /* Pods-ChipManager-Bohr.modulemap */,
+				E1084F30E0277612B483E542 /* Pods-ChipManager-Bohr.xcconfig */,
+				810A5B54A87F08CBD1286AFF /* Pods-ChipManager-Bohr-Private.xcconfig */,
+				2961432692CBAECF717F6618 /* Pods-ChipManager-Bohr-dummy.m */,
+				259AC6E4E0E68736B3B6953C /* Pods-ChipManager-Bohr-prefix.pch */,
+				064BA1BFC3BF32F8C79E819D /* Pods-ChipManager-Bohr-umbrella.h */,
 			);
-			name = Products;
+			name = "Support Files";
+			path = "../Target Support Files/Pods-ChipManager-Bohr";
 			sourceTree = "<group>";
 		};
-		A0A6A22AB2576189C262C706 = {
+		D7F6A851667A5A5D42B8D910 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FA4A00E1CCF13DA281F27AE9 /* Podfile */,
-				31FCAC98B7D9E5A9E58CEDD9 /* Frameworks */,
-				C5CF9354DCAF45CF2712BA88 /* Pods */,
-				89C0047E47645F1CFED73F9C /* Products */,
-				220D133D1E0F588C6544876C /* Targets Support Files */,
+				16437D9976F279F1D0115F46 /* iOS */,
 			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C5CF9354DCAF45CF2712BA88 /* Pods */ = {
+		EC488391191A9983CF07B809 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3026A7D39D7A24D4856A3C12 /* SimpleAlert */,
+				60657C042E46375AC5BC0B11 /* Bohr */,
+				6271F2574A7C375FCFE3CAE6 /* SimpleAlert */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -180,51 +299,90 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		6C2BE4F7F9D49AE91E6AF19D /* Headers */ = {
+		056B7BFEE70B9170FF078045 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C16E3C2B416880C7E481D3D /* Pods-ChipManager-SimpleAlert-umbrella.h in Headers */,
-				05ED177A831E73FD62D8EDEB /* SimpleAlert.h in Headers */,
+				E44680FEE10AC7B8EF48635B /* Pods-ChipManager-SimpleAlert-umbrella.h in Headers */,
+				88707F66911E486AFB3F7355 /* SimpleAlert.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C2FED953F6CED1A44B8E2B04 /* Headers */ = {
+		264A2A33415303B16C9D750C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				76FCBA0FD9BE9934DB5CEF07 /* Pods-ChipManager-umbrella.h in Headers */,
+				F1972AF7B22CE873437D063C /* BOButtonTableViewCell.h in Headers */,
+				0D3F60CF8A8C336B569AEB2B /* BOChoiceTableViewCell.h in Headers */,
+				D0851D4ED67553C5472E4D6D /* BOOptionTableViewCell.h in Headers */,
+				37336D9E11914AC4A02B0C38 /* BOSetting+Private.h in Headers */,
+				5EFB3470D6767FC8C924D867 /* BOSetting.h in Headers */,
+				843D3247DFC9698BAD68F986 /* BOSwitchTableViewCell.h in Headers */,
+				E4A204F3DB5F23FCEB7CC955 /* BOTableViewCell+Subclass.h in Headers */,
+				7E1B6A2FC5855CD5C727B77C /* BOTableViewCell.h in Headers */,
+				FD993D45089789A4B178D2BE /* BOTableViewController+Private.h in Headers */,
+				DD174B8B06F81C241AF3DE55 /* BOTableViewController.h in Headers */,
+				FE41A57276FA9F3BAD5E9824 /* BOTextTableViewCell.h in Headers */,
+				C915CED61745D761FEFE4253 /* BOTimeTableViewCell.h in Headers */,
+				281B6542C2F147F524B88414 /* Bohr.h in Headers */,
+				79A85BBD7CC40141278767E0 /* Pods-ChipManager-Bohr-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A70FBD5D7567D6783F3AF7E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF7DCBB0977B40F038319562 /* Pods-ChipManager-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		09579E3EC53EB5A340BC7D9A /* Pods-ChipManager */ = {
+		307027E5E3744CAE3F93EBBF /* Pods-ChipManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3330A99ACE9B2D69834BAD97 /* Build configuration list for PBXNativeTarget "Pods-ChipManager" */;
+			buildConfigurationList = D260BFEF8AC57EC5E9977ED7 /* Build configuration list for PBXNativeTarget "Pods-ChipManager" */;
 			buildPhases = (
-				E54645A83FA934E8172BBD3A /* Sources */,
-				BBA5BB26E9F759BE5855FF18 /* Frameworks */,
-				C2FED953F6CED1A44B8E2B04 /* Headers */,
+				F8038E0C5CD05FA5CF31A5A2 /* Sources */,
+				803A2C01CE8629B00D862182 /* Frameworks */,
+				9A70FBD5D7567D6783F3AF7E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				B5567D22DDF7D2938F3EBBD9 /* PBXTargetDependency */,
+				FB097111C146D4F1BD26D9B3 /* PBXTargetDependency */,
+				5C3F00A25EE53E5D62D48EBA /* PBXTargetDependency */,
 			);
 			name = "Pods-ChipManager";
 			productName = "Pods-ChipManager";
-			productReference = 34C9B2D4539AF152FD319AAE /* Pods_ChipManager.framework */;
+			productReference = CFB60763AA85062E9B3C2AAC /* Pods_ChipManager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		B3C7091A9DAEF2AABC288538 /* Pods-ChipManager-SimpleAlert */ = {
+		3F7EDF259CF0DEBFE77CE1C2 /* Pods-ChipManager-Bohr */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E7080EF343A0B7974485CFF0 /* Build configuration list for PBXNativeTarget "Pods-ChipManager-SimpleAlert" */;
+			buildConfigurationList = 54E0E3B345E1904C4E150662 /* Build configuration list for PBXNativeTarget "Pods-ChipManager-Bohr" */;
 			buildPhases = (
-				752731D6A0ACE587DA308D90 /* Sources */,
-				5A18866FF41A688B91627B13 /* Frameworks */,
-				6C2BE4F7F9D49AE91E6AF19D /* Headers */,
+				1173553AC54EBE6807F42DE8 /* Sources */,
+				38FD2FD77C2DBC53E8F86905 /* Frameworks */,
+				264A2A33415303B16C9D750C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ChipManager-Bohr";
+			productName = "Pods-ChipManager-Bohr";
+			productReference = 573C9A416D5B13636ED9F24F /* Bohr.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C6EC096F8E830319726F252E /* Pods-ChipManager-SimpleAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 71E1B4A0A69491B693A191D8 /* Build configuration list for PBXNativeTarget "Pods-ChipManager-SimpleAlert" */;
+			buildPhases = (
+				145CAD90032FF422A7B535A8 /* Sources */,
+				79449CB082403A8C3FBA13E0 /* Frameworks */,
+				056B7BFEE70B9170FF078045 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -232,69 +390,120 @@
 			);
 			name = "Pods-ChipManager-SimpleAlert";
 			productName = "Pods-ChipManager-SimpleAlert";
-			productReference = BE2083858A2901FB8E2BD284 /* SimpleAlert.framework */;
+			productReference = 6B9EC0685815978E72B0C7EB /* SimpleAlert.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		819DA7DC4FDB19856A02F120 /* Project object */ = {
+		33A395077FA4113CAF85EC46 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0640;
 			};
-			buildConfigurationList = E2C039E25A86E338361EEB0A /* Build configuration list for PBXProject "Pods" */;
+			buildConfigurationList = 172FFC37DCC9BE7DB79B4330 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = A0A6A22AB2576189C262C706;
-			productRefGroup = 89C0047E47645F1CFED73F9C /* Products */;
+			mainGroup = 05303CDE9A6A7C4FC1D22F00;
+			productRefGroup = A826AC678F37CE063F03AAAC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				09579E3EC53EB5A340BC7D9A /* Pods-ChipManager */,
-				B3C7091A9DAEF2AABC288538 /* Pods-ChipManager-SimpleAlert */,
+				307027E5E3744CAE3F93EBBF /* Pods-ChipManager */,
+				3F7EDF259CF0DEBFE77CE1C2 /* Pods-ChipManager-Bohr */,
+				C6EC096F8E830319726F252E /* Pods-ChipManager-SimpleAlert */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		752731D6A0ACE587DA308D90 /* Sources */ = {
+		1173553AC54EBE6807F42DE8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				117451F53FB2476438DDC7AD /* Pods-ChipManager-SimpleAlert-dummy.m in Sources */,
-				BE98688659001281041051DA /* SimpleAlert.swift in Sources */,
-				D0D5AC7455E27D411CB46D1C /* SimpleAlert.xib in Sources */,
+				A12E090924D88282DDEFAD18 /* BOButtonTableViewCell.m in Sources */,
+				1E72756D7C37EDA050623672 /* BOChoiceTableViewCell.m in Sources */,
+				0CE0DB95FD3C3E8CA2E35CF6 /* BOOptionTableViewCell.m in Sources */,
+				B4826382F7B1B4CC19AE422F /* BOSetting.m in Sources */,
+				FB7F6737DBA414FF117922EA /* BOSwitchTableViewCell.m in Sources */,
+				29128C94E928DA30EBFAC4F2 /* BOTableViewCell.m in Sources */,
+				A88D2BDA92EB2EDE338D731C /* BOTableViewController.m in Sources */,
+				D92AABA0D08DD36FB57B6DA9 /* BOTextTableViewCell.m in Sources */,
+				4D405C890CF9CFD28730D46D /* BOTimeTableViewCell.m in Sources */,
+				E7D7B48A2A08D5E5A60E6C60 /* Pods-ChipManager-Bohr-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E54645A83FA934E8172BBD3A /* Sources */ = {
+		145CAD90032FF422A7B535A8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F77BBF1F68D0B6EE03CDA094 /* Pods-ChipManager-dummy.m in Sources */,
+				7F798041B38CB9522A1766D9 /* Pods-ChipManager-SimpleAlert-dummy.m in Sources */,
+				6CBE5F57968C3706376D79D1 /* SimpleAlert.swift in Sources */,
+				132D69684D9D09531811C22F /* SimpleAlert.xib in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8038E0C5CD05FA5CF31A5A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				755E88AD5A8FFE82E034DA55 /* Pods-ChipManager-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		B5567D22DDF7D2938F3EBBD9 /* PBXTargetDependency */ = {
+		5C3F00A25EE53E5D62D48EBA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ChipManager-SimpleAlert";
-			target = B3C7091A9DAEF2AABC288538 /* Pods-ChipManager-SimpleAlert */;
-			targetProxy = 7137DFA3CFFFD6CBA69609EF /* PBXContainerItemProxy */;
+			target = C6EC096F8E830319726F252E /* Pods-ChipManager-SimpleAlert */;
+			targetProxy = 6C211B1FB4F0D04FFCCE0DBC /* PBXContainerItemProxy */;
+		};
+		FB097111C146D4F1BD26D9B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ChipManager-Bohr";
+			target = 3F7EDF259CF0DEBFE77CE1C2 /* Pods-ChipManager-Bohr */;
+			targetProxy = 02BB69FF6EFC6990AD2C1EAA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1538E2E1EBA2A7D4D6A3AA1D /* Debug */ = {
+		0442D51F620BE4357BEDC6D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40AA5EFD27AD3E321B2ECFC3 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */;
+			baseConfigurationReference = 810A5B54A87F08CBD1286AFF /* Pods-ChipManager-Bohr-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ChipManager-Bohr/Pods-ChipManager-Bohr-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager-Bohr/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager-Bohr/Pods-ChipManager-Bohr.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Bohr;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1269B98F22F2021A12EB6887 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A23BC264FA4243B39EEE3A41 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -320,9 +529,43 @@
 			};
 			name = Debug;
 		};
-		1E98BCB8D3A2119B754F96B7 /* Release */ = {
+		6B302CFD230548BA46EDEB82 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40AA5EFD27AD3E321B2ECFC3 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7C0C74247D814A9136AE8493 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 90EDB21A135D68EE808E9714 /* Pods-ChipManager.debug.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -331,14 +574,46 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Pods-ChipManager-SimpleAlert/Pods-ChipManager-SimpleAlert-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager-SimpleAlert/Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager-SimpleAlert/Pods-ChipManager-SimpleAlert.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager/Pods-ChipManager.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ChipManager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		BE8F24A6EAD7DE60E623BE61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4133EA9B5E363A4A8EA2A96E /* Pods-ChipManager.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager/Pods-ChipManager.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SimpleAlert;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_ChipManager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -347,7 +622,34 @@
 			};
 			name = Release;
 		};
-		39B9191424BCB369B26D5DCD /* Debug */ = {
+		D5E836212196585205F6B90A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 810A5B54A87F08CBD1286AFF /* Pods-ChipManager-Bohr-Private.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ChipManager-Bohr/Pods-ChipManager-Bohr-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager-Bohr/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager-Bohr/Pods-ChipManager-Bohr.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Bohr;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		DD1EF6F578968F2712A1E8D7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -386,9 +688,9 @@
 			};
 			name = Debug;
 		};
-		70541BD125B01C0DAE576543 /* Release */ = {
+		FFE1EDFD7FEE69409860013B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9EB31AF076152680D9D71869 /* Pods-ChipManager.release.xcconfig */;
+			baseConfigurationReference = A23BC264FA4243B39EEE3A41 /* Pods-ChipManager-SimpleAlert-Private.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
@@ -397,16 +699,14 @@
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager/Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ChipManager-SimpleAlert/Pods-ChipManager-SimpleAlert-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager-SimpleAlert/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager/Pods-ChipManager.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager-SimpleAlert/Pods-ChipManager-SimpleAlert.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_ChipManager;
+				PRODUCT_NAME = SimpleAlert;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -414,102 +714,47 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		D1E5485F0F097EFA2770945D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				COPY_PHASE_STRIP = YES;
-				ENABLE_NS_ASSERTIONS = NO;
-				GCC_C_LANGUAGE_STANDARD = gnu99;
-				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-				VALIDATE_PRODUCT = YES;
-			};
-			name = Release;
-		};
-		F3F50276782B29E8040AA584 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8D6D92C20850EAFF63893A0C /* Pods-ChipManager.debug.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-ChipManager/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Pods-ChipManager/Pods-ChipManager.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_NAME = Pods_ChipManager;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3330A99ACE9B2D69834BAD97 /* Build configuration list for PBXNativeTarget "Pods-ChipManager" */ = {
+		172FFC37DCC9BE7DB79B4330 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F3F50276782B29E8040AA584 /* Debug */,
-				70541BD125B01C0DAE576543 /* Release */,
+				DD1EF6F578968F2712A1E8D7 /* Debug */,
+				6B302CFD230548BA46EDEB82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E2C039E25A86E338361EEB0A /* Build configuration list for PBXProject "Pods" */ = {
+		54E0E3B345E1904C4E150662 /* Build configuration list for PBXNativeTarget "Pods-ChipManager-Bohr" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				39B9191424BCB369B26D5DCD /* Debug */,
-				D1E5485F0F097EFA2770945D /* Release */,
+				0442D51F620BE4357BEDC6D5 /* Debug */,
+				D5E836212196585205F6B90A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E7080EF343A0B7974485CFF0 /* Build configuration list for PBXNativeTarget "Pods-ChipManager-SimpleAlert" */ = {
+		71E1B4A0A69491B693A191D8 /* Build configuration list for PBXNativeTarget "Pods-ChipManager-SimpleAlert" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1538E2E1EBA2A7D4D6A3AA1D /* Debug */,
-				1E98BCB8D3A2119B754F96B7 /* Release */,
+				1269B98F22F2021A12EB6887 /* Debug */,
+				FFE1EDFD7FEE69409860013B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D260BFEF8AC57EC5E9977ED7 /* Build configuration list for PBXNativeTarget "Pods-ChipManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7C0C74247D814A9136AE8493 /* Debug */,
+				BE8F24A6EAD7DE60E623BE61 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 819DA7DC4FDB19856A02F120 /* Project object */;
+	rootObject = 33A395077FA4113CAF85EC46 /* Project object */;
 }

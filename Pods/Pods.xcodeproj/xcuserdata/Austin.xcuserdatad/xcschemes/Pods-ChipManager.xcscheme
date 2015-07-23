@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "09579E3EC53EB5A340BC7D9A"
+               BlueprintIdentifier = "307027E5E3744CAE3F93EBBF"
                BuildableName = "Pods_ChipManager.framework"
                BlueprintName = "Pods-ChipManager"
                ReferencedContainer = "container:Pods.xcodeproj">
