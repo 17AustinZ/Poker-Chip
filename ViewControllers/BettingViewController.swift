@@ -10,13 +10,21 @@ import Foundation
 import UIKit
 
 class BettingViewController: UIViewController{
+    
+    enum button {
+        case Raise
+        case Call
+        case Fold
+        case Check
+    }
+    
     var gameMode = ""
     
     var rotateView : UIView?
     @IBOutlet weak var raiseButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var foldButton: UIButton!
-    
+    @IBOutlet weak var checkButton: UIButton!
     
     @IBAction func raise(sender: AnyObject) {
     }
@@ -32,14 +40,14 @@ class BettingViewController: UIViewController{
     var playerNames : [String] = []
     var players : [Player] = []
     var currentPlayer : Player?
+    var activePlayers : [Player] = []
     func generateButtons() -> [ALRadialMenuButton] {
         
         var buttons = [ALRadialMenuButton]()
         for i in 0..<players.count {
             let button = ALRadialMenuButton(frame: CGRectMake(0, 0, 44, 44))
             button.setImage(UIImage(named: "icon\(i+1)"), forState: UIControlState.Normal)
-            
-            button.player = players[i]
+            button.setPlayer(players[i])
             buttons.append(button)
         }
         
@@ -52,10 +60,8 @@ class BettingViewController: UIViewController{
         currentPlayer = players[0]
         
         rotateView = UIView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 150, (UIScreen.mainScreen().bounds.height * 3 / 5) - 150, 300, 300))
-        rotateView?.backgroundColor = UIColor.blueColor()
+        rotateView?.backgroundColor = UIColor.whiteColor()        
         view.addSubview(rotateView!)
-        
-        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -69,12 +75,17 @@ class BettingViewController: UIViewController{
         showMenu()
     }
     
+    var buttonIndex = 0
+    var colorIndex = 0
+    var initImage : UIImage?
     
     @IBAction func testButton(sender: AnyObject) {
-//        buttons[2].setImage(UIImage(named: "icon1"), forState: UIControlState.Normal)
-//        radialMenu.setButtons(buttons)
-//        radialMenu.refreshButtons(view)
+        var temp = buttons[0]
+        for index in 1..<buttons.count{
+            
+        }
         
+        radialMenu.tester(rotateView!)
 //        - (void) runSpinAnimationOnView:(UIView*)view duration:(CGFloat)duration rotations:(CGFloat)rotations repeat:(float)repeat;
 //        {
 //            CABasicAnimation* rotationAnimation;
@@ -82,12 +93,12 @@ class BettingViewController: UIViewController{
 //            rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 /* full rotation*/ * rotations * duration ];
 //            rotationAnimation.duration = duration;
 //            rotationAnimation.cumulative = YES;
-//            rotationAnimation.repeatCount = repeat;
+//            rotationAnimation.repeatCount= repeat;
 //            
 //            [view.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
 //        }
         
-
+        
         
         
     }

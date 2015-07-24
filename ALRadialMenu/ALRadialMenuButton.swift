@@ -12,7 +12,7 @@ public typealias ALRadialMenuButtonAction = () -> Void
 
 public class ALRadialMenuButton: UIButton {
     var player : Player?
-    
+
     public var action: ALRadialMenuButtonAction? {
         didSet {
             configureAction()
@@ -28,5 +28,13 @@ public class ALRadialMenuButton: UIButton {
         if let a = action {
             a()
         }
+    }
+    
+    func setPlayer(player: Player){
+        self.player = player
+        self.setTitle("Player Name \n ASDF", forState: UIControlState.Normal)
+        self.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+        self.titleLabel?.numberOfLines = 2;
+        self.titleEdgeInsets
     }
 }

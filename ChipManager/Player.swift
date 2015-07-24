@@ -10,7 +10,7 @@ import Foundation
 
 class Player {
     var name : String?
-    
+    var active : Bool = true
     init(name : String){
         self.name = name
     }

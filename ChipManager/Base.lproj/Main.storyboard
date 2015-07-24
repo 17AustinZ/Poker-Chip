@@ -148,7 +148,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4y-XN-jfv">
-                                <rect key="frame" x="435" y="78" width="30" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
                                 <state key="normal" title="Call">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -157,7 +157,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1gA-tZ-WBd">
-                                <rect key="frame" x="473" y="78" width="31" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="31" height="30"/>
                                 <state key="normal" title="Fold">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -166,13 +166,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i1-YN-DBh">
-                                <rect key="frame" x="29" y="87" width="98" height="21"/>
+                                <rect key="frame" x="0.0" y="0.0" width="98" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXt-cD-1h0">
-                                <rect key="frame" x="277" y="532" width="46" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xXt-cD-1h0">
+                                <rect key="frame" x="277" y="550" width="46" height="30"/>
                                 <state key="normal" title="Button">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -181,13 +181,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i7k-cH-NW3">
-                                <rect key="frame" x="512" y="78" width="44" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="44" height="30"/>
                                 <state key="normal" title="Check">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QoO-yr-Yho">
-                                <rect key="frame" x="389" y="78" width="38" height="30"/>
+                                <rect key="frame" x="0.0" y="0.0" width="38" height="30"/>
                                 <state key="normal" title="Raise">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -198,12 +198,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="4We-LO-SZ7" firstAttribute="top" secondItem="xXt-cD-1h0" secondAttribute="bottom" constant="65" id="EIl-pP-Xh1"/>
+                            <constraint firstItem="4We-LO-SZ7" firstAttribute="top" secondItem="xXt-cD-1h0" secondAttribute="bottom" constant="20" id="EIl-pP-Xh1"/>
                             <constraint firstAttribute="centerX" secondItem="xXt-cD-1h0" secondAttribute="centerX" id="Y4i-2m-OLx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="callButton" destination="Y4y-XN-jfv" id="zRA-PO-feJ"/>
+                        <outlet property="checkButton" destination="i7k-cH-NW3" id="aDw-M1-NJ3"/>
                         <outlet property="foldButton" destination="1gA-tZ-WBd" id="keg-sA-Gk7"/>
                         <outlet property="mainView" destination="G3k-E2-Fgy" id="oks-zu-jnm"/>
                         <outlet property="raiseButton" destination="QoO-yr-Yho" id="xEZ-Sw-Eji"/>

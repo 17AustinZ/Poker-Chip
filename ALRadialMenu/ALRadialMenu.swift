@@ -194,6 +194,18 @@ public class ALRadialMenu: UIButton {
         }
         
     }
+    
+    public func tester(view: UIView){
+        var window = view.window
+        
+        for i in 0..<buttons.count - 1 {
+            rotateButton(buttons[i], index: i+1)
+
+        }
+        rotateButton(buttons[buttons.count - 1], index: 0)
+        
+        buttons.insert(buttons.removeAtIndex(buttons.count-1), atIndex: 0)
+    }
     /**
     Dismiss the buttons with an animation
     */
@@ -280,6 +292,19 @@ public class ALRadialMenu: UIButton {
             view.alpha = 1
             view.center = newCenter
         }, completion: nil)
+    }
+    
+    private func rotateButton(view: ALRadialMenuButton, index: Int){
+        let degrees = startAngle.degrees + spacingDegrees.degrees * Double(index)
+        let newCenter = pointOnCircumference(animationOrigin, radius: radius, angle: Angle(degrees: degrees))
+        let _delay = Double(index) * delay
+        
+        //view.center = animationOrigin
+        view.alpha = 0
+        UIView.animateWithDuration(0.5, delay: _delay, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: animationOptions, animations: {
+            view.alpha = 1
+            view.center = newCenter
+            }, completion: nil)
     }
     
     private func presentWithoutAnimation(view: ALRadialMenuButton, index: Int) {
