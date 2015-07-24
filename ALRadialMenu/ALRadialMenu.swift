@@ -24,7 +24,7 @@ public class ALRadialMenu: UIButton {
     
     public convenience init() {
         self.init(frame: CGRectZero)
-        overlayView = UIView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2, UIScreen.mainScreen().bounds.height / 2, CGFloat(self.radius * 2), CGFloat(self.radius * 2)))
+        overlayView = UIView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2, UIScreen.mainScreen().bounds.height * 3 / 5, CGFloat(self.radius * 2), CGFloat(self.radius * 2)))
     }
     
     public override init(frame: CGRect) {
@@ -284,7 +284,7 @@ public class ALRadialMenu: UIButton {
     
     private func presentWithoutAnimation(view: ALRadialMenuButton, index: Int) {
         let degrees = startAngle.degrees + spacingDegrees.degrees * Double(index)
-        let newCenter = pointOnCircumference(CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height / 2), radius: radius, angle: Angle(degrees: degrees))
+        let newCenter = pointOnCircumference(CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height * 3 / 5), radius: radius, angle: Angle(degrees: degrees))
         let _delay = Double(index) * delay
         view.alpha = 1
         view.center = newCenter

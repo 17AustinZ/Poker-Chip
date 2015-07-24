@@ -46,7 +46,7 @@ class ConfigureViewController: UIViewController{
         navigationController?.setNavigationBarHidden(false, animated: true)
         if segue.identifier == "toGame" {
             var bettingVC : BettingViewController = segue.destinationViewController as! BettingViewController
-            bettingVC.players = [Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob")]
+            bettingVC.players = [Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob")]
         }
         
     }

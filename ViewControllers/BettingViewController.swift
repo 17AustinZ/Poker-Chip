@@ -12,6 +12,7 @@ import UIKit
 class BettingViewController: UIViewController{
     var gameMode = ""
     
+    var rotateView : UIView?
     @IBOutlet weak var raiseButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var foldButton: UIButton!
@@ -23,8 +24,10 @@ class BettingViewController: UIViewController{
     }
     @IBAction func fold(sender: AnyObject) {
     }
+    @IBOutlet var mainView: UIView!
+    
     var radialMenu : ALRadialMenu = ALRadialMenu()
-    var numPlayers : Int? = 8
+    var numPlayers : Int? = 6
     var buttons : [ALRadialMenuButton] = []
     var playerNames : [String] = []
     var players : [Player] = []
@@ -48,6 +51,11 @@ class BettingViewController: UIViewController{
         super.viewDidLoad()
         currentPlayer = players[0]
         
+        rotateView = UIView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 150, (UIScreen.mainScreen().bounds.height * 3 / 5) - 150, 300, 300))
+        rotateView?.backgroundColor = UIColor.blueColor()
+        view.addSubview(rotateView!)
+        
+        
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -63,17 +71,29 @@ class BettingViewController: UIViewController{
     
     
     @IBAction func testButton(sender: AnyObject) {
-        buttons[2].setImage(UIImage(named: "icon1"), forState: UIControlState.Normal)
-        radialMenu.setButtons(buttons)
-        radialMenu.refreshButtons(view)
+//        buttons[2].setImage(UIImage(named: "icon1"), forState: UIControlState.Normal)
+//        radialMenu.setButtons(buttons)
+//        radialMenu.refreshButtons(view)
         
+//        - (void) runSpinAnimationOnView:(UIView*)view duration:(CGFloat)duration rotations:(CGFloat)rotations repeat:(float)repeat;
+//        {
+//            CABasicAnimation* rotationAnimation;
+//            rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
+//            rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 /* full rotation*/ * rotations * duration ];
+//            rotationAnimation.duration = duration;
+//            rotationAnimation.cumulative = YES;
+//            rotationAnimation.repeatCount = repeat;
+//            
+//            [view.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
+//        }
         
 
+        
         
     }
     
     func showMenu() {
-        var midScreen = CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height / 2)
+        var midScreen = CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height * 3 / 5)
         var buttons = [ALRadialMenuButton]()
 //            ALRadialMenu()
 //                .setButtons(buttons)
@@ -83,7 +103,7 @@ class BettingViewController: UIViewController{
         radialMenu = ALRadialMenu().setButtons(generateButtons()).setAnimationOrigin(midScreen)
         radialMenu.setRadius(150)
         radialMenu.setDismissOnOverlayTap(false)
-        radialMenu.presentInView(view)
+        radialMenu.presentInView(rotateView!)
 
         
     }
