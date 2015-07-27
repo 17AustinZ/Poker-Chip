@@ -11,7 +11,7 @@ import UIKit
 
 class BettingViewController: UIViewController{
     
-    enum button {
+    enum Button {
         case Raise
         case Call
         case Fold
@@ -80,26 +80,32 @@ class BettingViewController: UIViewController{
     var initImage : UIImage?
     
     @IBAction func testButton(sender: AnyObject) {
-        var temp = buttons[0]
-        for index in 1..<buttons.count{
+        //radialMenu.tester(rotateView!)
+        
+        sender.setTitle("asdf", forState: UIControlState.Normal)
+        label()
+    }
+    
+    @IBAction func testButton2(sender: AnyObject) {
+        radialMenu.rotate(view)
+    }
+    
+    func label(){
+     
+        for i in 0..<buttons.count {
+            let button = buttons[i]
             
+            button.setTitle("\(button.player?.name)\n\n\nA", forState: UIControlState.Normal)
+            button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+            button.setBackgroundImage(button.imageView?.image, forState: UIControlState.Normal)
+            button.setImage(nil, forState: UIControlState.Normal)
+            button.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+            button.titleLabel?.numberOfLines = 0;
+            button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0)
+//            button.titleEdgeInsets = UIEdgeInsetsMake( 0, 0, buttons[0].imageView!.image!.size.height, 0)
+            button.titleEdgeInsets = UIEdgeInsetsMake( 0, 0, 0, 0)
+
         }
-        
-        radialMenu.tester(rotateView!)
-//        - (void) runSpinAnimationOnView:(UIView*)view duration:(CGFloat)duration rotations:(CGFloat)rotations repeat:(float)repeat;
-//        {
-//            CABasicAnimation* rotationAnimation;
-//            rotationAnimation = [CABasicAnimation animationWithKeyPath:@"transform.rotation.z"];
-//            rotationAnimation.toValue = [NSNumber numberWithFloat: M_PI * 2.0 /* full rotation*/ * rotations * duration ];
-//            rotationAnimation.duration = duration;
-//            rotationAnimation.cumulative = YES;
-//            rotationAnimation.repeatCount= repeat;
-//            
-//            [view.layer addAnimation:rotationAnimation forKey:@"rotationAnimation"];
-//        }
-        
-        
-        
         
     }
     
@@ -115,6 +121,22 @@ class BettingViewController: UIViewController{
         radialMenu.setRadius(150)
         radialMenu.setDismissOnOverlayTap(false)
         radialMenu.presentInView(rotateView!)
+
+        
+    }
+    
+    func bet(action : Button){
+        switch action{
+        case .Raise:
+            println("raise")
+        case .Call:
+            println("call")
+        case .Fold:
+            println("fold")
+        case .Check:
+            println("check")
+            
+        }
 
         
     }

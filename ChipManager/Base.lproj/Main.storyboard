@@ -96,7 +96,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="yC8-6a-cyb" kind="show" identifier="toGame" id="K4A-Wx-sRF"/>
+                                    <segue destination="yC8-6a-cyb" kind="show" identifier="toGame" id="Bp9-hl-NRT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-VP-pI4">
@@ -195,10 +195,21 @@
                                     <action selector="raise:" destination="yC8-6a-cyb" eventType="touchUpInside" id="BuG-xx-fYf"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t5t-MK-Gpe">
+                                <rect key="frame" x="210" y="550" width="46" height="30"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="testButton2:" destination="yC8-6a-cyb" eventType="touchUpInside" id="v3G-HU-qax"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="4We-LO-SZ7" firstAttribute="top" secondItem="xXt-cD-1h0" secondAttribute="bottom" constant="20" id="EIl-pP-Xh1"/>
+                            <constraint firstItem="xXt-cD-1h0" firstAttribute="leading" secondItem="t5t-MK-Gpe" secondAttribute="trailing" constant="21" id="Rae-5H-Pi5"/>
+                            <constraint firstItem="xXt-cD-1h0" firstAttribute="centerY" secondItem="t5t-MK-Gpe" secondAttribute="centerY" id="Xcd-hu-G4e"/>
                             <constraint firstAttribute="centerX" secondItem="xXt-cD-1h0" secondAttribute="centerX" id="Y4i-2m-OLx"/>
                         </constraints>
                     </view>

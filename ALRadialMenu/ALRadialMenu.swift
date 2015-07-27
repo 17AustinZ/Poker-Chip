@@ -65,7 +65,9 @@ public class ALRadialMenu: UIButton {
             
             button.center = center
             button.action = {
-                self.dismiss(i)
+                button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
+                button.imageEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
+
                 if let a = action {
                     a()
                 }
@@ -195,7 +197,7 @@ public class ALRadialMenu: UIButton {
         
     }
     
-    public func tester(view: UIView){
+    public func rotate(view: UIView){
         var window = view.window
         
         for i in 0..<buttons.count - 1 {
@@ -292,6 +294,7 @@ public class ALRadialMenu: UIButton {
             view.alpha = 1
             view.center = newCenter
         }, completion: nil)
+       
     }
     
     private func rotateButton(view: ALRadialMenuButton, index: Int){
@@ -339,6 +342,7 @@ public class ALRadialMenu: UIButton {
             view.transform = CGAffineTransformIdentity
             view.removeFromSuperview()
         })
+         view.setPlayer(Player(name: "asdf"))
     }
     
     private func pointOnCircumference(origin: CGPoint, radius: Double, angle: Angle) -> CGPoint {

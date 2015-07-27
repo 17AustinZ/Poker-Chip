@@ -35,6 +35,6 @@ public class ALRadialMenuButton: UIButton {
         self.setTitle("Player Name \n ASDF", forState: UIControlState.Normal)
         self.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
         self.titleLabel?.numberOfLines = 2;
-        self.titleEdgeInsets
+        self.titleEdgeInsets = UIEdgeInsetsMake(0.0, 0.0, 0.0, 0.0)
     }
 }
