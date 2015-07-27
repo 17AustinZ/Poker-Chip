@@ -47,7 +47,15 @@ class ConfigureViewController: UIViewController{
         if segue.identifier == "toGame" {
             println("asdf0")
             var bettingVC : BettingViewController = segue.destinationViewController as! BettingViewController
-            bettingVC.players = [Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob"),Player(name: "bob")]
+            bettingVC.players = [
+                Player(name: "Player 1"),
+                Player(name: "Player 2"),
+                Player(name: "Player 3"),
+                Player(name: "Player 4"),
+                Player(name: "Player 5"),
+                Player(name: "Player 6"),
+                Player(name: "Player 7"),
+                Player(name: "Player 8")]
         }
         
     }

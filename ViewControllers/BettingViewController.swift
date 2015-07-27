@@ -94,8 +94,9 @@ class BettingViewController: UIViewController{
      
         for i in 0..<buttons.count {
             let button = buttons[i]
-            
-            button.setTitle("\(button.player?.name)\n\n\nA", forState: UIControlState.Normal)
+            button.titleLabel?.textAlignment = NSTextAlignment.Center
+            button.setTitle("\(button.player!.name!)\n\n\nA", forState: UIControlState.Normal)
+//            button.sizeToFit()
             button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
             button.setBackgroundImage(button.imageView?.image, forState: UIControlState.Normal)
             button.setImage(nil, forState: UIControlState.Normal)
