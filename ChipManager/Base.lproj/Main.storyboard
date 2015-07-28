@@ -73,7 +73,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gco-hn-OLM">
                                 <rect key="frame" x="0.0" y="64" width="600" height="390"/>
                                 <connections>
-                                    <segue destination="72A-wb-9GJ" kind="embed" id="njS-Jn-njF"/>
+                                    <segue destination="72A-wb-9GJ" kind="embed" identifier="configureEmbed" id="njS-Jn-njF"/>
                                 </connections>
                             </containerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1YA-Xd-nuQ">
@@ -101,10 +101,10 @@
             </objects>
             <point key="canvasLocation" x="-195" y="652"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Configure View Controller-->
         <scene sceneID="Q8Y-Vv-1qY">
             <objects>
-                <tableViewController id="72A-wb-9GJ" customClass="BOTableViewController" sceneMemberID="viewController">
+                <tableViewController id="72A-wb-9GJ" customClass="BOConfigureViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="LGS-hh-hTI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

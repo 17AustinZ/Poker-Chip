@@ -11,7 +11,7 @@ import Bohr
 
 class BOContainerViewController : UIViewController{
     var betStructure : bettingStructure = .Default
-    
+    var config : BOConfigureViewController?
     enum bettingStructure {
         case Default
         case NoLimit
@@ -38,6 +38,8 @@ class BOContainerViewController : UIViewController{
                 Player(name: "P06", startChips: startingChips!),
                 Player(name: "P07", startChips: startingChips!),
                 Player(name: "P08", startChips: startingChips!)]
+        } else if segue.identifier == "configureEmbed"{
+            config = segue.destinationViewController as? BOConfigureViewController
         }
         
         
