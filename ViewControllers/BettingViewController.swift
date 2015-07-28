@@ -95,16 +95,25 @@ class BettingViewController: UIViewController{
         for i in 0..<buttons.count {
             let button = buttons[i]
             button.titleLabel?.textAlignment = NSTextAlignment.Center
-            button.setTitle("\(button.player!.name!)\n\n\nA", forState: UIControlState.Normal)
+            button.setTitle("\(button.player!.name!)\n\n\n\nA", forState: UIControlState.Normal)
 //            button.sizeToFit()
             button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
             button.setBackgroundImage(button.imageView?.image, forState: UIControlState.Normal)
             button.setImage(nil, forState: UIControlState.Normal)
-            button.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
+//            button.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
             button.titleLabel?.numberOfLines = 0;
-            button.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0)
-//            button.titleEdgeInsets = UIEdgeInsetsMake( 0, 0, buttons[0].imageView!.image!.size.height, 0)
-            button.titleEdgeInsets = UIEdgeInsetsMake( 0, 0, 0, 0)
+            button.titleLabel?.font = UIFont.systemFontOfSize(12)
+//            button.titleLabel?.lineBreakMode = NSLineBreakMode.ByTruncatingTail
+
+//            button.setBackgroundImage(nil, forState: UIControlState.Normal)
+//            var bgImageView : UIImageView = UIImageView(image: button.imageView?.image)
+//            bgImageView.contentMode = UIViewContentMode.ScaleAspectFill
+//            bgImageView.frame = CGRectMake(0, 0, button.frame.size.width, button.frame.size.height)
+//            button.addSubview(bgImageView)
+//            button.bringSubviewToFront(button.imageView!)
+//            button.sizeToFit()
+            
+    
 
         }
         

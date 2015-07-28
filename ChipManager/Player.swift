@@ -11,7 +11,10 @@ import Foundation
 class Player {
     var name : String?
     var active : Bool = true
-    init(name : String){
+    var chips : Int?
+    
+    init(name : String, startChips : Int){
         self.name = name
+        chips = startChips
     }
 }

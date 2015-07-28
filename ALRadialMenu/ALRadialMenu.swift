@@ -342,7 +342,6 @@ public class ALRadialMenu: UIButton {
             view.transform = CGAffineTransformIdentity
             view.removeFromSuperview()
         })
-         view.setPlayer(Player(name: "asdf"))
     }
     
     private func pointOnCircumference(origin: CGPoint, radius: Double, angle: Angle) -> CGPoint {

@@ -21,7 +21,8 @@ class ConfigureViewController: UIViewController{
     
     @IBOutlet weak var bettingStructureButton: UIButton!
     
-    @IBOutlet weak var bettingStructureDisplay: UILabel! 
+    @IBOutlet weak var bettingStructureDisplay: UILabel!
+    
     var betStructure : bettingStructure = .Default
     
     enum bettingStructure {
@@ -31,6 +32,7 @@ class ConfigureViewController: UIViewController{
         case PotLimit
         case SpreadLimit
     }
+    var startingChips : Int? = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,21 +44,22 @@ class ConfigureViewController: UIViewController{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
-        super.prepareForSegue(segue, sender: sender)
-        navigationController?.setNavigationBarHidden(false, animated: true)
+
         if segue.identifier == "toGame" {
-            println("asdf0")
+            super.prepareForSegue(segue, sender: sender)
+            navigationController?.setNavigationBarHidden(false, animated: true)
             var bettingVC : BettingViewController = segue.destinationViewController as! BettingViewController
             bettingVC.players = [
-                Player(name: "Player 1"),
-                Player(name: "Player 2"),
-                Player(name: "Player 3"),
-                Player(name: "Player 4"),
-                Player(name: "Player 5"),
-                Player(name: "Player 6"),
-                Player(name: "Player 7"),
-                Player(name: "Player 8")]
+                Player(name: "P01", startChips: startingChips!),
+                Player(name: "P02", startChips: startingChips!),
+                Player(name: "P03", startChips: startingChips!),
+                Player(name: "P04", startChips: startingChips!),
+                Player(name: "P05", startChips: startingChips!),
+                Player(name: "P06", startChips: startingChips!),
+                Player(name: "P07", startChips: startingChips!),
+                Player(name: "P08", startChips: startingChips!)]
         }
+
         
     }
 
