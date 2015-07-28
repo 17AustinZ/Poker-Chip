@@ -7,3 +7,11 @@
 //
 
 import Foundation
+import Bohr
+
+class BettingStructureCell : BOChoiceTableViewCell{
+    override func wasSelectedFromViewController(viewController: BOTableViewController!) {
+        self.detailTextLabel?.text = "asdf"
+        self.settingValueDidChange()
+    }
+}
