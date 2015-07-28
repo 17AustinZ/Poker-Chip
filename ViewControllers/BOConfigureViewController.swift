@@ -7,8 +7,9 @@
 //
 
 import Foundation
+import Bohr
 
-class BOContainerController : UIViewController{
+class BOConfigureViewController : BOTableViewController{
     var betStructure : bettingStructure = .Default
     
     enum bettingStructure {
