@@ -16,7 +16,7 @@ import UIKit
 //import CZViewController
 
 
-
+//
 class ConfigureViewController: UIViewController{
     
     @IBOutlet weak var bettingStructureButton: UIButton!
@@ -36,7 +36,7 @@ class ConfigureViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.setNavigationBarHidden(true, animated: true)
+//        navigationController?.setNavigationBarHidden(true, animated: true)
         bettingStructureDisplay.text = ""
         
 
@@ -45,20 +45,6 @@ class ConfigureViewController: UIViewController{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
 
 
-        if segue.identifier == "toGame" {
-            super.prepareForSegue(segue, sender: sender)
-            navigationController?.setNavigationBarHidden(false, animated: true)
-            var bettingVC : BettingViewController = segue.destinationViewController as! BettingViewController
-            bettingVC.players = [
-                Player(name: "P01", startChips: startingChips!),
-                Player(name: "P02", startChips: startingChips!),
-                Player(name: "P03", startChips: startingChips!),
-                Player(name: "P04", startChips: startingChips!),
-                Player(name: "P05", startChips: startingChips!),
-                Player(name: "P06", startChips: startingChips!),
-                Player(name: "P07", startChips: startingChips!),
-                Player(name: "P08", startChips: startingChips!)]
-        }
 
         
     }

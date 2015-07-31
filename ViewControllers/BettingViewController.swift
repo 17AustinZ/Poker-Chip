@@ -11,6 +11,47 @@ import UIKit
 
 class BettingViewController: UIViewController{
     
+    @IBOutlet weak var CheckCallButton: UIButton!
+    
+    @IBOutlet weak var BetRaiseButton: UIButton!
+    
+    @IBOutlet weak var FoldButton: UIButton!
+    
+    
+    @IBAction func CheckCall(sender: AnyObject) {
+        
+    }
+    
+    @IBAction func BetRaise(sender: AnyObject) {
+        pool += 25
+        players[currentPlayerIndex!].chips! -= 25
+        nextTurn()
+    }
+    
+    @IBAction func Fold(sender: AnyObject) {
+//        players[currentPlayerIndex!].active  = false
+        players.removeAtIndex(currentPlayerIndex!)
+        radialMenu.dismiss()
+        radialMenu.setButtons(generateButtons())
+        showMenu()
+        nextTurn()
+    }
+
+    func nextTurn(){
+        
+        poolLabel?.text = String(pool)
+        label()
+        currentPlayerIndex = currentPlayerIndex! - 1
+        if currentPlayerIndex! < 0 {
+            currentPlayerIndex = players.count - 1
+        }
+        radialMenu.rotate(view)
+        if (!players[currentPlayerIndex!].active){
+            
+            nextTurn()
+        }
+    }
+    
     enum Button {
         case Raise
         case Call
@@ -21,45 +62,41 @@ class BettingViewController: UIViewController{
     var gameMode = ""
     
     var rotateView : UIView?
-    @IBOutlet weak var raiseButton: UIButton!
-    @IBOutlet weak var callButton: UIButton!
-    @IBOutlet weak var foldButton: UIButton!
-    @IBOutlet weak var checkButton: UIButton!
     
-    @IBAction func raise(sender: AnyObject) {
-    }
-    @IBAction func call(sender: AnyObject) {
-    }
-    @IBAction func fold(sender: AnyObject) {
-    }
+    
     @IBOutlet var mainView: UIView!
     
     var radialMenu : ALRadialMenu = ALRadialMenu()
-    var numPlayers : Int? = 6
+    var numPlayers : Int? = 0
     var buttons : [ALRadialMenuButton] = []
     var playerNames : [String] = []
     var players : [Player] = []
-    var currentPlayer : Player?
+    var currentPlayerIndex : Int?
     var activePlayers : [Player] = []
+    
+    var poolLabel : UILabel?
+    var pool : Int = 0
+    
     func generateButtons() -> [ALRadialMenuButton] {
-        
-        var buttons = [ALRadialMenuButton]()
+        buttons = []
+        numPlayers = players.count
+        println(players.count)
         for i in 0..<players.count {
             let button = ALRadialMenuButton(frame: CGRectMake(0, 0, 44, 44))
-            button.setImage(UIImage(named: "icon\(i+1)"), forState: UIControlState.Normal)
+            button.setImage(UIImage(named: "icon\(players[i].color!)"), forState: UIControlState.Normal)
             button.setPlayer(players[i])
             buttons.append(button)
         }
         
-        self.buttons = buttons
         return buttons
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        currentPlayer = players[0]
+        currentPlayerIndex = 0
         
         rotateView = UIView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 150, (UIScreen.mainScreen().bounds.height * 3 / 5) - 150, 300, 300))
+        
         rotateView?.backgroundColor = UIColor.whiteColor()        
         view.addSubview(rotateView!)
     }
@@ -71,20 +108,43 @@ class BettingViewController: UIViewController{
     
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
-        generateButtons()
         showMenu()
+        label()
+        poolLabel = UILabel(frame: CGRectMake((UIScreen.mainScreen().bounds.width / 2) - 20, (UIScreen.mainScreen().bounds.height * 3 / 5) - 20 , 40, 40))
+        view.addSubview(poolLabel!)
+        poolLabel?.textAlignment = NSTextAlignment.Center
+        poolLabel?.text = String(pool)
+        view.bringSubviewToFront(poolLabel!)
+
     }
+    
+    override func viewWillDisappear(animated: Bool) {
+        println("asdf2")
+        radialMenu.dismiss()
+        radialMenu.removeFromSuperview()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        println("asdf")
+        radialMenu.dismiss()
+        radialMenu.removeFromSuperview()
+        
+    }
+    
+    
     
     var buttonIndex = 0
     var colorIndex = 0
     var initImage : UIImage?
     
     @IBAction func testButton(sender: AnyObject) {
-        //radialMenu.tester(rotateView!)
         
-        sender.setTitle("asdf", forState: UIControlState.Normal)
-        label()
+        for i in players {
+            println("\(i.active)\t\(i.name!)\t\(i.chips!)")
+        }
+        
     }
+    
     
     @IBAction func testButton2(sender: AnyObject) {
         radialMenu.rotate(view)
@@ -95,24 +155,13 @@ class BettingViewController: UIViewController{
         for i in 0..<buttons.count {
             let button = buttons[i]
             button.titleLabel?.textAlignment = NSTextAlignment.Center
-            button.setTitle("\(button.player!.name!)\n\n\n\nA", forState: UIControlState.Normal)
-//            button.sizeToFit()
+            button.setTitle("\(button.player!.name!)\n\n\n\n\(button.player!.chips!)", forState: UIControlState.Normal)
             button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
             button.setBackgroundImage(button.imageView?.image, forState: UIControlState.Normal)
             button.setImage(nil, forState: UIControlState.Normal)
-//            button.titleLabel?.lineBreakMode = NSLineBreakMode.ByWordWrapping
             button.titleLabel?.numberOfLines = 0;
             button.titleLabel?.font = UIFont.systemFontOfSize(12)
-//            button.titleLabel?.lineBreakMode = NSLineBreakMode.ByTruncatingTail
 
-//            button.setBackgroundImage(nil, forState: UIControlState.Normal)
-//            var bgImageView : UIImageView = UIImageView(image: button.imageView?.image)
-//            bgImageView.contentMode = UIViewContentMode.ScaleAspectFill
-//            bgImageView.frame = CGRectMake(0, 0, button.frame.size.width, button.frame.size.height)
-//            button.addSubview(bgImageView)
-//            button.bringSubviewToFront(button.imageView!)
-//            button.sizeToFit()
-            
     
 
         }
@@ -121,7 +170,6 @@ class BettingViewController: UIViewController{
     
     func showMenu() {
         var midScreen = CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height * 3 / 5)
-        var buttons = [ALRadialMenuButton]()
 //            ALRadialMenu()
 //                .setButtons(buttons)
 //                .setAnimationOrigin(sender.locationInView(view))
@@ -131,7 +179,9 @@ class BettingViewController: UIViewController{
         radialMenu.setRadius(150)
         radialMenu.setDismissOnOverlayTap(false)
         radialMenu.presentInView(rotateView!)
-
+        println(buttons.count)
+        
+        
         
     }
     

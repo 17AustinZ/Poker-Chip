@@ -330,7 +330,7 @@ public class ALRadialMenu: UIButton {
         })
     }
     
-    private func dismissWithoutAnimation(view: ALRadialMenuButton, index: Int) {
+    public func dismissWithoutAnimation(view: ALRadialMenuButton, index: Int) {
         view.removeFromSuperview()
         
     }

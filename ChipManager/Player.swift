@@ -12,9 +12,11 @@ class Player {
     var name : String?
     var active : Bool = true
     var chips : Int?
+    var color : Int?
     
-    init(name : String, startChips : Int){
+    init(name : String, startChips : Int, color: Int){
         self.name = name
         chips = startChips
+        self.color = color
     }
 }

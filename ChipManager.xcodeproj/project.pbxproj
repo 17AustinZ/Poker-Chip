@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D92229CF1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92229CE1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift */; };
+		D92229D11B696F9F00EC8F59 /* ConfigureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92229D01B696F9F00EC8F59 /* ConfigureContainerViewController.swift */; };
+		D92229D31B6973A700EC8F59 /* ConfigureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92229D21B6973A700EC8F59 /* ConfigureTableViewController.swift */; };
 		D94C050C1B6015A400B323F1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C050B1B6015A400B323F1 /* Player.swift */; };
-		D9665D9F1B67E6200098F0D0 /* BOContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9665D9E1B67E6200098F0D0 /* BOContainerViewController.swift */; };
 		D98417E51B67EDFB004A48C4 /* BettingStructureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98417E41B67EDFB004A48C4 /* BettingStructureCell.swift */; };
-		D98417E71B67EF00004A48C4 /* BOConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98417E61B67EF00004A48C4 /* BOConfigureViewController.swift */; };
 		D9906D111B66B058002EA52F /* UILabelResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906D101B66B058002EA52F /* UILabelResizable.swift */; };
 		D9B117C01B5962EE003204CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117BF1B5962EE003204CC /* AppDelegate.swift */; };
 		D9B117C21B5962EE003204CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117C11B5962EE003204CC /* ViewController.swift */; };
@@ -41,10 +42,11 @@
 		1C62A9C68BD99D7D2008FE4B /* Pods-ChipManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChipManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChipManager/Pods-ChipManager.debug.xcconfig"; sourceTree = "<group>"; };
 		440C609F5F3F7DE89346B446 /* Pods_ChipManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChipManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3A56DB1737A8089BDE467D /* Pods-ChipManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChipManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChipManager/Pods-ChipManager.release.xcconfig"; sourceTree = "<group>"; };
+		D92229CE1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingStructureOptionViewController.swift; sourceTree = "<group>"; };
+		D92229D01B696F9F00EC8F59 /* ConfigureContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureContainerViewController.swift; sourceTree = "<group>"; };
+		D92229D21B6973A700EC8F59 /* ConfigureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureTableViewController.swift; sourceTree = "<group>"; };
 		D94C050B1B6015A400B323F1 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		D9665D9E1B67E6200098F0D0 /* BOContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BOContainerViewController.swift; sourceTree = "<group>"; };
 		D98417E41B67EDFB004A48C4 /* BettingStructureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingStructureCell.swift; sourceTree = "<group>"; };
-		D98417E61B67EF00004A48C4 /* BOConfigureViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BOConfigureViewController.swift; sourceTree = "<group>"; };
 		D9906D101B66B058002EA52F /* UILabelResizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelResizable.swift; sourceTree = "<group>"; };
 		D9B117BA1B5962EE003204CC /* ChipManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChipManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B117BE1B5962EE003204CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -181,8 +183,9 @@
 			children = (
 				D9B117E01B59635E003204CC /* BettingViewController.swift */,
 				D9B117E11B59635E003204CC /* ConfigureViewController.swift */,
-				D9665D9E1B67E6200098F0D0 /* BOContainerViewController.swift */,
-				D98417E61B67EF00004A48C4 /* BOConfigureViewController.swift */,
+				D92229D01B696F9F00EC8F59 /* ConfigureContainerViewController.swift */,
+				D92229D21B6973A700EC8F59 /* ConfigureTableViewController.swift */,
+				D92229CE1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = SOURCE_ROOT;
@@ -364,11 +367,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D9665D9F1B67E6200098F0D0 /* BOContainerViewController.swift in Sources */,
+				D92229D31B6973A700EC8F59 /* ConfigureTableViewController.swift in Sources */,
 				D9906D111B66B058002EA52F /* UILabelResizable.swift in Sources */,
 				D9B117C21B5962EE003204CC /* ViewController.swift in Sources */,
 				D98417E51B67EDFB004A48C4 /* BettingStructureCell.swift in Sources */,
-				D98417E71B67EF00004A48C4 /* BOConfigureViewController.swift in Sources */,
 				D9D478BC1B5DB10000CAA8C4 /* ALRadialMenu.swift in Sources */,
 				D9D478B81B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift in Sources */,
 				D9B117E41B59635E003204CC /* ConfigureViewController.swift in Sources */,
@@ -377,6 +379,8 @@
 				D9D478BD1B5DB10000CAA8C4 /* ALRadialMenuButton.swift in Sources */,
 				D94C050C1B6015A400B323F1 /* Player.swift in Sources */,
 				D9B117EC1B5963B9003204CC /* DYAlertPickView.m in Sources */,
+				D92229CF1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift in Sources */,
+				D92229D11B696F9F00EC8F59 /* ConfigureContainerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

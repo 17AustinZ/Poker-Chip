@@ -9,9 +9,16 @@
 import Foundation
 import Bohr
 
+
 class BettingStructureCell : BOChoiceTableViewCell{
+    var BettingStructureOptions : ConfigureTableViewController?
+    
     override func wasSelectedFromViewController(viewController: BOTableViewController!) {
         self.detailTextLabel?.text = "asdf"
+        self.textLabel?.text = "asdf"
         self.settingValueDidChange()
+        println("check")
+        
     }
+    
 }
