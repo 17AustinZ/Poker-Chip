@@ -1,0 +1,6 @@
+framework module LGPlusButtonsView {
+  umbrella header "Pods-ChipManager-LGPlusButtonsView-umbrella.h"
+
+  export *
+  module * { export * }
+}

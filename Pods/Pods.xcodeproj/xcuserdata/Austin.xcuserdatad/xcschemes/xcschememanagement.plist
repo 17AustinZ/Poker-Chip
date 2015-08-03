@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ChipManager-LGPlusButtonsView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ChipManager-SimpleAlert.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -22,17 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>307027E5E3744CAE3F93EBBF</key>
+		<key>0E413925904AFD12920FF2E9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3F7EDF259CF0DEBFE77CE1C2</key>
+		<key>54F798A06B97E0024E67E7B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C6EC096F8E830319726F252E</key>
+		<key>6348FE42C26D16A2E13F5A73</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>82CDA56490B6F942F7A7EC0D</key>
 		<dict>
 			<key>primary</key>
 			<true/>

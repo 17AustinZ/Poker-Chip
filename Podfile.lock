@@ -1,13 +1,16 @@
 PODS:
   - Bohr (2.1.0)
+  - LGPlusButtonsView (1.0.3)
   - SimpleAlert (1.2.1)
 
 DEPENDENCIES:
   - Bohr
+  - LGPlusButtonsView
   - SimpleAlert
 
 SPEC CHECKSUMS:
   Bohr: 08c66d64e8f14c2bb759d81074ebea9a3ae0024d
+  LGPlusButtonsView: d10027afc527e4aaae80f69c27e7a5f12a63df2c
   SimpleAlert: 22d7890f9d253d947a23fd60fcd0213febe6a339
 
 COCOAPODS: 0.37.2

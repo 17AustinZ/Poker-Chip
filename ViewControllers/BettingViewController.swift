@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import SimpleAlert
 
 class BettingViewController: UIViewController{
     
@@ -25,7 +26,27 @@ class BettingViewController: UIViewController{
     @IBAction func BetRaise(sender: AnyObject) {
         pool += 25
         players[currentPlayerIndex!].chips! -= 25
-        nextTurn()
+        
+        radialMenu.dismiss()
+
+        var raisePopup = SimpleAlert.Controller(title: "Bet Amount", message: "", style: SimpleAlert.Controller.Style.Alert)
+        
+        raisePopup.addAction(SimpleAlert.Action(title: "OK", style: .Default) { action in
+            println("No Limit")
+            println("Asdf")
+            self.radialMenu.presentInView(self.view)
+            
+            var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "nextTurn", userInfo: nil, repeats: false)
+//            self.nextTurn()
+            })
+        
+        
+        self.presentViewController(raisePopup, animated: true, completion: {
+        })
+        
+        
+        
+      
     }
     
     @IBAction func Fold(sender: AnyObject) {
@@ -41,15 +62,16 @@ class BettingViewController: UIViewController{
         
         poolLabel?.text = String(pool)
         label()
-        currentPlayerIndex = currentPlayerIndex! - 1
-        if currentPlayerIndex! < 0 {
-            currentPlayerIndex = players.count - 1
+        currentPlayerIndex = currentPlayerIndex! + 1
+        if currentPlayerIndex! > players.count {
+            currentPlayerIndex = 0
         }
         radialMenu.rotate(view)
         if (!players[currentPlayerIndex!].active){
             
             nextTurn()
         }
+        println(buttons[currentPlayerIndex!].player!.name!)
     }
     
     enum Button {

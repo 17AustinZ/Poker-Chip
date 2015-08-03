@@ -200,13 +200,19 @@ public class ALRadialMenu: UIButton {
     public func rotate(view: UIView){
         var window = view.window
         
-        for i in 0..<buttons.count - 1 {
-            rotateButton(buttons[i], index: i+1)
-
+        for var i = buttons.count - 1; i >= 0; i-- {
+            rotateButton(buttons[i], index: i-1)
+            println(buttons[i].player!.name)
         }
-        rotateButton(buttons[buttons.count - 1], index: 0)
+        println()
+        rotateButton(buttons[0], index: buttons.count - 1)
+        var tempButton = buttons.removeAtIndex(0)
+        buttons.insert(tempButton, atIndex: buttons.count)
         
-        buttons.insert(buttons.removeAtIndex(buttons.count-1), atIndex: 0)
+        
+        for button in buttons {
+            println(button.player!.name)
+        }
     }
     /**
     Dismiss the buttons with an animation

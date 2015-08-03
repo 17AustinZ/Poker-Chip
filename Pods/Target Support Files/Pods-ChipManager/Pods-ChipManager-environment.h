@@ -12,6 +12,12 @@
 #define COCOAPODS_VERSION_MINOR_Bohr 1
 #define COCOAPODS_VERSION_PATCH_Bohr 0
 
+// LGPlusButtonsView
+#define COCOAPODS_POD_AVAILABLE_LGPlusButtonsView
+#define COCOAPODS_VERSION_MAJOR_LGPlusButtonsView 1
+#define COCOAPODS_VERSION_MINOR_LGPlusButtonsView 0
+#define COCOAPODS_VERSION_PATCH_LGPlusButtonsView 3
+
 // SimpleAlert
 #define COCOAPODS_POD_AVAILABLE_SimpleAlert
 #define COCOAPODS_VERSION_MAJOR_SimpleAlert 1
