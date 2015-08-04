@@ -30,17 +30,12 @@ class ConfigureContainerViewController : UIViewController{
             //            navigationController?.setNavigationBarHidden(false, animated: true)
             var bettingVC : BettingViewController = segue.destinationViewController as! BettingViewController
             bettingVC.players = [
+                
                 Player(name: "P01", startChips: startingChips!, color: 1),
                 Player(name: "P02", startChips: startingChips!, color: 2),
                 Player(name: "P03", startChips: startingChips!, color: 3),
                 Player(name: "P04", startChips: startingChips!, color: 4),
                 Player(name: "P05", startChips: startingChips!, color: 5),
-                
-//                Player(name: "P02", startChips: startingChips!),
-//                Player(name: "P03", startChips: startingChips!),
-//                Player(name: "P04", startChips: startingChips!),
-//                Player(name: "P05", startChips: startingChips!),
-//                Player(name: "P06", startChips: startingChips!),
                 Player(name: "P06", startChips: startingChips!, color: 6),
                 Player(name: "P07", startChips: startingChips!, color: 7),
                 Player(name: "P08", startChips: startingChips!, color: 8)]

@@ -20,7 +20,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BUP-LM-43O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-789" y="-113"/>
+            <point key="canvasLocation" x="-1093" y="-625"/>
         </scene>
         <!--Main-->
         <scene sceneID="tr7-Eb-VFt">
@@ -58,7 +58,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TLP-8c-EFg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="79" y="-192"/>
+            <point key="canvasLocation" x="-1093" y="232"/>
         </scene>
         <!--Configure Container View Controller-->
         <scene sceneID="gGY-mN-hb5">
@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBO-gX-oF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-195" y="652"/>
+            <point key="canvasLocation" x="-211" y="232"/>
         </scene>
         <!--Configure Table View Controller-->
         <scene sceneID="jVL-Iy-ZZy">
@@ -166,7 +166,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M05-tS-crl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="633" y="748"/>
+            <point key="canvasLocation" x="-211" y="972"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="F4j-jL-AZA">
@@ -225,81 +225,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ewm-J8-FWI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1359" y="803"/>
-        </scene>
-        <!--Configure View Controller-->
-        <scene sceneID="afN-OQ-2Ll">
-            <objects>
-                <viewController id="CWz-f1-OR0" customClass="ConfigureViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="oFy-eZ-VMf"/>
-                        <viewControllerLayoutGuide type="bottom" id="Byc-XG-Oan"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="rne-Zs-XXZ">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1bL-Za-5qp">
-                                <rect key="frame" x="26" y="84" width="117" height="30"/>
-                                <state key="normal" title="Betting Structure">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="changeBettingStructure:" destination="CWz-f1-OR0" eventType="touchUpInside" id="qd4-jb-6VU"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="ss" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="reb-Vt-sPj">
-                                <rect key="frame" x="556" y="88" width="18" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfN-DW-aEp">
-                                <rect key="frame" x="275" y="491" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.69411764710000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="f29-9r-K68"/>
-                                    <constraint firstAttribute="width" constant="50" id="frT-L6-Ia4"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="yC8-6a-cyb" kind="show" identifier="toGame" id="hIK-ky-XyR"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7P8-VP-pI4">
-                                <rect key="frame" x="356" y="491" width="50" height="50"/>
-                                <color key="backgroundColor" red="0.0" green="0.69411764710000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="50" id="dDI-Yi-YQx"/>
-                                    <constraint firstAttribute="height" constant="50" id="iId-bK-jk9"/>
-                                </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="reb-Vt-sPj" secondAttribute="trailing" constant="10" id="1o3-wn-Uxu"/>
-                            <constraint firstItem="1bL-Za-5qp" firstAttribute="leading" secondItem="rne-Zs-XXZ" secondAttribute="leadingMargin" constant="10" id="4Up-2E-SdX"/>
-                            <constraint firstItem="7P8-VP-pI4" firstAttribute="leading" secondItem="jfN-DW-aEp" secondAttribute="trailing" constant="31" id="COV-Ig-XKh"/>
-                            <constraint firstItem="1bL-Za-5qp" firstAttribute="top" secondItem="oFy-eZ-VMf" secondAttribute="bottom" constant="20" id="H41-9F-mI5"/>
-                            <constraint firstItem="reb-Vt-sPj" firstAttribute="centerY" secondItem="1bL-Za-5qp" secondAttribute="centerY" id="TKR-Db-6ka"/>
-                            <constraint firstAttribute="centerX" secondItem="jfN-DW-aEp" secondAttribute="centerX" id="ae1-Zn-dxz"/>
-                            <constraint firstItem="7P8-VP-pI4" firstAttribute="centerY" secondItem="jfN-DW-aEp" secondAttribute="centerY" id="agl-Uq-BZg"/>
-                            <constraint firstItem="Byc-XG-Oan" firstAttribute="top" secondItem="jfN-DW-aEp" secondAttribute="bottom" constant="59" id="oac-PQ-Vfu"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="bettingStructureButton" destination="1bL-Za-5qp" id="sNM-dX-7gG"/>
-                        <outlet property="bettingStructureDisplay" destination="reb-Vt-sPj" id="yKg-4D-0rF"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9NY-sv-wHs" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1043" y="-252"/>
+            <point key="canvasLocation" x="-211" y="1627"/>
         </scene>
         <!--Betting View Controller-->
         <scene sceneID="HU3-za-6gO">
@@ -391,47 +317,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17k-MA-dfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1745" y="-252"/>
-        </scene>
-        <!--Configure Container View Controller-->
-        <scene sceneID="XYr-5Q-aKZ">
-            <objects>
-                <viewController id="COP-Bq-6PP" customClass="ConfigureContainerViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="aYE-oN-pV7"/>
-                        <viewControllerLayoutGuide type="bottom" id="JMx-qS-SAJ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="7fA-YJ-V2Z">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FN2-13-9tM">
-                                <rect key="frame" x="277" y="550" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                            </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I2h-Cg-0Xa">
-                                <rect key="frame" x="0.0" y="64" width="600" height="466"/>
-                            </containerView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="FN2-13-9tM" firstAttribute="top" secondItem="I2h-Cg-0Xa" secondAttribute="bottom" constant="20" id="9Oy-Wb-ZiF"/>
-                            <constraint firstAttribute="trailing" secondItem="I2h-Cg-0Xa" secondAttribute="trailing" id="Fky-t6-swa"/>
-                            <constraint firstItem="JMx-qS-SAJ" firstAttribute="top" secondItem="FN2-13-9tM" secondAttribute="bottom" constant="20" id="Jin-bf-lz5"/>
-                            <constraint firstItem="I2h-Cg-0Xa" firstAttribute="top" secondItem="aYE-oN-pV7" secondAttribute="bottom" id="bgv-pF-jiE"/>
-                            <constraint firstAttribute="centerX" secondItem="FN2-13-9tM" secondAttribute="centerX" id="hDd-vm-dav"/>
-                            <constraint firstItem="I2h-Cg-0Xa" firstAttribute="leading" secondItem="7fA-YJ-V2Z" secondAttribute="leading" id="y9j-MJ-cpZ"/>
-                        </constraints>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SrA-W8-xYp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-195" y="652"/>
+            <point key="canvasLocation" x="733" y="232"/>
         </scene>
     </scenes>
-    <inferredMetricsTieBreakers>
-        <segue reference="JJT-IO-pkh"/>
-    </inferredMetricsTieBreakers>
 </document>

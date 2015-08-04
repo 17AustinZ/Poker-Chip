@@ -19,25 +19,47 @@ class BettingViewController: UIViewController{
     @IBOutlet weak var FoldButton: UIButton!
     
     
+    var lastBet : Int = 0
+    
     @IBAction func CheckCall(sender: AnyObject) {
-        
+        self.pool += lastBet
+        self.players[self.currentPlayerIndex!].chips! -= lastBet
     }
     
+    //[Button] Bets/Raises by the specified amount
+    //Specified amount is specified via
     @IBAction func BetRaise(sender: AnyObject) {
-        pool += 25
-        players[currentPlayerIndex!].chips! -= 25
-        
+        //[Workaround]
+        //Reasoning: SimpleAlert shows up underneath the radialMenu
         radialMenu.dismiss()
-
         var raisePopup = SimpleAlert.Controller(title: "Bet Amount", message: "", style: SimpleAlert.Controller.Style.Alert)
+
+        raisePopup.addTextFieldWithConfigurationHandler() { textField in
+            textField.frame.size.height = 30
+            textField.backgroundColor = nil
+            textField.layer.borderColor = nil
+            textField.layer.borderWidth = 0
+        }
         
         raisePopup.addAction(SimpleAlert.Action(title: "OK", style: .Default) { action in
-            println("No Limit")
-            println("Asdf")
-            self.radialMenu.presentInView(self.view)
+            var raiseCount = raisePopup.textFields[0].text.toInt()
             
+            if raiseCount != nil {
+                var betAmount = raiseCount
+                self.lastBet = betAmount!
+                if (betAmount > self.players[self.currentPlayerIndex!].chips! ){
+                    println("not enough chips")
+                } else {
+                    self.pool += betAmount!
+                    self.players[self.currentPlayerIndex!].chips! -= betAmount!
+
+                }
+            } else {
+                println("failed")
+            }
+            
+            self.radialMenu.presentInView(self.view)
             var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "nextTurn", userInfo: nil, repeats: false)
-//            self.nextTurn()
             })
         
         
