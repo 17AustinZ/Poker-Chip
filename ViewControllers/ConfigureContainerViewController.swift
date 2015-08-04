@@ -23,14 +23,11 @@ class ConfigureContainerViewController : UIViewController{
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        
-        
         if segue.identifier == "toGame" {
             super.prepareForSegue(segue, sender: sender)
-            //            navigationController?.setNavigationBarHidden(false, animated: true)
             var bettingVC : BettingViewController = segue.destinationViewController as! BettingViewController
+            
             bettingVC.players = [
-                
                 Player(name: "P01", startChips: startingChips!, color: 1),
                 Player(name: "P02", startChips: startingChips!, color: 2),
                 Player(name: "P03", startChips: startingChips!, color: 3),

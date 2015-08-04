@@ -9,5 +9,5 @@
 import Foundation
 
 class BettingStructureOptionViewController: UITableViewController{
-    
+    var ConfigVC : ConfigureTableViewController?
 }

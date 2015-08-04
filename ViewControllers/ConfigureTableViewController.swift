@@ -28,8 +28,8 @@ class ConfigureTableViewController: BOTableViewController{
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "toStructureSelection" {
-            var destVC = segue.destinationViewController as! BettingStructureCell
-            destVC.BettingStructureOptions = self
+            var destVC = segue.destinationViewController as! BettingStructureOptionViewController
+            destVC.ConfigVC = self
         }
     }
 }
