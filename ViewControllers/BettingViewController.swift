@@ -18,7 +18,8 @@ class BettingViewController: UIViewController{
         case Fold
         case Check
     }
-    //Class variables
+    
+     //Class variables
     ////////////////////////////////////////////////////////////////////////////
     var lastBet : Int = 0 //Check memory
     var gameMode = ""
@@ -33,12 +34,14 @@ class BettingViewController: UIViewController{
     
     var poolLabel : UILabel? //Pot count label
     var pool : Int = 0 //
+    
+     //Button handles
     ////////////////////////////////////////////////////////////////////////////
     @IBOutlet weak var CheckCallButton: UIButton!
     @IBOutlet weak var BetRaiseButton: UIButton!
     @IBOutlet weak var FoldButton: UIButton!
     
-    //Betting Functionality
+     //Betting Functionality
     ////////////////////////////////////////////////////////////////////////////
     
     @IBAction func CheckCall(sender: AnyObject) {
@@ -156,8 +159,8 @@ class BettingViewController: UIViewController{
         }
         return buttons
     }
-    
-    //Backend
+
+     //Backend
     ////////////////////////////////////////////////////////////////////////////
 
     override func viewDidLoad() {
@@ -200,7 +203,7 @@ class BettingViewController: UIViewController{
         
     }
     
-    //Testing Functions
+     //Testing Functions
     ////////////////////////////////////////////////////////////////////////////
     @IBAction func testButton(sender: AnyObject) {
         for i in players {println("\(i.active)\t\(i.name!)\t\(i.chips!)")}

@@ -18,5 +18,6 @@ class BettingStructureOptionViewController: UITableViewController{
         println("selected")
         println(indexPath)
         println(indexPath.indexAtPosition(1))
+    
     }
 }
