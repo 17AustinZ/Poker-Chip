@@ -12,14 +12,18 @@ class ConfigureTableViewController: BOTableViewController{
   
     
     @IBOutlet weak var structureOptions: BOChoiceTableViewCell!
-    var selectedStructure : Int = -1
+    var selectedStructurePath : NSIndexPath?
+    var selectedStructureIndex : Int?
     override func setup() {
         structureOptions.options = ["Option 1", "Option 2", "Option 3"]
         structureOptions.textLabel?.textAlignment = NSTextAlignment.Center
+        
     }
     
     override func viewDidLoad() {
         navigationController?.navigationBarHidden = true
+        selectedStructureIndex = selectedStructurePath!.indexAtPosition(1)
+
     }
     
     override func viewDidAppear(animated: Bool) {

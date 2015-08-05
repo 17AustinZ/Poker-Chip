@@ -14,10 +14,17 @@ class BettingStructureOptionViewController: UITableViewController{
 //    override func viewDidLoad() {
 //        
 //    }
-    override func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println("selected")
         println(indexPath)
         println(indexPath.indexAtPosition(1))
-    
+        var index : Int = indexPath.indexAtPosition(1)
+        ConfigVC?.selectedStructurePath = indexPath
+        
+        tableView.cellForRowAtIndexPath(indexPath)?.detailTextLabel?.text = "asdf"
+//        tableView.cellForRowAtIndexPath(indexPath)?.setNeedsLayout()
+//        tableView.cellForRowAtIndexPath(indexPath)?.setNeedsDisplay()
     }
+    
+
 }
