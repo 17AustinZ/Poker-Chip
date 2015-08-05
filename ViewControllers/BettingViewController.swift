@@ -115,6 +115,7 @@ class BettingViewController: UIViewController{
         
         //Rotates radial menu
         radialMenu.rotate(view)
+        label()
 //        println(buttons[currentPlayerIndex!].player!.name!)
     }
     

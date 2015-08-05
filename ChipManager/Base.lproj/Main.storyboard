@@ -168,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="-211" y="972"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Betting Structure Option View Controller-->
         <scene sceneID="F4j-jL-AZA">
             <objects>
-                <tableViewController id="Ctp-VP-fqG" customClass="BOTableViewController" sceneMemberID="viewController">
+                <tableViewController id="Ctp-VP-fqG" customClass="BettingStructureOptionViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="gPH-qM-sLp">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="466"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,7 +179,7 @@
                         <sections>
                             <tableViewSection id="mfy-HQ-H0u">
                                 <cells>
-                                    <tableViewCell contentMode="center" selectionStyle="default" indentationWidth="10" textLabel="A07-MH-EHG" style="IBUITableViewCellStyleDefault" id="Owi-7x-gkV" customClass="BettingStructureCell" customModule="ChipManager" customModuleProvider="target">
+                                    <tableViewCell contentMode="center" selectionStyle="none" indentationWidth="10" textLabel="A07-MH-EHG" style="IBUITableViewCellStyleDefault" id="Owi-7x-gkV">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Owi-7x-gkV" id="tJ3-8C-Qkk">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -196,7 +196,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="key" value="structureOptions"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="V2m-Ft-NIL" customClass="BettingStructureCell" customModule="ChipManager" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="V2m-Ft-NIL">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="V2m-Ft-NIL" id="7yx-be-YqF">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -205,7 +205,7 @@
                                             <userDefinedRuntimeAttribute type="string" keyPath="key" value="structureOptions"/>
                                         </userDefinedRuntimeAttributes>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="SFj-IU-9gv" customClass="BettingStructureCell" customModule="ChipManager" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="SFj-IU-9gv">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="SFj-IU-9gv" id="KRY-A9-Mf5">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -311,7 +311,6 @@
                         <outlet property="BetRaiseButton" destination="CQx-WG-1cb" id="wua-ff-HoS"/>
                         <outlet property="CheckCallButton" destination="nhd-HK-XKT" id="ubE-pY-k8n"/>
                         <outlet property="FoldButton" destination="Ofn-Cw-6eo" id="sod-uc-cVW"/>
-                        <outlet property="mainView" destination="G3k-E2-Fgy" id="oks-zu-jnm"/>
                         <outlet property="poolLabel" destination="Hie-I8-GIz" id="rVk-Vv-2Li"/>
                     </connections>
                 </viewController>
