@@ -22,6 +22,8 @@
 		D9B117E31B59635E003204CC /* BettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117E01B59635E003204CC /* BettingViewController.swift */; };
 		D9B117E41B59635E003204CC /* ConfigureViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117E11B59635E003204CC /* ConfigureViewController.swift */; };
 		D9B117EC1B5963B9003204CC /* DYAlertPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B117EB1B5963B9003204CC /* DYAlertPickView.m */; };
+		D9C665EA1B73D4F800A3D3EE /* AnteConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C665E91B73D4F800A3D3EE /* AnteConfigVC.swift */; };
+		D9C665EC1B73D7DB00A3D3EE /* SplitPotConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C665EB1B73D7DB00A3D3EE /* SplitPotConfigVC.swift */; };
 		D9D478B81B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D478B71B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift */; };
 		D9D478BC1B5DB10000CAA8C4 /* ALRadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D478BA1B5DB10000CAA8C4 /* ALRadialMenu.swift */; };
 		D9D478BD1B5DB10000CAA8C4 /* ALRadialMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D478BB1B5DB10000CAA8C4 /* ALRadialMenuButton.swift */; };
@@ -63,6 +65,8 @@
 		D9B117E61B596367003204CC /* ChipManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChipManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		D9B117EA1B5963B9003204CC /* DYAlertPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYAlertPickView.h; sourceTree = "<group>"; };
 		D9B117EB1B5963B9003204CC /* DYAlertPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYAlertPickView.m; sourceTree = "<group>"; };
+		D9C665E91B73D4F800A3D3EE /* AnteConfigVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnteConfigVC.swift; sourceTree = "<group>"; };
+		D9C665EB1B73D7DB00A3D3EE /* SplitPotConfigVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitPotConfigVC.swift; sourceTree = "<group>"; };
 		D9D478B71B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureSimpleAlert.swift; sourceTree = "<group>"; };
 		D9D478BA1B5DB10000CAA8C4 /* ALRadialMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALRadialMenu.swift; sourceTree = "<group>"; };
 		D9D478BB1B5DB10000CAA8C4 /* ALRadialMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALRadialMenuButton.swift; sourceTree = "<group>"; };
@@ -186,6 +190,8 @@
 				D92229D01B696F9F00EC8F59 /* ConfigureContainerViewController.swift */,
 				D92229D21B6973A700EC8F59 /* ConfigureTableViewController.swift */,
 				D92229CE1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift */,
+				D9C665E91B73D4F800A3D3EE /* AnteConfigVC.swift */,
+				D9C665EB1B73D7DB00A3D3EE /* SplitPotConfigVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = SOURCE_ROOT;
@@ -381,6 +387,8 @@
 				D9B117EC1B5963B9003204CC /* DYAlertPickView.m in Sources */,
 				D92229CF1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift in Sources */,
 				D92229D11B696F9F00EC8F59 /* ConfigureContainerViewController.swift in Sources */,
+				D9C665EA1B73D4F800A3D3EE /* AnteConfigVC.swift in Sources */,
+				D9C665EC1B73D7DB00A3D3EE /* SplitPotConfigVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

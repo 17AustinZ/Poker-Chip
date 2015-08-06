@@ -7,17 +7,13 @@
 //
 
 import Foundation
+import Bohr
 class ConfigureContainerViewController : UIViewController{
-    
-    enum bettingStructure {
-        case Default
-        case NoLimit
-        case FixedLimit
-        case PotLimit
-        case SpreadLimit
-    }
+
+    var bettingStructure : BettingViewController.bettingLimit?
     var startingChips : Int? = 100
-    
+    var configVC : ConfigureTableViewController!
+    var splitPot : Bool?
     override func viewDidLoad() {
         navigationController?.navigationBarHidden = false
     }
@@ -36,7 +32,16 @@ class ConfigureContainerViewController : UIViewController{
                 Player(name: "P06", startChips: startingChips!, color: 6),
                 Player(name: "P07", startChips: startingChips!, color: 7),
                 Player(name: "P08", startChips: startingChips!, color: 8)]
+            bettingStructure = configVC?.selectedStructure
+            
+            var splitSwitch = configVC.tableView.cellForRowAtIndexPath(NSIndexPath(indexes: [0,0], length: 2)) as! BOSwitchTableViewCell
+            splitPot = splitSwitch.toggleSwitch.on
+
+
+        } else if segue.identifier == "embedConfig" {
+            configVC  = segue.destinationViewController as! ConfigureTableViewController
         }
+
         
         
     }

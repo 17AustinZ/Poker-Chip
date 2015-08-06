@@ -50,6 +50,17 @@ class BettingStructureOptionViewController: UITableViewController{
             }
             self.presentViewController(fixedPopup, animated: true, completion: {})
 
+            fixedPopup.addAction(SimpleAlert.Action(title: "OK", style: .Default) { action in
+                //Setup
+                var beforeLimit = fixedPopup.textFields[0].text.toInt()
+                var afterLimit = fixedPopup.textFields[1].text.toInt()
+
+                if (beforeLimit != nil && afterLimit != nil){
+                    println()
+                }
+                self.ConfigVC?.selectedStructure  = BettingViewController.bettingLimit.Fixed
+            })
+
         } else if (index == 1){ //Spread Limit
 
         } else if (index == 2){ //Pot Limit

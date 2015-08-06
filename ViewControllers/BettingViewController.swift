@@ -12,14 +12,14 @@ import SimpleAlert
 
 class BettingViewController: UIViewController{
     
-    enum Button {
-        case Raise
-        case Call
-        case Fold
-        case Check
+    enum bettingLimit{
+        case Fixed
+        case Spread
+        case Pot
+        case None
     }
-    
-     //MARK: aClass variables
+
+     //MARK: Class variables
     ////////////////////////////////////////////////////////////////////////////
     var lastBet : Int = 0 //Check memory
     var gameMode = ""
@@ -28,13 +28,12 @@ class BettingViewController: UIViewController{
     
     var buttons : [ALRadialMenuButton] = []
     var players : [Player] = []
-    
-//    var currentPlayerIndex : Int?
-    var activePlayers : [Player] = []
-    
+
     var poolLabel : UILabel? //Pot count label
     var pool : Int = 0 //
-    
+
+    var limit : bettingLimit!
+
      //MARK: Button handles
     ////////////////////////////////////////////////////////////////////////////
     @IBOutlet weak var CheckCallButton: UIButton!
