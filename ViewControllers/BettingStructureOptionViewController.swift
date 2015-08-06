@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import SimpleAlert
 
 class BettingStructureOptionViewController: UITableViewController{
     var ConfigVC : ConfigureTableViewController?
@@ -26,7 +27,36 @@ class BettingStructureOptionViewController: UITableViewController{
         }
         var index : Int = indexPath.indexAtPosition(1)
         ConfigVC?.selectedStructurePath = indexPath
-        
+
+        if (index == 0){ //Fixed Limit
+            var fixedPopup = SimpleAlert.Controller(title: "Fixed Limits", message: "", style: SimpleAlert.Controller.Style.Alert)
+            fixedPopup.addTextFieldWithConfigurationHandler() { textField in
+                textField.frame.size.height = 30
+                textField.backgroundColor = nil
+                textField.layer.borderColor = nil
+                textField.layer.borderWidth = 0
+                textField.placeholder = "Limit before first draw"
+                textField.borderStyle = UITextBorderStyle.Line
+            }
+
+            fixedPopup.addTextFieldWithConfigurationHandler() { textField in
+                textField.frame.size.height = 30
+                textField.backgroundColor = nil
+                textField.layer.borderColor = nil
+                textField.layer.borderWidth = 0
+                textField.placeholder = "Limit after first draw"
+                textField.borderStyle = UITextBorderStyle.Line
+
+            }
+            self.presentViewController(fixedPopup, animated: true, completion: {})
+
+        } else if (index == 1){ //Spread Limit
+
+        } else if (index == 2){ //Pot Limit
+
+        } else if (index == 3){ //No Limit
+
+        }
         
         tableView.cellForRowAtIndexPath(indexPath)!.accessoryType = UITableViewCellAccessoryType.Checkmark
 //        tableView.cellForRowAtIndexPath(indexPath)?.detailTextLabel?.text = "asdf"
