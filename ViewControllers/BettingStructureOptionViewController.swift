@@ -29,7 +29,7 @@ class BettingStructureOptionViewController: UITableViewController{
         
         
         tableView.cellForRowAtIndexPath(indexPath)!.accessoryType = UITableViewCellAccessoryType.Checkmark
-        tableView.cellForRowAtIndexPath(indexPath)?.detailTextLabel?.text = "asdf"
+//        tableView.cellForRowAtIndexPath(indexPath)?.detailTextLabel?.text = "asdf"
         //        tableView.cellForRowAtIndexPath(indexPath)?.setNeedsLayout()
         //        tableView.cellForRowAtIndexPath(indexPath)?.setNeedsDisplay()
     }
