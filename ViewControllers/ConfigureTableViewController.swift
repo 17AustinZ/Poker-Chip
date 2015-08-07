@@ -11,7 +11,6 @@ import Bohr
 class ConfigureTableViewController: BOTableViewController{
   
 
-    @IBOutlet weak var structureOptions: BOChoiceTableViewCell!
     var selectedStructurePath : NSIndexPath?
     var selectedStructureIndex : Int?
     var selectedStructure : BettingViewController.bettingLimit?
@@ -21,9 +20,7 @@ class ConfigureTableViewController: BOTableViewController{
     }
 
     override func setup() {
-        structureOptions.options = ["Option 1", "Option 2", "Option 3"]
-        structureOptions.textLabel?.textAlignment = NSTextAlignment.Center
-        
+
     }
     
     override func viewDidLoad() {

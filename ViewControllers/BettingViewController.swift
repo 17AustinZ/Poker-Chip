@@ -19,6 +19,7 @@ class BettingViewController: UIViewController{
         case None
     }
 
+
      //MARK: Class variables
     ////////////////////////////////////////////////////////////////////////////
     var lastBet : Int = 0 //Check memory
@@ -34,6 +35,8 @@ class BettingViewController: UIViewController{
 
     var limit : bettingLimit!
 
+    var checkCount : Int = 0
+
      //MARK: Button handles
     ////////////////////////////////////////////////////////////////////////////
     @IBOutlet weak var CheckCallButton: UIButton!
@@ -43,10 +46,13 @@ class BettingViewController: UIViewController{
      //MARK: Betting Functionality
     ////////////////////////////////////////////////////////////////////////////
 
+
+
     @IBAction func CheckCall(sender: AnyObject) {
         self.pool += lastBet
         //        self.players[self.currentPlayerIndex!].chips! -= lastBet
         self.players[0].chips! -= lastBet
+        checkCount++
     }
     
     //[Button] Bets/Raises by the specified amount
@@ -111,24 +117,12 @@ class BettingViewController: UIViewController{
     ///Handles transition to next turn
     func nextTurn(){
         poolLabel?.text = String(pool)
-        println("A" + buttons[0].player!.name!)
         buttons = buttons.rotate(1)
-//        radialMenu.setButtons(buttons)
-//        radialMenu.refreshButtons(rotateView!)
-        println("B" + buttons[0].player!.name!)
-        //Increments current player index
-//        currentPlayerIndex = currentPlayerIndex! + 1
-//
-//        //Restarts from 0 after the last player
-//        if currentPlayerIndex! > players.count - 1{
-//            currentPlayerIndex = 0
-//        }
-
         //Rotates radial menu
         radialMenu.rotate(view)
         label()
-//        println("currentPlayer = \(currentPlayerIndex!)s")
-//        println(buttons[currentPlayerIndex!].player!.name!)
+
+
     }
     
     ///Generates labels for each button
@@ -174,6 +168,28 @@ class BettingViewController: UIViewController{
         return buttons
     }
 
+    ///Starts showdown - Prompts to select winner(s)
+    func showdown(){
+        radialMenu.dismiss()
+        var showdownPopup = SimpleAlert.Controller(title: "Decide Winner(s)", message: "", style: SimpleAlert.Controller.Style.Alert)
+
+        for var i : Int = 0; i < buttons.count - 1; i++ {
+            showdownPopup.addAction(SimpleAlert.Action(title: "\(buttons[i].player!.name!)", style: .Default) { action in
+
+                println(i)
+                println(showdownPopup.actions)
+                showdownPopup.actions[i].button.titleLabel?.text = "ASDF"
+                //Cleanup + Exit
+                self.radialMenu.presentInView(self.view)
+                //Pauses thread to stagger animations
+                var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "nextTurn", userInfo: nil, repeats: false)
+                })
+
+        }
+
+        self.presentViewController(showdownPopup, animated: true, completion: {})
+    }
+
      //MARK: Backend
     ////////////////////////////////////////////////////////////////////////////
 
@@ -215,6 +231,10 @@ class BettingViewController: UIViewController{
 //        println("asdf")
         radialMenu.dismiss()
         radialMenu.removeFromSuperview()
+        if segue.identifier == "toShowdown" {
+            var showdownVC = segue.destinationViewController as! ShowdownViewController
+            showdownVC.bettingVC = self
+        }
         
     }
     
