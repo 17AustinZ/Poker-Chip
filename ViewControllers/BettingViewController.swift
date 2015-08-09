@@ -28,7 +28,14 @@ class BettingViewController: UIViewController{
     var radialMenu : ALRadialMenu = ALRadialMenu() //Radial menu
     
     var buttons : [ALRadialMenuButton] = []
-    var players : [Player] = []
+    
+    var players : [Player] = [] {
+        didSet{
+            for player in players {
+                print(String(player.chips!) + " ")
+            }
+        }
+    }
 
     var poolLabel : UILabel? //Pot count label
     var pool : Int = 0 //
@@ -80,13 +87,13 @@ class BettingViewController: UIViewController{
                 var betAmount = raiseCount
                 self.lastBet = betAmount!
 //                if (betAmount > self.players[self.currentPlayerIndex!].chips! ){
-                if (betAmount > self.players[0].chips!){
+                if (betAmount > self.buttons[0].player!.chips!){
                     //[CODE]
                     println("not enough chips")
                 } else {
                     self.pool += betAmount!
 //                    self.players[self.currentPlayerIndex!].chips! -= betAmount!
-                    self.players[0].chips! -= betAmount!
+                    self.buttons[0].player!.chips! -= betAmount!
                 }
             } else {
                 //CODE
@@ -96,30 +103,32 @@ class BettingViewController: UIViewController{
             //Cleanup + Exit
             self.radialMenu.presentInView(self.view)
             //Pauses thread to stagger animations
-            var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "nextTurn", userInfo: nil, repeats: false)
+            var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "nextTurnTrue", userInfo: nil, repeats: false)
         })
         self.presentViewController(raisePopup, animated: true, completion: {})
     }
     
     ///[Button] Folds
     @IBAction func Fold(sender: AnyObject) {
-        
-//        players.removeAtIndex(currentPlayerIndex!)
-        players.removeAtIndex(1)
+        println(players[0].name!)
+        players.removeAtIndex(0)
         radialMenu.dismiss()
         radialMenu.setButtons(generateButtons())
         showMenu()
         label()
-        nextTurn()
+        println(players[0].name!)
+        nextTurn(false)
+        buttons = buttons.rotate(-1)
     }
     
     
     ///Handles transition to next turn
-    func nextTurn(){
+    func nextTurn(rotate : Bool){
+//        testButton(self)
         poolLabel?.text = String(pool)
         buttons = buttons.rotate(1)
         //Rotates radial menu
-        radialMenu.rotate(view)
+        if rotate {radialMenu.rotate(view)}
         label()
 
 
@@ -131,6 +140,7 @@ class BettingViewController: UIViewController{
             let button = buttons[i]
             button.titleLabel?.textAlignment = NSTextAlignment.Center
             button.setTitle("\(button.player!.name!)\n\n\n\n\(button.player!.chips!)", forState: UIControlState.Normal)
+            println(button.player!.chips!)
             button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
             button.setBackgroundImage(button.imageView?.image, forState: UIControlState.Normal)
             button.setImage(nil, forState: UIControlState.Normal)
@@ -144,6 +154,7 @@ class BettingViewController: UIViewController{
     ///Displays the radial menu
     func showMenu() {
         var midScreen = CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height * 3 / 5)
+        radialMenu.setButtons(buttons)
         radialMenu = ALRadialMenu().setButtons(generateButtons()).setAnimationOrigin(midScreen)
         //[ADD] Dynamic resizing?
         radialMenu.setRadius(150)
@@ -182,7 +193,7 @@ class BettingViewController: UIViewController{
                 //Cleanup + Exit
                 self.radialMenu.presentInView(self.view)
                 //Pauses thread to stagger animations
-                var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "nextTurn", userInfo: nil, repeats: false)
+                var timer = NSTimer.scheduledTimerWithTimeInterval(0.4, target: self, selector: "nextTurnTrue", userInfo: nil, repeats: false)
                 })
 
         }
@@ -192,6 +203,10 @@ class BettingViewController: UIViewController{
 
      //MARK: Backend
     ////////////////////////////////////////////////////////////////////////////
+
+    func nextTurnTrue(){
+        nextTurn(true)
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -235,13 +250,14 @@ class BettingViewController: UIViewController{
             var showdownVC = segue.destinationViewController as! ShowdownViewController
             showdownVC.bettingVC = self
         }
+
         
     }
     
      //MARK: Testing Functions
     ////////////////////////////////////////////////////////////////////////////
     @IBAction func testButton(sender: AnyObject) {
-        for i in players {println("\(i.active)\t\(i.name!)\t\(i.chips!)")}
+        for i in buttons {println("\(i.player?.name!)")}
     }
     
     @IBAction func testButton2(sender: AnyObject) {
