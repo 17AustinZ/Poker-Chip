@@ -119,6 +119,7 @@ class BettingViewController: UIViewController{
         println(players[0].name!)
         nextTurn(false)
         buttons = buttons.rotate(-1)
+        players = players.rotate(-1)
     }
     
     
@@ -127,6 +128,7 @@ class BettingViewController: UIViewController{
 //        testButton(self)
         poolLabel?.text = String(pool)
         buttons = buttons.rotate(1)
+        players = players.rotate(1)
         //Rotates radial menu
         if rotate {radialMenu.rotate(view)}
         label()
