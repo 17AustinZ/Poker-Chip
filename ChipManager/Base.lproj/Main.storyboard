@@ -48,16 +48,19 @@
                                     <segue destination="sru-0H-Rjs" kind="show" id="n2b-AX-zrf"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Poker Chip Manager " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjr-Cv-oB2">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poker Chip Manager " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjr-Cv-oB2">
                                 <rect key="frame" x="219" y="72" width="163" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="cjr-Cv-oB2" firstAttribute="top" secondItem="EQZ-u3-vta" secondAttribute="bottom" constant="8" id="FOo-gd-Sj9"/>
                             <constraint firstAttribute="centerY" secondItem="xig-ql-uOt" secondAttribute="centerY" constant="26" id="X8q-MV-rUo"/>
                             <constraint firstAttribute="centerX" secondItem="xig-ql-uOt" secondAttribute="centerX" constant="7" id="bbc-vt-FWo"/>
+                            <constraint firstAttribute="centerX" secondItem="cjr-Cv-oB2" secondAttribute="centerX" constant="-0.5" id="w7q-4b-QHc"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y1V-Mk-qYm"/>
@@ -66,7 +69,7 @@
             </objects>
             <point key="canvasLocation" x="-1093" y="232"/>
         </scene>
-        <!--Configure Container View Controller-->
+        <!--Players-->
         <scene sceneID="gGY-mN-hb5">
             <objects>
                 <viewController id="sru-0H-Rjs" customClass="ConfigureContainerViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
@@ -110,7 +113,7 @@
                             <constraint firstAttribute="centerX" secondItem="1YA-Xd-nuQ" secondAttribute="centerX" id="set-Q3-WxD"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="Yd2-Pn-MvG">
+                    <navigationItem key="navigationItem" title="Players" id="Yd2-Pn-MvG">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="ZdC-x5-OXN">
                             <connections>
                                 <action selector="addPlayer:" destination="sru-0H-Rjs" id="rzr-RN-pwl"/>
