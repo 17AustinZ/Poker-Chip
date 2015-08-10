@@ -34,33 +34,32 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xig-ql-uOt">
-                                <rect key="frame" x="210" y="191" width="166" height="166"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SPR-Hz-FTY">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BmQ-ZB-Va0">
+                                        <rect key="frame" x="150" y="118" width="300" height="300"/>
+                                        <state key="normal" backgroundImage="go">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="sru-0H-Rjs" kind="show" id="m5v-bo-3O5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
                                 <color key="backgroundColor" red="0.0" green="0.69411764710000001" blue="0.41568627450000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="166" id="haG-b8-8Jz"/>
-                                    <constraint firstAttribute="width" constant="166" id="tKV-Zc-0rz"/>
+                                    <constraint firstAttribute="centerX" secondItem="BmQ-ZB-Va0" secondAttribute="centerX" id="aMr-mg-oax"/>
+                                    <constraint firstAttribute="centerY" secondItem="BmQ-ZB-Va0" secondAttribute="centerY" id="jBM-8O-lOy"/>
                                 </constraints>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="sru-0H-Rjs" kind="show" id="n2b-AX-zrf"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Poker Chip Manager " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjr-Cv-oB2">
-                                <rect key="frame" x="219" y="72" width="163" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="cjr-Cv-oB2" firstAttribute="top" secondItem="EQZ-u3-vta" secondAttribute="bottom" constant="8" id="FOo-gd-Sj9"/>
-                            <constraint firstAttribute="centerY" secondItem="xig-ql-uOt" secondAttribute="centerY" constant="26" id="X8q-MV-rUo"/>
-                            <constraint firstAttribute="centerX" secondItem="xig-ql-uOt" secondAttribute="centerX" constant="7" id="bbc-vt-FWo"/>
-                            <constraint firstAttribute="centerX" secondItem="cjr-Cv-oB2" secondAttribute="centerX" constant="-0.5" id="w7q-4b-QHc"/>
+                            <constraint firstAttribute="trailing" secondItem="SPR-Hz-FTY" secondAttribute="trailing" id="3nE-sU-dlf"/>
+                            <constraint firstItem="f1j-Ip-G1u" firstAttribute="top" secondItem="SPR-Hz-FTY" secondAttribute="bottom" id="5gf-vk-Vf2"/>
+                            <constraint firstItem="SPR-Hz-FTY" firstAttribute="leading" secondItem="4Lq-Gd-gir" secondAttribute="leading" id="BsU-kU-dZ4"/>
+                            <constraint firstItem="SPR-Hz-FTY" firstAttribute="top" secondItem="EQZ-u3-vta" secondAttribute="bottom" id="HpU-fX-5Yk"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y1V-Mk-qYm"/>
@@ -168,7 +167,7 @@
             <objects>
                 <tableViewController id="DZh-HM-YfY" customClass="PlayerListViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYb-G9-Qnf">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="476"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -180,7 +179,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="qNr-zg-Twb">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Y63-gV-VWJ">
@@ -488,7 +487,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="faz-OW-YCr" kind="show" identifier="toShowdown" id="vHr-ac-s3U"/>
+                                    <segue destination="aYu-9v-cqS" kind="show" identifier="toShowdown" id="gKU-05-QpH"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -522,7 +521,7 @@
             <objects>
                 <tableViewController id="faz-OW-YCr" customClass="ShowdownViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="jBP-tX-lT3">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="476"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -534,7 +533,7 @@
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3BS-Ac-I8h">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -553,7 +552,77 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="76f-uE-TMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1435" y="211"/>
+            <point key="canvasLocation" x="2163" y="271"/>
+        </scene>
+        <!--Showdown Container View Controller-->
+        <scene sceneID="fYB-oX-wyZ">
+            <objects>
+                <viewController id="aYu-9v-cqS" customClass="ShowdownContainerViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SFB-AO-BQD"/>
+                        <viewControllerLayoutGuide type="bottom" id="Udl-bt-qjj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="deV-y2-000">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="arj-Oj-Jtr">
+                                <rect key="frame" x="0.0" y="64" width="600" height="476"/>
+                                <connections>
+                                    <segue destination="faz-OW-YCr" kind="embed" identifier="showdownEmbed" id="RJ9-Vu-jjl"/>
+                                </connections>
+                            </containerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZi-GR-xGI">
+                                <rect key="frame" x="0.0" y="540" width="600" height="60"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="showdownDone:" destination="aYu-9v-cqS" eventType="touchUpInside" id="bCu-pK-jNI"/>
+                                    <segue destination="sru-0H-Rjs" kind="show" id="Mp5-9J-6Si"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="vZi-GR-xGI" secondAttribute="trailing" id="0CA-24-O1y"/>
+                            <constraint firstItem="arj-Oj-Jtr" firstAttribute="top" secondItem="SFB-AO-BQD" secondAttribute="bottom" id="5Vp-Xc-kna"/>
+                            <constraint firstItem="Udl-bt-qjj" firstAttribute="top" secondItem="vZi-GR-xGI" secondAttribute="bottom" id="HnK-5r-Bcs"/>
+                            <constraint firstItem="vZi-GR-xGI" firstAttribute="top" secondItem="arj-Oj-Jtr" secondAttribute="bottom" id="QSC-TC-pMm"/>
+                            <constraint firstItem="Udl-bt-qjj" firstAttribute="top" secondItem="arj-Oj-Jtr" secondAttribute="bottom" constant="60" id="bIs-Nx-6lq"/>
+                            <constraint firstItem="arj-Oj-Jtr" firstAttribute="leading" secondItem="deV-y2-000" secondAttribute="leading" id="dVy-RU-w2G"/>
+                            <constraint firstItem="vZi-GR-xGI" firstAttribute="leading" secondItem="deV-y2-000" secondAttribute="leading" id="eL8-v1-ueU"/>
+                            <constraint firstAttribute="trailing" secondItem="arj-Oj-Jtr" secondAttribute="trailing" id="gpY-xO-5n4"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="p25-MP-4Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1427" y="1143"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="E4p-oS-PHO">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="MXy-vW-XRP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Dm-3E-li3"/>
+                        <viewControllerLayoutGuide type="bottom" id="dtg-WA-Qxu"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="CxC-cr-ZBT">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYf-nu-b5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="go" width="300" height="300"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Mp5-9J-6Si"/>
+    </inferredMetricsTieBreakers>
 </document>

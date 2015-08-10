@@ -11,7 +11,7 @@ import SimpleAlert
 
 class PlayerListViewController : UITableViewController, UITableViewDataSource, UITableViewDelegate{
 
-    var playerList : [Player]!
+//    var playerList : [Player]!
 
     func addNewPlayer(){
         tableView.reloadData()
@@ -45,7 +45,7 @@ class PlayerListViewController : UITableViewController, UITableViewDataSource, U
         addPlayerPopup.addAction(SimpleAlert.Action(title: "Add Player", style: .Default) { action in
             var playerName : String = addPlayerPopup.textFields[0].text
             var playerCount : Int = addPlayerPopup.textFields[1].text.toInt()!
-            self.playerList.append(Player(name: playerName, startChips: playerCount, color: self.playerList.count + 1))
+            Universal.sharedInstance.playersList.append(Player(name: playerName, startChips: playerCount, color: Universal.sharedInstance.playersList.count + 1))
             self.tableView.reloadData()
 
         })
@@ -55,7 +55,6 @@ class PlayerListViewController : UITableViewController, UITableViewDataSource, U
     }
 
     override func viewDidLoad() {
-        playerList = []
         tableView.delegate = self
         tableView.dataSource = self
         navigationController?.navigationBarHidden = true
@@ -71,7 +70,7 @@ extension PlayerListViewController: UITableViewDataSource {
         let cell = tableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath) as! PlayerCell
         println("Asdf")
         let row = indexPath.row
-        let player = playerList[row] as Player
+        let player = Universal.sharedInstance.playersList[row]
         cell.player = player
 
         return cell
@@ -80,7 +79,7 @@ extension PlayerListViewController: UITableViewDataSource {
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return playerList.count
+        return Universal.sharedInstance.playersList.count
     }
 
 

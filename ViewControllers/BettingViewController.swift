@@ -31,9 +31,7 @@ class BettingViewController: UIViewController{
     
     var players : [Player] = [] {
         didSet{
-            for player in players {
-                print(String(player.chips!) + " ")
-            }
+            Universal.sharedInstance.playersList = players
         }
     }
 
@@ -56,10 +54,15 @@ class BettingViewController: UIViewController{
 
 
     @IBAction func CheckCall(sender: AnyObject) {
-        self.pool += lastBet
-        //        self.players[self.currentPlayerIndex!].chips! -= lastBet
-        self.players[0].chips! -= lastBet
-        checkCount++
+//        self.pool += lastBet
+//        //        self.players[self.currentPlayerIndex!].chips! -= lastBet
+//        self.players[0].chips! -= lastBet
+//        checkCount++
+        for i in 0..<players.count {
+            print(players[i].name)
+            println(players[i].active)
+        }
+
     }
     
     //[Button] Bets/Raises by the specified amount
@@ -112,15 +115,17 @@ class BettingViewController: UIViewController{
     ///[Button] Folds
     @IBAction func Fold(sender: AnyObject) {
         println(players[0].name!)
-        players.removeAtIndex(0)
+//        players.removeAtIndex(0)
+        players[0].active = false
+
         radialMenu.dismiss()
         radialMenu.setButtons(generateButtons())
         showMenu()
         label()
         println(players[0].name!)
         nextTurn(false)
-        buttons = buttons.rotate(-1)
-        players = players.rotate(-1)
+//        buttons = buttons.rotate(-1)
+//        players = players.rotate(-1)
     }
     
     
@@ -130,6 +135,7 @@ class BettingViewController: UIViewController{
         poolLabel?.text = String(pool)
         buttons = buttons.rotate(1)
         players = players.rotate(1)
+        rotateToNext()
         //Rotates radial menu
         if rotate {radialMenu.rotate(view)}
         label()
@@ -157,7 +163,7 @@ class BettingViewController: UIViewController{
     ///Displays the radial menu
     func showMenu() {
         var midScreen = CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height * 3 / 5)
-        radialMenu.setButtons(buttons)
+//        radialMenu.setButtons(buttons)
         radialMenu = ALRadialMenu().setButtons(generateButtons()).setAnimationOrigin(midScreen)
         //[ADD] Dynamic resizing?
         radialMenu.setRadius(150)
@@ -172,12 +178,14 @@ class BettingViewController: UIViewController{
         buttons = []
 //        println(players.count)
         for i in 0..<players.count {
-            let button = ALRadialMenuButton(frame: CGRectMake(0, 0, 44, 44))
-            //color
-            //[ADD] Change to background image?
-            button.setImage(UIImage(named: "icon\(players[i].color!)"), forState: UIControlState.Normal)
-            button.setPlayer(players[i])
-            buttons.append(button)
+            if players[i].active {
+                let button = ALRadialMenuButton(frame: CGRectMake(0, 0, 44, 44))
+                //color
+                //[ADD] Change to background image?
+                button.setImage(UIImage(named: "icon\(players[i].color!)"), forState: UIControlState.Normal)
+                button.setPlayer(players[i])
+                buttons.append(button)
+            }
         }
         return buttons
     }
@@ -207,6 +215,7 @@ class BettingViewController: UIViewController{
      //MARK: Backend
     ////////////////////////////////////////////////////////////////////////////
 
+    //EXP
     func nextTurnTrue(){
         nextTurn(true)
     }
@@ -246,11 +255,10 @@ class BettingViewController: UIViewController{
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-//        println("asdf")
         radialMenu.dismiss()
         radialMenu.removeFromSuperview()
         if segue.identifier == "toShowdown" {
-            var showdownVC = segue.destinationViewController as! ShowdownViewController
+            var showdownVC = segue.destinationViewController as! ShowdownContainerViewController
             showdownVC.bettingVC = self
         }
 
@@ -260,6 +268,12 @@ class BettingViewController: UIViewController{
      //MARK: Testing Functions
     ////////////////////////////////////////////////////////////////////////////
 
+    func rotateToNext(){
+        while !players[0].active{
+            players.rotate(1)
+            buttons.rotate(1)
+        }
+    }
 
 }
 extension Array {
