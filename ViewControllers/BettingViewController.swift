@@ -77,6 +77,7 @@ class BettingViewController: UIViewController{
             textField.backgroundColor = nil
             textField.layer.borderColor = nil
             textField.layer.borderWidth = 0
+            textField.placeholder = "Number of Chips"
         }
         raisePopup.addAction(SimpleAlert.Action(title: "OK", style: .Default) { action in
             //Setup
@@ -258,14 +259,7 @@ class BettingViewController: UIViewController{
     
      //MARK: Testing Functions
     ////////////////////////////////////////////////////////////////////////////
-    @IBAction func testButton(sender: AnyObject) {
-        for i in buttons {println("\(i.player?.name!)")}
-    }
-    
-    @IBAction func testButton2(sender: AnyObject) {
-        radialMenu.rotate(view)
-    }
-    
+
 
 }
 extension Array {
