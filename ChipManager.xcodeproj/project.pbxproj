@@ -29,6 +29,8 @@
 		D9D62F731B7529C60082B674 /* ShowdownTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D62F721B7529C60082B674 /* ShowdownTableViewCell.swift */; };
 		D9D72D251B791F340049F316 /* ShowdownContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D72D241B791F340049F316 /* ShowdownContainerViewController.swift */; };
 		D9D72D271B7920F90049F316 /* Universal.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D72D261B7920F90049F316 /* Universal.swift */; };
+		D9D73EE91B7A5C4C004001D5 /* BVReorderTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9D73EE81B7A5C4C004001D5 /* BVReorderTableView.m */; };
+		D9D73EEB1B7A5CBE004001D5 /* ReorderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D73EEA1B7A5CBE004001D5 /* ReorderTableViewController.swift */; };
 		D9FF674F1B7816B900184103 /* PlayerListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF674E1B7816B900184103 /* PlayerListViewController.swift */; };
 		D9FF67511B783C7400184103 /* PlayerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9FF67501B783C7400184103 /* PlayerCell.swift */; };
 		F65284D83E946E64D44E8520 /* Pods_ChipManager.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 440C609F5F3F7DE89346B446 /* Pods_ChipManager.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
@@ -76,6 +78,9 @@
 		D9D62F721B7529C60082B674 /* ShowdownTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowdownTableViewCell.swift; sourceTree = "<group>"; };
 		D9D72D241B791F340049F316 /* ShowdownContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowdownContainerViewController.swift; sourceTree = "<group>"; };
 		D9D72D261B7920F90049F316 /* Universal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Universal.swift; sourceTree = "<group>"; };
+		D9D73EE71B7A5C4C004001D5 /* BVReorderTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BVReorderTableView.h; sourceTree = "<group>"; };
+		D9D73EE81B7A5C4C004001D5 /* BVReorderTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BVReorderTableView.m; sourceTree = "<group>"; };
+		D9D73EEA1B7A5CBE004001D5 /* ReorderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReorderTableViewController.swift; sourceTree = "<group>"; };
 		D9FF674E1B7816B900184103 /* PlayerListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerListViewController.swift; sourceTree = "<group>"; };
 		D9FF67501B783C7400184103 /* PlayerCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -148,6 +153,7 @@
 		D9B117BC1B5962EE003204CC /* ChipManager */ = {
 			isa = PBXGroup;
 			children = (
+				D9D73EE61B7A5C4C004001D5 /* ReorderTable */,
 				D98417E31B67EBB0004A48C4 /* ConfigureCells */,
 				D9D478B91B5DB10000CAA8C4 /* ALRadialMenu */,
 				D9D763861B5D8B4C00230075 /* Views */,
@@ -203,6 +209,7 @@
 				D9D72D241B791F340049F316 /* ShowdownContainerViewController.swift */,
 				D9FF674E1B7816B900184103 /* PlayerListViewController.swift */,
 				D9D72D261B7920F90049F316 /* Universal.swift */,
+				D9D73EEA1B7A5CBE004001D5 /* ReorderTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = SOURCE_ROOT;
@@ -223,6 +230,15 @@
 				D9D478BB1B5DB10000CAA8C4 /* ALRadialMenuButton.swift */,
 			);
 			path = ALRadialMenu;
+			sourceTree = SOURCE_ROOT;
+		};
+		D9D73EE61B7A5C4C004001D5 /* ReorderTable */ = {
+			isa = PBXGroup;
+			children = (
+				D9D73EE71B7A5C4C004001D5 /* BVReorderTableView.h */,
+				D9D73EE81B7A5C4C004001D5 /* BVReorderTableView.m */,
+			);
+			path = ReorderTable;
 			sourceTree = SOURCE_ROOT;
 		};
 		D9D763861B5D8B4C00230075 /* Views */ = {
@@ -392,11 +408,13 @@
 				D9D62F711B7525690082B674 /* ShowdownViewController.swift in Sources */,
 				D9B117C21B5962EE003204CC /* ViewController.swift in Sources */,
 				D98417E51B67EDFB004A48C4 /* BettingStructureCell.swift in Sources */,
+				D9D73EE91B7A5C4C004001D5 /* BVReorderTableView.m in Sources */,
 				D9D478BC1B5DB10000CAA8C4 /* ALRadialMenu.swift in Sources */,
 				D9D72D271B7920F90049F316 /* Universal.swift in Sources */,
 				D9D478B81B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift in Sources */,
 				D9B117C01B5962EE003204CC /* AppDelegate.swift in Sources */,
 				D9FF674F1B7816B900184103 /* PlayerListViewController.swift in Sources */,
+				D9D73EEB1B7A5CBE004001D5 /* ReorderTableViewController.swift in Sources */,
 				D9B117E31B59635E003204CC /* BettingViewController.swift in Sources */,
 				D9D72D251B791F340049F316 /* ShowdownContainerViewController.swift in Sources */,
 				D9D478BD1B5DB10000CAA8C4 /* ALRadialMenuButton.swift in Sources */,

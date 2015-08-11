@@ -10,7 +10,22 @@ import Foundation
 
 class ShowdownViewController : UITableViewController{
 
+    var winners : [Player]?
     var bettingVC : BettingViewController?
+
+    func getWinners() -> [Player]{
+        winners = []
+        for i in 0..<tableView.numberOfRowsInSection(0){
+            var path = NSIndexPath(forRow: i, inSection: 0)
+            var cell =  tableView.cellForRowAtIndexPath(path)
+            if cell?.accessoryType == UITableViewCellAccessoryType.Checkmark{
+                winners?.append(bettingVC!.buttons[path.row].player!)
+            }
+
+        }
+        return winners!
+    }
+
 }
 
 extension ShowdownViewController: UITableViewDataSource {
@@ -30,14 +45,25 @@ extension ShowdownViewController: UITableViewDataSource {
     }
 
 
+
 }
 
 extension ShowdownViewController: UITableViewDelegate {
 
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
+        var cell = tableView.cellForRowAtIndexPath(indexPath)
+        println(indexPath)
+        if cell!.accessoryType == UITableViewCellAccessoryType.Checkmark {
+            cell?.accessoryType = UITableViewCellAccessoryType.None
+        } else {
+            cell?.accessoryType = UITableViewCellAccessoryType.Checkmark
+
+//            winners?.append(bettingVC!.buttons[indexPath.row].player!)
+        }
+
     }
+
 
     // 3
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
@@ -49,6 +75,9 @@ extension ShowdownViewController: UITableViewDelegate {
 
 
     }
+
+
+
 
 
 
