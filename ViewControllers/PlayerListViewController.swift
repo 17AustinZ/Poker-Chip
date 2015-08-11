@@ -9,6 +9,7 @@
 import Foundation
 import SimpleAlert
 
+
 class PlayerListViewController : UITableViewController, UITableViewDataSource, UITableViewDelegate{
 
 //    var playerList : [Player]!
@@ -102,9 +103,39 @@ extension PlayerListViewController: UITableViewDelegate {
         
         
     }
-    
-    
-    
+
+
+
+    func saveObjectAndInsertBlankRowAtIndexPath(indexPath : NSIndexPath) -> AnyObject{
+        var object = Universal.sharedInstance.playersList[indexPath.row]
+        Universal.sharedInstance.playersList[indexPath.row] = Player(name: "", startChips: 0, color: 1)
+        println("asd")
+        return object
+
+    }
+
+
+    func moveRowAtIndexPath(fromIndexPath : NSIndexPath, toIndexPath: NSIndexPath){
+        var object = Universal.sharedInstance.playersList[fromIndexPath.row]
+        Universal.sharedInstance.playersList.removeAtIndex(fromIndexPath.row)
+        Universal.sharedInstance.playersList.insert(object, atIndex: toIndexPath.row)
+
+    }
+
+    // This method is called when the selected row is released to its new position. The object is the same
+//    // object you returned in saveObjectAndInsertBlankRowAtIndexPath:. Simply update the data source so the
+//    // object is in its new position. You should do any saving/cleanup here.
+//    - (void)finishReorderingWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath; {
+//    [_objects replaceObjectAtIndex:indexPath.row withObject:object];
+//    // do any additional cleanup here
+//    }
+
+
+    func finishReorderingWithObject(object: AnyObject, atIndexPath indexPath: NSIndexPath) {
+        Universal.sharedInstance.playersList[indexPath.row] = object as! Player
+        tableView.reloadData()
+    }
+
 }
 extension PlayerListViewController : UITextFieldDelegate{
     func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {

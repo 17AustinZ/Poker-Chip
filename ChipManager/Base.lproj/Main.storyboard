@@ -95,8 +95,8 @@
                                     <segue destination="yC8-6a-cyb" kind="show" identifier="toGame" id="JJT-IO-pkh"/>
                                 </connections>
                             </button>
-                            <containerView opaque="NO" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gco-hn-OLM">
-                                <rect key="frame" x="0.0" y="64" width="600" height="476"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gco-hn-OLM">
+                                <rect key="frame" x="0.0" y="20" width="600" height="520"/>
                                 <connections>
                                     <segue destination="DZh-HM-YfY" kind="embed" identifier="embedConfig" id="UgY-Gf-eIR"/>
                                 </connections>
@@ -166,7 +166,7 @@
         <scene sceneID="zWD-HJ-7f4">
             <objects>
                 <tableViewController id="DZh-HM-YfY" customClass="PlayerListViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYb-G9-Qnf">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYb-G9-Qnf" customClass="BVReorderTableView">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -204,7 +204,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K0q-V4-Qno" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-120" y="908"/>
+            <point key="canvasLocation" x="-120" y="996"/>
         </scene>
         <!--Split Pot ConfigVC-->
         <scene sceneID="5ee-fl-aZ7">
@@ -448,8 +448,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQx-WG-1cb">
-                                <rect key="frame" x="445" y="72" width="67" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQx-WG-1cb">
+                                <rect key="frame" x="445" y="28" width="67" height="30"/>
                                 <state key="normal" title="Bet/Raise">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -457,8 +457,8 @@
                                     <action selector="BetRaise:" destination="yC8-6a-cyb" eventType="touchUpInside" id="Lxy-qm-Bxf"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofn-Cw-6eo">
-                                <rect key="frame" x="527" y="72" width="31" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofn-Cw-6eo">
+                                <rect key="frame" x="527" y="28" width="31" height="30"/>
                                 <state key="normal" title="Fold">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -466,8 +466,8 @@
                                     <action selector="Fold:" destination="yC8-6a-cyb" eventType="touchUpInside" id="yWP-ad-8XE"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhd-HK-XKT">
-                                <rect key="frame" x="356" y="72" width="76" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhd-HK-XKT">
+                                <rect key="frame" x="356" y="28" width="76" height="30"/>
                                 <state key="normal" title="Check/Call">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -481,8 +481,8 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Psa-MO-So0">
-                                <rect key="frame" x="504" y="110" width="77" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Psa-MO-So0">
+                                <rect key="frame" x="504" y="66" width="77" height="30"/>
                                 <state key="normal" title="Showdown">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
