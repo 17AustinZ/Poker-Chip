@@ -9,6 +9,9 @@
 import Foundation
 import UIKit
 import SimpleAlert
+import LGPlusButtonsView
+import ActionButton
+
 
 class BettingViewController: UIViewController{
     
@@ -35,6 +38,7 @@ class BettingViewController: UIViewController{
         }
     }
 
+    var actionButton : ActionButton?
     var poolLabel : UILabel? //Pot count label
     var pool : Int = 0 //
 
@@ -47,7 +51,13 @@ class BettingViewController: UIViewController{
     @IBOutlet weak var CheckCallButton: UIButton!
     @IBOutlet weak var BetRaiseButton: UIButton!
     @IBOutlet weak var FoldButton: UIButton!
-    
+
+
+
+
+
+
+
      //MARK: Betting Functionality
     ////////////////////////////////////////////////////////////////////////////
 
@@ -59,8 +69,6 @@ class BettingViewController: UIViewController{
 //        self.players[0].chips! -= lastBet
 //        checkCount++
         for i in 0..<players.count {
-            print(players[i].name)
-            println(players[i].active)
         }
 
     }
@@ -92,16 +100,15 @@ class BettingViewController: UIViewController{
                 self.lastBet = betAmount!
 //                if (betAmount > self.players[self.currentPlayerIndex!].chips! ){
                 if (betAmount > self.buttons[0].player!.chips!){
-                    //[CODE]
-                    println("not enough chips")
+                    self.pool += self.buttons[0].player!.chips!
+                    self.buttons[0].player!.chips! = 0
                 } else {
                     self.pool += betAmount!
 //                    self.players[self.currentPlayerIndex!].chips! -= betAmount!
                     self.buttons[0].player!.chips! -= betAmount!
                 }
             } else {
-                //CODE
-                println("failed")
+                return
             }
             
             //Cleanup + Exit
@@ -157,6 +164,7 @@ class BettingViewController: UIViewController{
             button.titleLabel?.font = UIFont.systemFontOfSize(12)
         }
     }
+
 
 
     //[ADD] Optimization to remove redundant recalculation
@@ -223,12 +231,15 @@ class BettingViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
 //        currentPlayerIndex = 0
-
+        players = Universal.sharedInstance.playersList
         rotateView = UIView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 150, (UIScreen.mainScreen().bounds.height * 3 / 5) - 150, 300, 300))
         
         //[ADD] Alpha
         rotateView?.backgroundColor = UIColor.whiteColor()        
         view.addSubview(rotateView!)
+
+
+
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -245,6 +256,18 @@ class BettingViewController: UIViewController{
         poolLabel?.textAlignment = NSTextAlignment.Center
         poolLabel?.text = String(pool)
         view.bringSubviewToFront(poolLabel!)
+
+        let icon1 = UIImage(named: "icon1.png")!
+        let icon2 = UIImage(named: "icon2.png")!
+
+        let bet = ActionButtonItem(title: "Bet", image: icon1)
+        bet.action = {item in println("asdf")}
+
+        let fold = ActionButtonItem(title: "Fold", image: icon2)
+        fold.action = {item in println("asdf")}
+
+        actionButton = ActionButton(attachedToView: view, items: [bet, fold])
+        actionButton!.action = { button in button.toggleMenu() }
 
     }
     
@@ -294,4 +317,14 @@ extension Array {
         }
         return array
     }
+}
+extension BettingViewController : LGPlusButtonsViewDelegate {
+    func plusButtonsView(plusButtonsView: LGPlusButtonsView, buttonPressedWithTitle title: String, description: String, index: UInt) {
+
+    }
+
+    func plusButtonsViewPlusButtonPressed(plusButtonsView: LGPlusButtonsView) {
+
+    }
+
 }

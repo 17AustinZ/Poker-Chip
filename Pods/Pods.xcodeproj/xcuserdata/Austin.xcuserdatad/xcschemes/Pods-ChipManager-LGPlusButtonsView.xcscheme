@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "6348FE42C26D16A2E13F5A73"
+               BlueprintIdentifier = "82234EE195EA286BBCA43830"
                BuildableName = "LGPlusButtonsView.framework"
                BlueprintName = "Pods-ChipManager-LGPlusButtonsView"
                ReferencedContainer = "container:Pods.xcodeproj">

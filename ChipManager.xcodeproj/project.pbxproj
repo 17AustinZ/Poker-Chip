@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D92229CF1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92229CE1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift */; };
 		D92229D11B696F9F00EC8F59 /* ConfigureContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92229D01B696F9F00EC8F59 /* ConfigureContainerViewController.swift */; };
 		D92229D31B6973A700EC8F59 /* ConfigureTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D92229D21B6973A700EC8F59 /* ConfigureTableViewController.swift */; };
 		D94C050C1B6015A400B323F1 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = D94C050B1B6015A400B323F1 /* Player.swift */; };
-		D98417E51B67EDFB004A48C4 /* BettingStructureCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D98417E41B67EDFB004A48C4 /* BettingStructureCell.swift */; };
 		D9906D111B66B058002EA52F /* UILabelResizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9906D101B66B058002EA52F /* UILabelResizable.swift */; };
+		D9A09D8A1B7B19B000882D08 /* testVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9A09D891B7B19B000882D08 /* testVC.swift */; };
 		D9B117C01B5962EE003204CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117BF1B5962EE003204CC /* AppDelegate.swift */; };
 		D9B117C21B5962EE003204CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117C11B5962EE003204CC /* ViewController.swift */; };
 		D9B117C51B5962EE003204CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D9B117C31B5962EE003204CC /* Main.storyboard */; };
@@ -21,7 +20,6 @@
 		D9B117D61B5962EE003204CC /* ChipManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117D51B5962EE003204CC /* ChipManagerTests.swift */; };
 		D9B117E31B59635E003204CC /* BettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9B117E01B59635E003204CC /* BettingViewController.swift */; };
 		D9B117EC1B5963B9003204CC /* DYAlertPickView.m in Sources */ = {isa = PBXBuildFile; fileRef = D9B117EB1B5963B9003204CC /* DYAlertPickView.m */; };
-		D9C665EC1B73D7DB00A3D3EE /* SplitPotConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9C665EB1B73D7DB00A3D3EE /* SplitPotConfigVC.swift */; };
 		D9D478B81B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D478B71B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift */; };
 		D9D478BC1B5DB10000CAA8C4 /* ALRadialMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D478BA1B5DB10000CAA8C4 /* ALRadialMenu.swift */; };
 		D9D478BD1B5DB10000CAA8C4 /* ALRadialMenuButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9D478BB1B5DB10000CAA8C4 /* ALRadialMenuButton.swift */; };
@@ -50,12 +48,11 @@
 		1C62A9C68BD99D7D2008FE4B /* Pods-ChipManager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChipManager.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChipManager/Pods-ChipManager.debug.xcconfig"; sourceTree = "<group>"; };
 		440C609F5F3F7DE89346B446 /* Pods_ChipManager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChipManager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D3A56DB1737A8089BDE467D /* Pods-ChipManager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChipManager.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChipManager/Pods-ChipManager.release.xcconfig"; sourceTree = "<group>"; };
-		D92229CE1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingStructureOptionViewController.swift; sourceTree = "<group>"; };
 		D92229D01B696F9F00EC8F59 /* ConfigureContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureContainerViewController.swift; sourceTree = "<group>"; };
 		D92229D21B6973A700EC8F59 /* ConfigureTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureTableViewController.swift; sourceTree = "<group>"; };
 		D94C050B1B6015A400B323F1 /* Player.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		D98417E41B67EDFB004A48C4 /* BettingStructureCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BettingStructureCell.swift; sourceTree = "<group>"; };
 		D9906D101B66B058002EA52F /* UILabelResizable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILabelResizable.swift; sourceTree = "<group>"; };
+		D9A09D891B7B19B000882D08 /* testVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = testVC.swift; sourceTree = "<group>"; };
 		D9B117BA1B5962EE003204CC /* ChipManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChipManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D9B117BE1B5962EE003204CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D9B117BF1B5962EE003204CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -70,7 +67,6 @@
 		D9B117E61B596367003204CC /* ChipManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChipManager-Bridging-Header.h"; sourceTree = "<group>"; };
 		D9B117EA1B5963B9003204CC /* DYAlertPickView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DYAlertPickView.h; sourceTree = "<group>"; };
 		D9B117EB1B5963B9003204CC /* DYAlertPickView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DYAlertPickView.m; sourceTree = "<group>"; };
-		D9C665EB1B73D7DB00A3D3EE /* SplitPotConfigVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitPotConfigVC.swift; sourceTree = "<group>"; };
 		D9D478B71B5D8FF500CAA8C4 /* ConfigureSimpleAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigureSimpleAlert.swift; sourceTree = "<group>"; };
 		D9D478BA1B5DB10000CAA8C4 /* ALRadialMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALRadialMenu.swift; sourceTree = "<group>"; };
 		D9D478BB1B5DB10000CAA8C4 /* ALRadialMenuButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ALRadialMenuButton.swift; sourceTree = "<group>"; };
@@ -124,7 +120,6 @@
 		D98417E31B67EBB0004A48C4 /* ConfigureCells */ = {
 			isa = PBXGroup;
 			children = (
-				D98417E41B67EDFB004A48C4 /* BettingStructureCell.swift */,
 				D9FF67501B783C7400184103 /* PlayerCell.swift */,
 			);
 			path = ConfigureCells;
@@ -203,13 +198,12 @@
 				D9B117E01B59635E003204CC /* BettingViewController.swift */,
 				D92229D01B696F9F00EC8F59 /* ConfigureContainerViewController.swift */,
 				D92229D21B6973A700EC8F59 /* ConfigureTableViewController.swift */,
-				D92229CE1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift */,
-				D9C665EB1B73D7DB00A3D3EE /* SplitPotConfigVC.swift */,
 				D9D62F701B7525690082B674 /* ShowdownViewController.swift */,
 				D9D72D241B791F340049F316 /* ShowdownContainerViewController.swift */,
 				D9FF674E1B7816B900184103 /* PlayerListViewController.swift */,
 				D9D72D261B7920F90049F316 /* Universal.swift */,
 				D9D73EEA1B7A5CBE004001D5 /* ReorderTableViewController.swift */,
+				D9A09D891B7B19B000882D08 /* testVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = SOURCE_ROOT;
@@ -407,7 +401,6 @@
 				D9D62F731B7529C60082B674 /* ShowdownTableViewCell.swift in Sources */,
 				D9D62F711B7525690082B674 /* ShowdownViewController.swift in Sources */,
 				D9B117C21B5962EE003204CC /* ViewController.swift in Sources */,
-				D98417E51B67EDFB004A48C4 /* BettingStructureCell.swift in Sources */,
 				D9D73EE91B7A5C4C004001D5 /* BVReorderTableView.m in Sources */,
 				D9D478BC1B5DB10000CAA8C4 /* ALRadialMenu.swift in Sources */,
 				D9D72D271B7920F90049F316 /* Universal.swift in Sources */,
@@ -419,11 +412,10 @@
 				D9D72D251B791F340049F316 /* ShowdownContainerViewController.swift in Sources */,
 				D9D478BD1B5DB10000CAA8C4 /* ALRadialMenuButton.swift in Sources */,
 				D9FF67511B783C7400184103 /* PlayerCell.swift in Sources */,
+				D9A09D8A1B7B19B000882D08 /* testVC.swift in Sources */,
 				D94C050C1B6015A400B323F1 /* Player.swift in Sources */,
 				D9B117EC1B5963B9003204CC /* DYAlertPickView.m in Sources */,
-				D92229CF1B696EDF00EC8F59 /* BettingStructureOptionViewController.swift in Sources */,
 				D92229D11B696F9F00EC8F59 /* ConfigureContainerViewController.swift in Sources */,
-				D9C665EC1B73D7DB00A3D3EE /* SplitPotConfigVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

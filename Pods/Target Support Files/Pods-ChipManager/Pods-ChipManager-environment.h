@@ -6,6 +6,12 @@
 // project.
 
 
+// ActionButton
+#define COCOAPODS_POD_AVAILABLE_ActionButton
+#define COCOAPODS_VERSION_MAJOR_ActionButton 0
+#define COCOAPODS_VERSION_MINOR_ActionButton 1
+#define COCOAPODS_VERSION_PATCH_ActionButton 2
+
 // Bohr
 #define COCOAPODS_POD_AVAILABLE_Bohr
 #define COCOAPODS_VERSION_MAJOR_Bohr 2

@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Pods-ChipManager-ActionButton.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ChipManager-Bohr.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -27,22 +32,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0E413925904AFD12920FF2E9</key>
+		<key>4FF20557046A8CD40CBA8634</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>54F798A06B97E0024E67E7B6</key>
+		<key>82234EE195EA286BBCA43830</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>6348FE42C26D16A2E13F5A73</key>
+		<key>C46D325F3003DEE02143E0B7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82CDA56490B6F942F7A7EC0D</key>
+		<key>C64B6A06017CF4C4F3EE2609</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F3A7E7BBA62719D7E02EF7DE</key>
 		<dict>
 			<key>primary</key>
 			<true/>

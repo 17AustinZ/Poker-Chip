@@ -24,9 +24,7 @@ class ConfigureTableViewController: BOTableViewController{
     }
     
     override func viewDidLoad() {
-        navigationController?.navigationBarHidden = true
-        selectedStructureIndex = selectedStructurePath!.indexAtPosition(1)
-
+ 
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -34,10 +32,6 @@ class ConfigureTableViewController: BOTableViewController{
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "toStructureSelection" {
-            var destVC = segue.destinationViewController as! BettingStructureOptionViewController
-            destVC.ConfigVC = self
-        }
     }
 }
 

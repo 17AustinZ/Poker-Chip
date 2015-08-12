@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C46D325F3003DEE02143E0B7"
-               BuildableName = "SimpleAlert.framework"
-               BlueprintName = "Pods-ChipManager-SimpleAlert"
+               BlueprintIdentifier = "4FF20557046A8CD40CBA8634"
+               BuildableName = "ActionButton.framework"
+               BlueprintName = "Pods-ChipManager-ActionButton"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

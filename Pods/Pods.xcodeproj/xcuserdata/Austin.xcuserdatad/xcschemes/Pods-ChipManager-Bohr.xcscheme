@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "82CDA56490B6F942F7A7EC0D"
+               BlueprintIdentifier = "F3A7E7BBA62719D7E02EF7DE"
                BuildableName = "Bohr.framework"
                BlueprintName = "Pods-ChipManager-Bohr"
                ReferencedContainer = "container:Pods.xcodeproj">

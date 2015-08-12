@@ -8,6 +8,7 @@ target 'ChipManager' do
 pod 'SimpleAlert'
 pod 'Bohr'
 pod 'LGPlusButtonsView'
+pod 'ActionButton'
 end
 
 target 'ChipManagerTests' do

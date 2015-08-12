@@ -8,7 +8,7 @@
 
 import Foundation
 import SimpleAlert
-
+import ActionButton
 
 class PlayerListViewController : UITableViewController, UITableViewDataSource, UITableViewDelegate{
 
@@ -39,7 +39,7 @@ class PlayerListViewController : UITableViewController, UITableViewDataSource, U
             textField.placeholder = "Number of Chips"
             textField.keyboardType = UIKeyboardType.NumberPad
             textField.borderStyle = UITextBorderStyle.Line
-//            textField.delegate = self
+            textField.delegate = self
 
         }
 
@@ -52,13 +52,19 @@ class PlayerListViewController : UITableViewController, UITableViewDataSource, U
         })
         self.presentViewController(addPlayerPopup, animated: true, completion: {})
 
-//        println(playerList)
+    }
+
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
 
     override func viewDidLoad() {
+        super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        navigationController?.navigationBarHidden = true
+//        navigationController?.navigationBarHidden = true
+
 
 
     }
@@ -69,7 +75,6 @@ extension PlayerListViewController: UITableViewDataSource {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
 
         let cell = tableView.dequeueReusableCellWithIdentifier("playerCell", forIndexPath: indexPath) as! PlayerCell
-        println("Asdf")
         let row = indexPath.row
         let player = Universal.sharedInstance.playersList[row]
         cell.player = player
@@ -138,10 +143,23 @@ extension PlayerListViewController: UITableViewDelegate {
 
 }
 extension PlayerListViewController : UITextFieldDelegate{
-    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange, replacementString string: String) -> Bool {
-        if count(textField.text) > 3 && range.length == 0{
-            return false
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,
+        replacementString string: String) -> Bool {
+        if textField.placeholder! == "Player Initials" {
+            if count(textField.text) > 3 && range.length == 0{
+                return false
+            }
+
+        } else if textField.placeholder == "Number of Chips"{
+            println("chips")
+
+            for chr in string {
+                if ((chr >= "a" && chr <= "z") || (chr >= "A" && chr <= "Z") ) {
+                    return false
+                }
+            }
         }
         return true
     }
+
 }
