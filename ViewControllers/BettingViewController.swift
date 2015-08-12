@@ -63,8 +63,9 @@ class BettingViewController: UIViewController{
 //        //        self.players[self.currentPlayerIndex!].chips! -= lastBet
 //        self.players[0].chips! -= lastBet
 //        checkCount++
-        for i in 0..<players.count {
-        }
+        self.pool += lastBet
+        self.players[0].chips! -= lastBet
+        nextTurn(true)
 
     }
     
@@ -101,6 +102,7 @@ class BettingViewController: UIViewController{
                     self.pool += betAmount!
 //                    self.players[self.currentPlayerIndex!].chips! -= betAmount!
                     self.buttons[0].player!.chips! -= betAmount!
+                    self.lastBet = betAmount!
                 }
             } else {
                 return
@@ -265,10 +267,15 @@ class BettingViewController: UIViewController{
         fold.action = {item in self.Fold(self)}
 
         let check = ActionButtonItem(title: "Check", image: icon3)
-        fold.action = {item in self.CheckCall(self)}
+        check.action = {item in self.CheckCall(self)}
 
         let showdown = ActionButtonItem(title: "Showdown", image: icon4)
-        fold.action = {item in self.performSegueWithIdentifier("toWinners", sender: self)}
+        showdown.action = {item in
+            println("Asdf")
+
+            self.performSegueWithIdentifier("toWinners", sender: self)
+
+        }
 
         actionButton = ActionButton(attachedToView: view, items: [bet, fold, check, showdown])
         actionButton!.action = { button in button.toggleMenu() }

@@ -45,7 +45,14 @@ class PlayerListViewController : UITableViewController, UITableViewDataSource, U
 
         addPlayerPopup.addAction(SimpleAlert.Action(title: "Add Player", style: .Default) { action in
             var playerName : String = addPlayerPopup.textFields[0].text
-            var playerCount : Int = addPlayerPopup.textFields[1].text.toInt()!
+            var playerCount : Int = 0
+            println(addPlayerPopup.textFields[1].text)
+            if !addPlayerPopup.textFields[1].text.isEmpty {
+                var playerCount : Int = addPlayerPopup.textFields[1].text.toInt()!
+            }
+            else {
+                return
+            }
             Universal.sharedInstance.playersList.append(Player(name: playerName, startChips: playerCount, color: Universal.sharedInstance.playersList.count + 1))
             self.tableView.reloadData()
 
@@ -154,7 +161,7 @@ extension PlayerListViewController : UITextFieldDelegate{
             println("chips")
 
             for chr in string {
-                if ((chr >= "a" && chr <= "z") || (chr >= "A" && chr <= "Z") ) {
+                if (!(chr >= "0" && chr <= "9")) {
                     return false
                 }
             }

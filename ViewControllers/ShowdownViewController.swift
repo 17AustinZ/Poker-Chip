@@ -41,7 +41,11 @@ extension ShowdownViewController: UITableViewDataSource {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         let rows = bettingVC?.buttons.count
-        return rows!
+        if let rows = rows {
+            return rows
+        }
+        return 0
+
     }
 
 
