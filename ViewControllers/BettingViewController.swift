@@ -48,11 +48,6 @@ class BettingViewController: UIViewController{
 
      //MARK: Button handles
     ////////////////////////////////////////////////////////////////////////////
-    @IBOutlet weak var CheckCallButton: UIButton!
-    @IBOutlet weak var BetRaiseButton: UIButton!
-    @IBOutlet weak var FoldButton: UIButton!
-
-
 
 
 
@@ -63,7 +58,7 @@ class BettingViewController: UIViewController{
 
 
 
-    @IBAction func CheckCall(sender: AnyObject) {
+    func CheckCall(sender: AnyObject) {
 //        self.pool += lastBet
 //        //        self.players[self.currentPlayerIndex!].chips! -= lastBet
 //        self.players[0].chips! -= lastBet
@@ -75,7 +70,7 @@ class BettingViewController: UIViewController{
     
     //[Button] Bets/Raises by the specified amount
     //Specified amount is specified via
-    @IBAction func BetRaise(sender: AnyObject) {
+    func BetRaise(sender: AnyObject) {
         //[Workaround]
         //BUG[001]
         //Reasoning: SimpleAlert shows up underneath the radialMenu
@@ -120,7 +115,7 @@ class BettingViewController: UIViewController{
     }
     
     ///[Button] Folds
-    @IBAction func Fold(sender: AnyObject) {
+     func Fold(sender: AnyObject) {
         println(players[0].name!)
 //        players.removeAtIndex(0)
         players[0].active = false
@@ -170,7 +165,7 @@ class BettingViewController: UIViewController{
     //[ADD] Optimization to remove redundant recalculation
     ///Displays the radial menu
     func showMenu() {
-        var midScreen = CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height * 3 / 5)
+        var midScreen = CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height * 2 / 5)
 //        radialMenu.setButtons(buttons)
         radialMenu = ALRadialMenu().setButtons(generateButtons()).setAnimationOrigin(midScreen)
         //[ADD] Dynamic resizing?
@@ -179,6 +174,7 @@ class BettingViewController: UIViewController{
         //[BUG] Likely Cause of Bug BUG[001]
         radialMenu.presentInView(rotateView!)
 //        println(buttons.count)
+        
     }
     
     ///Generates buttons - Modifies buttons[Button]
@@ -232,7 +228,7 @@ class BettingViewController: UIViewController{
         super.viewDidLoad()
 //        currentPlayerIndex = 0
         players = Universal.sharedInstance.playersList
-        rotateView = UIView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 150, (UIScreen.mainScreen().bounds.height * 3 / 5) - 150, 300, 300))
+        rotateView = UIView(frame: CGRectMake(UIScreen.mainScreen().bounds.width / 2 - 150, (UIScreen.mainScreen().bounds.height * 2 / 5) - 150, 300, 300))
         
         //[ADD] Alpha
         rotateView?.backgroundColor = UIColor.whiteColor()        
@@ -251,23 +247,33 @@ class BettingViewController: UIViewController{
         super.viewDidAppear(animated)
         showMenu()
         label()
-        poolLabel = UILabel(frame: CGRectMake((UIScreen.mainScreen().bounds.width / 2) - 20, (UIScreen.mainScreen().bounds.height * 3 / 5) - 20 , 40, 40))
+        poolLabel = UILabel(frame: CGRectMake((UIScreen.mainScreen().bounds.width / 2) - 20, (UIScreen.mainScreen().bounds.height * 2 / 5) - 20 , 40, 40))
         view.addSubview(poolLabel!)
         poolLabel?.textAlignment = NSTextAlignment.Center
         poolLabel?.text = String(pool)
         view.bringSubviewToFront(poolLabel!)
 
         let icon1 = UIImage(named: "icon1.png")!
-        let icon2 = UIImage(named: "icon2.png")!
+        let icon2 = UIImage(named: "icon3.png")!
+        let icon3 = UIImage(named: "icon4.png")!
+        let icon4 = UIImage(named: "icon4.png")!
 
         let bet = ActionButtonItem(title: "Bet", image: icon1)
-        bet.action = {item in println("asdf")}
+        bet.action = {item in self.BetRaise(self)}
 
         let fold = ActionButtonItem(title: "Fold", image: icon2)
-        fold.action = {item in println("asdf")}
+        fold.action = {item in self.Fold(self)}
 
-        actionButton = ActionButton(attachedToView: view, items: [bet, fold])
+        let check = ActionButtonItem(title: "Check", image: icon3)
+        fold.action = {item in self.CheckCall(self)}
+
+        let showdown = ActionButtonItem(title: "Showdown", image: icon4)
+        fold.action = {item in self.performSegueWithIdentifier("toWinners", sender: self)}
+
+        actionButton = ActionButton(attachedToView: view, items: [bet, fold, check, showdown])
         actionButton!.action = { button in button.toggleMenu() }
+        view.bringSubviewToFront(actionButton!.contentView!)
+        
 
     }
     

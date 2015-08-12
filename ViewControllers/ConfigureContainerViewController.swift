@@ -39,7 +39,7 @@ class ConfigureContainerViewController : UIViewController{
 //            ]
 
 
-            //            var splitSwitch = configVC.tableView.cellForRowAtIndexPath(NSIndexPath(indexes: [0,0], length: 2)) as! BOSwitchTableViewCell
+            //            var splitSwitch = configVC.tableView.cellForRowAtIndexPath(NSIndexPath(indexes: [0,0], length: 2))vi as! BOSwitchTableViewCell
 //            splitPot = splitSwitch.toggleSwitch.on
 //
 

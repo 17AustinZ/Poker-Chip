@@ -48,7 +48,7 @@ public class ActionButton: NSObject {
     private var floatButton: UIButton!
     
     /// View that will hold the placement of the button's actions
-    private var contentView: UIView!
+    public var contentView: UIView!
     
     /// View where the *floatButton* will be displayed
     private var parentView: UIView!
@@ -57,17 +57,18 @@ public class ActionButton: NSObject {
     private var blurVisualEffect: UIVisualEffectView!
     
     // Distance between each item action
-    private let itemOffset = -55
+    private let itemOffset = -45
     
     /// the float button's radius
     private let floatButtonRadius = 50
     
     public init(attachedToView view: UIView, items: [ActionButtonItem]?) {
         super.init()
-        
+
         self.parentView = view
         self.items = items
         let bounds = self.parentView.bounds
+        println(bounds)
         
         self.floatButton = UIButton.buttonWithType(.Custom) as! UIButton
         self.floatButton.layer.cornerRadius = CGFloat(floatButtonRadius / 2)
@@ -90,7 +91,8 @@ public class ActionButton: NSObject {
 //        self.blurVisualEffect = UIVisualEffectView(effect: UIBlurEffect(style: .ExtraLight))
 //        self.blurVisualEffect.frame = self.contentView.frame
 //        self.contentView.addSubview(self.blurVisualEffect)
-
+        self.parentView.bringSubviewToFront(contentView)
+//        self.parentView.bringSubviewToFront(contentView)
         let tap = UITapGestureRecognizer(target: self, action: Selector("backgroundTapped:"))
         self.contentView.addGestureRecognizer(tap)
         

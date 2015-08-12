@@ -2,8 +2,6 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14E46" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="kCi-sH-U2d">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
-        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Navigation Controller-->
@@ -122,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aBO-gX-oF6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-239" y="169"/>
+            <point key="canvasLocation" x="-371" y="121"/>
         </scene>
         <!--Configure Table View Controller-->
         <scene sceneID="jVL-Iy-ZZy">
@@ -167,7 +165,7 @@
             <objects>
                 <tableViewController id="DZh-HM-YfY" customClass="PlayerListViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lYb-G9-Qnf" customClass="BVReorderTableView">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="520"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
@@ -448,135 +446,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQx-WG-1cb">
-                                <rect key="frame" x="270" y="97" width="61" height="50"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="61" id="JAy-cR-acd"/>
-                                    <constraint firstAttribute="width" secondItem="CQx-WG-1cb" secondAttribute="height" multiplier="2:1" id="g2L-Xf-Wwn"/>
-                                    <constraint firstAttribute="height" constant="50" id="zm6-ye-Nv6"/>
-                                </constraints>
-                                <state key="normal" title="Bet/Raise">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="g2L-Xf-Wwn"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="BetRaise:" destination="yC8-6a-cyb" eventType="touchUpInside" id="Lxy-qm-Bxf"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nhd-HK-XKT">
-                                <rect key="frame" x="345" y="28" width="94" height="31"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="nhd-HK-XKT" secondAttribute="height" multiplier="1:1" id="6rF-Jb-p8n"/>
-                                    <constraint firstAttribute="height" constant="31" id="EYA-fi-nOM"/>
-                                    <constraint firstAttribute="width" constant="94" id="hjy-YT-yho"/>
-                                </constraints>
-                                <state key="normal" title="Check/Call">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="6rF-Jb-p8n"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="CheckCall:" destination="yC8-6a-cyb" eventType="touchUpInside" id="7p9-UR-hW3"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ASDF" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hie-I8-GIz">
                                 <rect key="frame" x="278" y="332" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Psa-MO-So0">
-                                <rect key="frame" x="489" y="189" width="77" height="30"/>
-                                <state key="normal" title="Showdown">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="aYu-9v-cqS" kind="show" identifier="toShowdown" id="gKU-05-QpH"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ofn-Cw-6eo">
-                                <rect key="frame" x="357" y="74" width="61" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="Ofn-Cw-6eo" secondAttribute="height" multiplier="1:1" constant="1" id="IT2-Rb-Xcs"/>
-                                    <constraint firstAttribute="width" constant="61" id="Tdt-NK-g7Q"/>
-                                    <constraint firstAttribute="height" constant="60" id="miK-xr-iMw"/>
-                                </constraints>
-                                <state key="normal" title="Fold">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="IT2-Rb-Xcs"/>
-                                        <exclude reference="miK-xr-iMw"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <action selector="Fold:" destination="yC8-6a-cyb" eventType="touchUpInside" id="yWP-ad-8XE"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3gv-te-742">
-                                <rect key="frame" x="292" y="189" width="46" height="30"/>
-                                <state key="normal" title="Button">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="k3o-SX-02e" kind="show" id="xZG-Pk-MNL"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Psa-MO-So0" firstAttribute="top" secondItem="Ocy-2G-zVm" secondAttribute="bottom" constant="169" id="C93-hc-BpH"/>
-                            <constraint firstItem="Ofn-Cw-6eo" firstAttribute="leading" secondItem="CQx-WG-1cb" secondAttribute="trailing" constant="26" id="EFj-kS-Qsk"/>
-                            <constraint firstItem="Ofn-Cw-6eo" firstAttribute="top" secondItem="nhd-HK-XKT" secondAttribute="bottom" constant="15" id="FD7-Zk-2Pu"/>
-                            <constraint firstItem="3gv-te-742" firstAttribute="top" secondItem="CQx-WG-1cb" secondAttribute="bottom" constant="42" id="IT9-bs-aNe"/>
-                            <constraint firstItem="4We-LO-SZ7" firstAttribute="top" secondItem="Ofn-Cw-6eo" secondAttribute="bottom" constant="466" id="QRd-zG-9C8"/>
-                            <constraint firstItem="Psa-MO-So0" firstAttribute="leading" secondItem="3gv-te-742" secondAttribute="trailing" constant="151" id="QiS-yi-ekn"/>
-                            <constraint firstItem="Hie-I8-GIz" firstAttribute="centerX" secondItem="CQx-WG-1cb" secondAttribute="centerX" id="W73-8l-MiP"/>
-                            <constraint firstAttribute="trailing" secondItem="nhd-HK-XKT" secondAttribute="trailing" constant="161" id="Wzp-PZ-S4Y"/>
-                            <constraint firstItem="CQx-WG-1cb" firstAttribute="centerX" secondItem="G3k-E2-Fgy" secondAttribute="centerX" id="ZzD-XR-ZfE"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="Psa-MO-So0" secondAttribute="trailing" constant="18" id="anF-c9-d9H"/>
-                            <constraint firstItem="CQx-WG-1cb" firstAttribute="top" secondItem="Ocy-2G-zVm" secondAttribute="bottom" constant="77" id="fbX-x2-nc2"/>
-                            <constraint firstItem="3gv-te-742" firstAttribute="leading" secondItem="CQx-WG-1cb" secondAttribute="trailing" constant="-39" id="g0d-z3-9Yi"/>
-                            <constraint firstItem="nhd-HK-XKT" firstAttribute="top" secondItem="Ocy-2G-zVm" secondAttribute="bottom" constant="8" symbolic="YES" id="o7a-5c-PuW"/>
-                            <constraint firstItem="4We-LO-SZ7" firstAttribute="top" secondItem="Hie-I8-GIz" secondAttribute="bottom" constant="247" id="sui-m2-bPV"/>
+                            <constraint firstAttribute="centerX" secondItem="Hie-I8-GIz" secondAttribute="centerX" constant="-0.5" id="WY8-Ly-Pbg"/>
+                            <constraint firstAttribute="centerY" secondItem="Hie-I8-GIz" secondAttribute="centerY" constant="-42.5" id="lBy-21-7pz"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="BetRaiseButton" destination="CQx-WG-1cb" id="wua-ff-HoS"/>
-                        <outlet property="CheckCallButton" destination="nhd-HK-XKT" id="ubE-pY-k8n"/>
-                        <outlet property="FoldButton" destination="Ofn-Cw-6eo" id="sod-uc-cVW"/>
                         <outlet property="poolLabel" destination="Hie-I8-GIz" id="rVk-Vv-2Li"/>
+                        <segue destination="aYu-9v-cqS" kind="show" identifier="toWinners" id="1rJ-aA-EqN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="17k-MA-dfD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="733" y="232"/>
-        </scene>
-        <!--TestVC-->
-        <scene sceneID="w5g-rq-mpA">
-            <objects>
-                <viewController id="k3o-SX-02e" customClass="testVC" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jvd-HZ-d1j"/>
-                        <viewControllerLayoutGuide type="bottom" id="9tk-ox-Typ"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OTR-Lf-sR9">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="PxX-h0-vE4" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1109" y="91"/>
         </scene>
         <!--Select Winners-->
         <scene sceneID="7L4-dU-9UW">
@@ -619,7 +509,7 @@
         <!--Select Winners-->
         <scene sceneID="fYB-oX-wyZ">
             <objects>
-                <viewController title="Select Winners" id="aYu-9v-cqS" customClass="ShowdownContainerViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="selectWinners" title="Select Winners" id="aYu-9v-cqS" customClass="ShowdownContainerViewController" customModule="ChipManager" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="SFB-AO-BQD"/>
                         <viewControllerLayoutGuide type="bottom" id="Udl-bt-qjj"/>
@@ -660,7 +550,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="p25-MP-4Z6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1301" y="1307"/>
+            <point key="canvasLocation" x="919" y="1705"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="E4p-oS-PHO">
@@ -679,12 +569,13 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JYf-nu-b5q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="852" y="-654"/>
         </scene>
     </scenes>
     <resources>
         <image name="go" width="300" height="300"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="m5v-bo-3O5"/>
+        <segue reference="Mp5-9J-6Si"/>
     </inferredMetricsTieBreakers>
 </document>
