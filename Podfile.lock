@@ -2,18 +2,23 @@ PODS:
   - ActionButton (0.1.2)
   - Bohr (2.1.0)
   - LGPlusButtonsView (1.0.3)
+  - Mixpanel (2.8.2):
+    - Mixpanel/Mixpanel (= 2.8.2)
+  - Mixpanel/Mixpanel (2.8.2)
   - SimpleAlert (1.2.1)
 
 DEPENDENCIES:
   - ActionButton
   - Bohr
   - LGPlusButtonsView
+  - Mixpanel
   - SimpleAlert
 
 SPEC CHECKSUMS:
   ActionButton: a9396194eee90f4a0ec1cc4ee7bc419d916abdc1
   Bohr: 08c66d64e8f14c2bb759d81074ebea9a3ae0024d
   LGPlusButtonsView: d10027afc527e4aaae80f69c27e7a5f12a63df2c
+  Mixpanel: f4d71ac2a306e7cda6ad03d4a2be249a0fd7a967
   SimpleAlert: 22d7890f9d253d947a23fd60fcd0213febe6a339
 
 COCOAPODS: 0.37.2

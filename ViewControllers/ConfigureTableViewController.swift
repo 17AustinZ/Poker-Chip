@@ -13,7 +13,6 @@ class ConfigureTableViewController: BOTableViewController{
 
     var selectedStructurePath : NSIndexPath?
     var selectedStructureIndex : Int?
-    var selectedStructure : BettingViewController.bettingLimit?
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         println(indexPath)

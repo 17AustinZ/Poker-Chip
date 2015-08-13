@@ -10,7 +10,6 @@ import Foundation
 import Bohr
 class ConfigureContainerViewController : UIViewController{
 
-    var bettingStructure : BettingViewController.bettingLimit?
     var startingChips : Int? = 100
     var configVC : PlayerListViewController!
     var splitPot : Bool?

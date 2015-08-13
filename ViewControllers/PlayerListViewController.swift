@@ -9,10 +9,12 @@
 import Foundation
 import SimpleAlert
 import ActionButton
+import Mixpanel
 
 class PlayerListViewController : UITableViewController, UITableViewDataSource, UITableViewDelegate{
 
 //    var playerList : [Player]!
+    var mixpanel = Mixpanel.sharedInstance()
 
     func addNewPlayer(){
         tableView.reloadData()
@@ -48,7 +50,7 @@ class PlayerListViewController : UITableViewController, UITableViewDataSource, U
             var playerCount : Int = 0
             println(addPlayerPopup.textFields[1].text)
             if !addPlayerPopup.textFields[1].text.isEmpty {
-                var playerCount : Int = addPlayerPopup.textFields[1].text.toInt()!
+                playerCount = addPlayerPopup.textFields[1].text.toInt()!
             }
             else {
                 return
@@ -70,6 +72,7 @@ class PlayerListViewController : UITableViewController, UITableViewDataSource, U
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        mixpanel.track("Opened View Controller", properties: ["View Controller" : "PlayerList"])
 //        navigationController?.navigationBarHidden = true
 
 
@@ -102,7 +105,7 @@ extension PlayerListViewController: UITableViewDelegate {
 
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
+//        tableView.cellForRowAtIndexPath(indexPath)?.accessoryType = UITableViewCellAccessoryType.Checkmark
     }
 
     // 3
@@ -146,6 +149,7 @@ extension PlayerListViewController: UITableViewDelegate {
     func finishReorderingWithObject(object: AnyObject, atIndexPath indexPath: NSIndexPath) {
         Universal.sharedInstance.playersList[indexPath.row] = object as! Player
         tableView.reloadData()
+        mixpanel.track("Reordered Player List")
     }
 
 }

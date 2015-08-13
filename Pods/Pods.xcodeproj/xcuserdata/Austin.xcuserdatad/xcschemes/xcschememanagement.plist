@@ -19,6 +19,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Pods-ChipManager-Mixpanel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods-ChipManager-SimpleAlert.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -32,27 +37,32 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>4FF20557046A8CD40CBA8634</key>
+		<key>1C3F50ECC738F82CCDD667B6</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>82234EE195EA286BBCA43830</key>
+		<key>23AD0A33E8DDF5F3E25E9ECE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C46D325F3003DEE02143E0B7</key>
+		<key>382829F0956D3786337B695C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C64B6A06017CF4C4F3EE2609</key>
+		<key>5B82A969392A08107E2D1537</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F3A7E7BBA62719D7E02EF7DE</key>
+		<key>86D23CF9AC65ABE57E3CFDDC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>BE2EF0FBFF7A51DB8644C3B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>

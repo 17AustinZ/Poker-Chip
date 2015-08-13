@@ -51,11 +51,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'ActionButton.framework'
   install_framework 'Bohr.framework'
   install_framework 'LGPlusButtonsView.framework'
+  install_framework 'Mixpanel.framework'
   install_framework 'SimpleAlert.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'ActionButton.framework'
   install_framework 'Bohr.framework'
   install_framework 'LGPlusButtonsView.framework'
+  install_framework 'Mixpanel.framework'
   install_framework 'SimpleAlert.framework'
 fi

@@ -7,12 +7,20 @@
 //
 
 import Foundation
+import Mixpanel
 
 class ShowdownViewController : UITableViewController{
 
+    var mixpanel = Mixpanel.sharedInstance()
     var winners : [Player]?
     var bettingVC : BettingViewController?
 
+    override func viewDidLoad() {
+
+        super.viewDidLoad()
+        mixpanel.track("Opened View Controller", properties: ["View Controller" : "Showdown"])
+
+    }
     func getWinners() -> [Player]{
         winners = []
         for i in 0..<tableView.numberOfRowsInSection(0){
@@ -41,9 +49,12 @@ extension ShowdownViewController: UITableViewDataSource {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         let rows = bettingVC?.buttons.count
+        println(bettingVC)
+        println(rows)
         if let rows = rows {
             return rows
         }
+        println("asdfasda")
         return 0
 
     }

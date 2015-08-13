@@ -24,6 +24,18 @@
 #define COCOAPODS_VERSION_MINOR_LGPlusButtonsView 0
 #define COCOAPODS_VERSION_PATCH_LGPlusButtonsView 3
 
+// Mixpanel
+#define COCOAPODS_POD_AVAILABLE_Mixpanel
+#define COCOAPODS_VERSION_MAJOR_Mixpanel 2
+#define COCOAPODS_VERSION_MINOR_Mixpanel 8
+#define COCOAPODS_VERSION_PATCH_Mixpanel 2
+
+// Mixpanel/Mixpanel
+#define COCOAPODS_POD_AVAILABLE_Mixpanel_Mixpanel
+#define COCOAPODS_VERSION_MAJOR_Mixpanel_Mixpanel 2
+#define COCOAPODS_VERSION_MINOR_Mixpanel_Mixpanel 8
+#define COCOAPODS_VERSION_PATCH_Mixpanel_Mixpanel 2
+
 // SimpleAlert
 #define COCOAPODS_POD_AVAILABLE_SimpleAlert
 #define COCOAPODS_VERSION_MAJOR_SimpleAlert 1

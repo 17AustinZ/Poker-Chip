@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4FF20557046A8CD40CBA8634"
+               BlueprintIdentifier = "382829F0956D3786337B695C"
                BuildableName = "ActionButton.framework"
                BlueprintName = "Pods-ChipManager-ActionButton"
                ReferencedContainer = "container:Pods.xcodeproj">

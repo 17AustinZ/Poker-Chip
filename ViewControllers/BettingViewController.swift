@@ -11,16 +11,14 @@ import UIKit
 import SimpleAlert
 import LGPlusButtonsView
 import ActionButton
+import Mixpanel
+
+
 
 
 class BettingViewController: UIViewController{
-    
-    enum bettingLimit{
-        case Fixed
-        case Spread
-        case Pot
-        case None
-    }
+    var mixpanel = Mixpanel.sharedInstance()
+
 
 
      //MARK: Class variables
@@ -41,14 +39,7 @@ class BettingViewController: UIViewController{
     var actionButton : ActionButton?
     var poolLabel : UILabel? //Pot count label
     var pool : Int = 0 //
-
-    var limit : bettingLimit!
-
     var checkCount : Int = 0
-
-     //MARK: Button handles
-    ////////////////////////////////////////////////////////////////////////////
-
 
 
 
@@ -59,10 +50,6 @@ class BettingViewController: UIViewController{
 
 
     func CheckCall(sender: AnyObject) {
-//        self.pool += lastBet
-//        //        self.players[self.currentPlayerIndex!].chips! -= lastBet
-//        self.players[0].chips! -= lastBet
-//        checkCount++
         self.pool += lastBet
         self.players[0].chips! -= lastBet
         nextTurn(true)
@@ -85,6 +72,7 @@ class BettingViewController: UIViewController{
             textField.layer.borderColor = nil
             textField.layer.borderWidth = 0
             textField.placeholder = "Number of Chips"
+            textField.delegate = self
         }
         raisePopup.addAction(SimpleAlert.Action(title: "OK", style: .Default) { action in
             //Setup
@@ -94,13 +82,11 @@ class BettingViewController: UIViewController{
             if raiseCount != nil {
                 var betAmount = raiseCount
                 self.lastBet = betAmount!
-//                if (betAmount > self.players[self.currentPlayerIndex!].chips! ){
                 if (betAmount > self.buttons[0].player!.chips!){
                     self.pool += self.buttons[0].player!.chips!
                     self.buttons[0].player!.chips! = 0
                 } else {
                     self.pool += betAmount!
-//                    self.players[self.currentPlayerIndex!].chips! -= betAmount!
                     self.buttons[0].player!.chips! -= betAmount!
                     self.lastBet = betAmount!
                 }
@@ -171,7 +157,7 @@ class BettingViewController: UIViewController{
 //        radialMenu.setButtons(buttons)
         radialMenu = ALRadialMenu().setButtons(generateButtons()).setAnimationOrigin(midScreen)
         //[ADD] Dynamic resizing?
-        radialMenu.setRadius(150)
+        radialMenu.setRadius(Double(UIScreen.mainScreen().bounds.width) / 2 - 30)
         radialMenu.setDismissOnOverlayTap(false)
         //[BUG] Likely Cause of Bug BUG[001]
         radialMenu.presentInView(rotateView!)
@@ -236,6 +222,8 @@ class BettingViewController: UIViewController{
         rotateView?.backgroundColor = UIColor.whiteColor()        
         view.addSubview(rotateView!)
 
+        mixpanel.track("Opened View Controller", properties: ["View Controller" : "Betting"])
+
 
 
     }
@@ -256,8 +244,8 @@ class BettingViewController: UIViewController{
         view.bringSubviewToFront(poolLabel!)
 
         let icon1 = UIImage(named: "icon1.png")!
-        let icon2 = UIImage(named: "icon3.png")!
-        let icon3 = UIImage(named: "icon4.png")!
+        let icon2 = UIImage(named: "icon2.png")!
+        let icon3 = UIImage(named: "icon3.png")!
         let icon4 = UIImage(named: "icon4.png")!
 
         let bet = ActionButtonItem(title: "Bet", image: icon1)
@@ -293,7 +281,7 @@ class BettingViewController: UIViewController{
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         radialMenu.dismiss()
         radialMenu.removeFromSuperview()
-        if segue.identifier == "toShowdown" {
+        if segue.identifier == "toWinners" {
             var showdownVC = segue.destinationViewController as! ShowdownContainerViewController
             showdownVC.bettingVC = self
         }
@@ -340,4 +328,17 @@ extension BettingViewController : LGPlusButtonsViewDelegate {
 
     }
 
+}
+
+extension BettingViewController : UITextFieldDelegate{
+    func textField(textField: UITextField, shouldChangeCharactersInRange range: NSRange,
+        replacementString string: String) -> Bool {
+            for chr in string {
+                if (!(chr >= "0" && chr <= "9")) {
+                    return false
+                }
+            }
+        return true
+    }
+    
 }
