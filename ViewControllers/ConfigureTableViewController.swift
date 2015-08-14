@@ -15,7 +15,6 @@ class ConfigureTableViewController: BOTableViewController{
     var selectedStructureIndex : Int?
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        println(indexPath)
     }
 
     override func setup() {

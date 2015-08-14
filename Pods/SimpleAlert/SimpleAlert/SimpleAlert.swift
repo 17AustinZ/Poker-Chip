@@ -306,7 +306,6 @@ public class SimpleAlert {
         }
         
         @IBAction func unwindToSegue (segue : UIStoryboardSegue) {
-            println("asdf")
         }
     }
 }

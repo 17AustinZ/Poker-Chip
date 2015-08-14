@@ -68,7 +68,6 @@ public class ActionButton: NSObject {
         self.parentView = view
         self.items = items
         let bounds = self.parentView.bounds
-        println(bounds)
         
         self.floatButton = UIButton.buttonWithType(.Custom) as! UIButton
         self.floatButton.layer.cornerRadius = CGFloat(floatButtonRadius / 2)

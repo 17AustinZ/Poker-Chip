@@ -16,7 +16,6 @@ class ShowdownContainerViewController : UIViewController{
     var actionButton: ActionButton!
     @IBAction func showdownDone(sender: AnyObject) {
         var pool = bettingVC?.pool
-        println(pool)
         showdownVC?.getWinners()
         if let winners = showdownVC?.winners!{
             for player in winners{
@@ -34,8 +33,6 @@ class ShowdownContainerViewController : UIViewController{
 
         super.prepareForSegue(segue, sender: sender)
         if segue.identifier == "showdownEmbed" {
-            println("showdowncalled")
-            println(self.bettingVC)
             showdownVC = segue.destinationViewController as? ShowdownViewController
             showdownVC!.bettingVC = self.bettingVC
         }

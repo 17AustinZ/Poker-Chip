@@ -202,7 +202,6 @@ public class ALRadialMenu: UIButton {
         
         for var i = buttons.count - 1; i >= 0; i-- {
             rotateButton(buttons[i], index: i-1)
-//            println(buttons[i].player!.name)
         }
         println()
         rotateButton(buttons[0], index: buttons.count - 1)

@@ -48,7 +48,6 @@ class PlayerListViewController : UITableViewController, UITableViewDataSource, U
         addPlayerPopup.addAction(SimpleAlert.Action(title: "Add Player", style: .Default) { action in
             var playerName : String = addPlayerPopup.textFields[0].text
             var playerCount : Int = 0
-            println(addPlayerPopup.textFields[1].text)
             if !addPlayerPopup.textFields[1].text.isEmpty {
                 playerCount = addPlayerPopup.textFields[1].text.toInt()!
             }
@@ -124,7 +123,6 @@ extension PlayerListViewController: UITableViewDelegate {
     func saveObjectAndInsertBlankRowAtIndexPath(indexPath : NSIndexPath) -> AnyObject{
         var object = Universal.sharedInstance.playersList[indexPath.row]
         Universal.sharedInstance.playersList[indexPath.row] = Player(name: "", startChips: 0, color: 1)
-        println("asd")
         return object
 
     }
@@ -162,7 +160,6 @@ extension PlayerListViewController : UITextFieldDelegate{
             }
 
         } else if textField.placeholder == "Number of Chips"{
-            println("chips")
 
             for chr in string {
                 if (!(chr >= "0" && chr <= "9")) {

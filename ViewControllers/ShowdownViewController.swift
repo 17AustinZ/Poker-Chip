@@ -49,12 +49,9 @@ extension ShowdownViewController: UITableViewDataSource {
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         let rows = bettingVC?.buttons.count
-        println(bettingVC)
-        println(rows)
         if let rows = rows {
             return rows
         }
-        println("asdfasda")
         return 0
 
     }
@@ -68,7 +65,6 @@ extension ShowdownViewController: UITableViewDelegate {
 
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         var cell = tableView.cellForRowAtIndexPath(indexPath)
-        println(indexPath)
         if cell!.accessoryType == UITableViewCellAccessoryType.Checkmark {
             cell?.accessoryType = UITableViewCellAccessoryType.None
         } else {

@@ -50,9 +50,12 @@ class BettingViewController: UIViewController{
 
 
     func CheckCall(sender: AnyObject) {
-        self.pool += lastBet
-        self.players[0].chips! -= lastBet
-        nextTurn(true)
+
+        if lastBet != 0{
+            self.pool += lastBet
+            self.players[0].chips! -= lastBet
+            nextTurn(true)
+        }
 
     }
     
@@ -104,7 +107,6 @@ class BettingViewController: UIViewController{
     
     ///[Button] Folds
      func Fold(sender: AnyObject) {
-        println(players[0].name!)
 //        players.removeAtIndex(0)
         players[0].active = false
 
@@ -112,10 +114,7 @@ class BettingViewController: UIViewController{
         radialMenu.setButtons(generateButtons())
         showMenu()
         label()
-        println(players[0].name!)
         nextTurn(false)
-//        buttons = buttons.rotate(-1)
-//        players = players.rotate(-1)
     }
     
     
@@ -139,7 +138,6 @@ class BettingViewController: UIViewController{
             let button = buttons[i]
             button.titleLabel?.textAlignment = NSTextAlignment.Center
             button.setTitle("\(button.player!.name!)\n\n\n\n\(button.player!.chips!)", forState: UIControlState.Normal)
-            println(button.player!.chips!)
             button.setTitleColor(UIColor.blackColor(), forState: UIControlState.Normal)
             button.setBackgroundImage(button.imageView?.image, forState: UIControlState.Normal)
             button.setImage(nil, forState: UIControlState.Normal)
@@ -154,21 +152,18 @@ class BettingViewController: UIViewController{
     ///Displays the radial menu
     func showMenu() {
         var midScreen = CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height * 2 / 5)
-//        radialMenu.setButtons(buttons)
         radialMenu = ALRadialMenu().setButtons(generateButtons()).setAnimationOrigin(midScreen)
         //[ADD] Dynamic resizing?
         radialMenu.setRadius(Double(UIScreen.mainScreen().bounds.width) / 2 - 30)
         radialMenu.setDismissOnOverlayTap(false)
         //[BUG] Likely Cause of Bug BUG[001]
         radialMenu.presentInView(rotateView!)
-//        println(buttons.count)
-        
+
     }
     
     ///Generates buttons - Modifies buttons[Button]
     func generateButtons() -> [ALRadialMenuButton] {
         buttons = []
-//        println(players.count)
         for i in 0..<players.count {
             if players[i].active {
                 let button = ALRadialMenuButton(frame: CGRectMake(0, 0, 44, 44))
@@ -190,8 +185,6 @@ class BettingViewController: UIViewController{
         for var i : Int = 0; i < buttons.count - 1; i++ {
             showdownPopup.addAction(SimpleAlert.Action(title: "\(buttons[i].player!.name!)", style: .Default) { action in
 
-                println(i)
-                println(showdownPopup.actions)
                 showdownPopup.actions[i].button.titleLabel?.text = "ASDF"
                 //Cleanup + Exit
                 self.radialMenu.presentInView(self.view)
@@ -252,14 +245,17 @@ class BettingViewController: UIViewController{
         bet.action = {item in self.BetRaise(self)}
 
         let fold = ActionButtonItem(title: "Fold", image: icon2)
-        fold.action = {item in self.Fold(self)}
+        fold.action = {item in
+            if self.buttons.count > 1 {
+                self.Fold(self)
+            }
+        }
 
         let check = ActionButtonItem(title: "Check", image: icon3)
         check.action = {item in self.CheckCall(self)}
 
         let showdown = ActionButtonItem(title: "Showdown", image: icon4)
         showdown.action = {item in
-            println("Asdf")
 
             self.performSegueWithIdentifier("toWinners", sender: self)
 
@@ -273,7 +269,6 @@ class BettingViewController: UIViewController{
     }
     
     override func viewWillDisappear(animated: Bool) {
-//        println("asdf2")
         radialMenu.dismiss()
         radialMenu.removeFromSuperview()
     }
