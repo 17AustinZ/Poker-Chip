@@ -17,9 +17,16 @@ class ShowdownContainerViewController : UIViewController{
     @IBAction func showdownDone(sender: AnyObject) {
         var pool = bettingVC?.pool
         showdownVC?.getWinners()
-        if let winners = showdownVC?.winners!{
+
+        var winnerCount : Int = 0;
+        if let winners = bettingVC?.players{
             for player in winners{
-                player.chips! += (pool! / winners.count)
+                if player.winner {
+                    winnerCount++
+                }
+            }
+            for player in winners{
+                player.chips! += (pool! / winnerCount)
             }
         }
     }

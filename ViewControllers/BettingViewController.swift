@@ -76,6 +76,7 @@ class BettingViewController: UIViewController{
             textField.layer.borderWidth = 0
             textField.placeholder = "Number of Chips"
             textField.delegate = self
+            textField.keyboardType = UIKeyboardType.NumberPad
         }
         raisePopup.addAction(SimpleAlert.Action(title: "OK", style: .Default) { action in
             //Setup
@@ -154,7 +155,7 @@ class BettingViewController: UIViewController{
         var midScreen = CGPoint(x: UIScreen.mainScreen().bounds.width / 2, y: UIScreen.mainScreen().bounds.height * 2 / 5)
         radialMenu = ALRadialMenu().setButtons(generateButtons()).setAnimationOrigin(midScreen)
         //[ADD] Dynamic resizing?
-        radialMenu.setRadius(Double(UIScreen.mainScreen().bounds.width) / 2 - 30)
+        radialMenu.setRadius(Double(UIScreen.mainScreen().bounds.width) / 2 - 50)
         radialMenu.setDismissOnOverlayTap(false)
         //[BUG] Likely Cause of Bug BUG[001]
         radialMenu.presentInView(rotateView!)

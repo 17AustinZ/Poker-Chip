@@ -13,7 +13,6 @@ import Mixpanel
 
 class PlayerListViewController : UITableViewController, UITableViewDataSource, UITableViewDelegate{
 
-//    var playerList : [Player]!
     var mixpanel = Mixpanel.sharedInstance()
 
     func addNewPlayer(){
@@ -72,8 +71,6 @@ class PlayerListViewController : UITableViewController, UITableViewDataSource, U
         tableView.delegate = self
         tableView.dataSource = self
         mixpanel.track("Opened View Controller", properties: ["View Controller" : "PlayerList"])
-//        navigationController?.navigationBarHidden = true
-
 
 
     }
@@ -134,14 +131,6 @@ extension PlayerListViewController: UITableViewDelegate {
         Universal.sharedInstance.playersList.insert(object, atIndex: toIndexPath.row)
 
     }
-
-    // This method is called when the selected row is released to its new position. The object is the same
-//    // object you returned in saveObjectAndInsertBlankRowAtIndexPath:. Simply update the data source so the
-//    // object is in its new position. You should do any saving/cleanup here.
-//    - (void)finishReorderingWithObject:(id)object atIndexPath:(NSIndexPath *)indexPath; {
-//    [_objects replaceObjectAtIndex:indexPath.row withObject:object];
-//    // do any additional cleanup here
-//    }
 
 
     func finishReorderingWithObject(object: AnyObject, atIndexPath indexPath: NSIndexPath) {

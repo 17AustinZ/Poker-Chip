@@ -13,6 +13,7 @@ class Player {
     var active : Bool = true
     var chips : Int?
     var color : Int?
+    var winner : Bool = true
     
     init(name : String, startChips : Int, color: Int){
         self.name = name

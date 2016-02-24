@@ -24,24 +24,6 @@ class ConfigureContainerViewController : UIViewController{
         if segue.identifier == "toGame" {
             super.prepareForSegue(segue, sender: sender)
             var bettingVC : BettingViewController = segue.destinationViewController as! BettingViewController
-            
-
-//            bettingVC.players = Universal.sharedInstance.playersList
-//            bettingVC.players = [
-//                Player(name: "1", startChips: 100, color: 1),
-//                Player(name: "2", startChips: 100, color: 2),
-//                Player(name: "3", startChips: 100, color: 3),
-//                Player(name: "4", startChips: 100, color: 4),
-//                Player(name: "5", startChips: 100, color: 5),
-//                Player(name: "6", startChips: 100, color: 6),
-//                Player(name: "7", startChips: 100, color: 7)
-//            ]
-
-
-            //            var splitSwitch = configVC.tableView.cellForRowAtIndexPath(NSIndexPath(indexes: [0,0], length: 2))vi as! BOSwitchTableViewCell
-//            splitPot = splitSwitch.toggleSwitch.on
-//
-
         } else if segue.identifier == "embedConfig" {
             configVC  = segue.destinationViewController as! PlayerListViewController
         }
